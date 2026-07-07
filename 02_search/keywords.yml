@@ -1,0 +1,22 @@
+topic: VDMOS total ionizing dose literature
+queries:
+  - "VDMOS total ionizing dose"
+  - "vertical double diffused MOSFET total ionizing dose"
+  - "power MOSFET total ionizing dose radiation effects"
+  - "trench power MOSFET total ionizing dose"
+  - "MOS total ionizing dose oxide trapped charge interface traps"
+  - "VDMOS gamma irradiation threshold voltage shift"
+  - "space VDMOS total dose radiation damage"
+include_terms:
+  - VDMOS
+  - power MOSFET
+  - total ionizing dose
+  - TID
+  - oxide trapped charge
+  - interface trap
+  - gamma irradiation
+  - threshold voltage shift
+exclude_terms:
+  - photovoltaic
+  - social science
+  - medicine

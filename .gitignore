@@ -1,0 +1,25 @@
+# Local/private runtime artifacts
+sentaurus_runs/
+sentaurus_runs_skilltest/
+vm_*sentaurus*.txt
+vm_locale_fix*.txt
+codex_host_key.pub
+codex_linux_reconfig.txt
+ibus_*.txt
+langsh_patch.txt
+lc_all_cleanup.txt
+locale_*.txt
+mihomo_*.txt
+
+# Do not publish raw paper PDFs by default
+*.pdf
+04_pdfs/
+00_inbox/
+
+# Generated/cache files
+__pycache__/
+*.pyc
+*.tmp
+
+# Local agent planning scratch
+/docs/superpowers/
