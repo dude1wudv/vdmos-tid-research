@@ -1,4 +1,5 @@
 # Local/private runtime artifacts
+local_runtime/
 sentaurus_runs/
 sentaurus_runs_skilltest/
 vm_*sentaurus*.txt

@@ -11,8 +11,10 @@ A minimal literature-research workspace for VDMOS / power MOSFET total ionizing 
 05_notes/          Manual or generated close-reading notes
 papers/            ARIS/research-wiki style paper cards
 06_synthesis/      Literature matrix, mechanism map, and synthesis notes
+docs/vm_setup/     Reproducible VM/Sentaurus setup notes
 scripts/           Import/search/analysis helper scripts
 prompts/           Reusable paper-analysis prompts
+local_runtime/     Ignored local VM logs, packages, and simulation outputs
 ```
 
 ## Quick start
@@ -36,4 +38,4 @@ Current focus:
 - threshold-voltage shift, leakage, mobility, subthreshold swing, and on-resistance degradation;
 - oxide trapped charge, interface traps, border traps, annealing, and bias-condition mechanisms.
 
-Raw paper PDFs and local VM/Sentaurus simulation artifacts are intentionally excluded from this public repository.
+Raw paper PDFs and local VM/Sentaurus simulation artifacts stay under ignored local folders unless intentionally promoted into tracked docs.
