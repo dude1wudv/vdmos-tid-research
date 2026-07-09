@@ -2,6 +2,7 @@
 local_runtime/
 sentaurus_runs/
 sentaurus_runs_skilltest/
+*.gzp
 vm_*sentaurus*.txt
 vm_locale_fix*.txt
 codex_host_key.pub
