@@ -1,0 +1,4 @@
+interface:
+  display_name: "Virtuoso VM Bridge Setup"
+  short_description: "Set up VMware VM networking, SSH, and virtuoso-bridge-lite."
+  default_prompt: "Set up or repair a VMware-hosted Cadence Virtuoso VM connection and configure virtuoso-bridge-lite from the host."

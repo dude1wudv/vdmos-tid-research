@@ -1,0 +1,3 @@
+display_name: Codex Workflows
+short_description: Compile and run Codex multi-agent workflows.
+default_prompt: /codex-workflows Audit this repository with the smallest useful workflow and summarize risks.

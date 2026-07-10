@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sentaurus VM Runner"
+  short_description: "Run Sentaurus TCAD jobs over SSH"
+  default_prompt: "Use $sentaurus-vm-runner to run a Sentaurus PN diode simulation on my TCAD VM."

@@ -39,3 +39,7 @@ Current focus:
 - oxide trapped charge, interface traps, border traps, annealing, and bias-condition mechanisms.
 
 Raw paper PDFs and local VM/Sentaurus simulation artifacts stay under ignored local folders unless intentionally promoted into tracked docs.
+
+## 小组环境安装
+
+Windows、VMware、SSH、Sentaurus 和 Codex Skill 的小组共享配置见 [`team_setup/README.md`](team_setup/README.md)。

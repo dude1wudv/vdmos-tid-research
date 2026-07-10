@@ -1,0 +1,3 @@
+team_setup/**/*.sh text eol=lf
+team_setup/**/*.zip binary
+team_setup/skills/superpowers/assets/*.png binary
