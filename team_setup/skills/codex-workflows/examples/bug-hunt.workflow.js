@@ -6,7 +6,7 @@
 // are then checked by independent skeptics — each told to REFUTE by default — and a
 // candidate is kept only if a *majority* of skeptics cannot refute it.
 //
-//   node .../bin/run-workflow.js bug-hunt.workflow.js --frontier --auto-effort \
+//   node .../bin/run-workflow.js bug-hunt.workflow.js \
 //     --sandbox read-only --budget 6000000 \
 //     --args '{"target":"src/","focus":"correctness, security, and resource leaks"}'
 //

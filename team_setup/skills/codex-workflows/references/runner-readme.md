@@ -114,12 +114,6 @@ run-workflow <script.js>
   --plan              dry run: count agents per phase/effort + estimate a budget (no model)
   --tui               open a live ASCII map of the run in a new terminal window
   --gui               open a live HTML viewer of the run in your browser  (--monitor = both)
-  --model M           fallback model (Claude ids/aliases auto-mapped); omit for config default
-  --frontier          pin ALL agents to the auto-detected latest frontier model (overrides per-call model)
-  --pin-model M       pin ALL agents to model M (overrides per-call model)
-  --effort E          none|minimal|low|medium|high|xhigh (flat fallback)
-  --auto-effort       scale effort to each layer's parallel width: 1->xhigh, 2+->high (floor)
-  --pin-effort E      force ALL agents to effort E (overrides per-call effort)
   --sandbox S         read-only | workspace-write | danger-full-access
   --retries N         transient-error retries per agent (default 3)
   --resume            reuse prior results from the journal (skip unchanged agents)
@@ -130,26 +124,11 @@ run-workflow <script.js>
   --no-summary        silence the short end-of-run recap (printed by default)
 ```
 
-### Layer-width effort (`--auto-effort`)
+### Automatic model and reasoning selection
 
-`parallel()` and `pipeline()` publish how many agents run side-by-side in the
-current layer via an `AsyncLocalStorage` store (`runtime.js`); `agent()` reads it
-(default `1` for a lone, un-fanned-out call) and, when `--auto-effort` is on,
-maps width → effort with `effortForLayerWidth`:
-
-| layer width | effort  |
-| ----------- | ------- |
-| 1           | `xhigh` |
-| 2+          | `high`  |
-
-The rationale: a lone agent is a critical gate (consolidation / judge / report)
-where one weak output sinks the run, so it thinks hardest; every fan-out floors
-at `high` (the policy never drops to `medium`). The context propagates across awaits and through the
-vm-hosted thunks, so a queued or deeply-awaited agent still sees the width of the
-layer that spawned it. Effort precedence (highest first): `--pin-effort` →
-per-call `opts.effort` → `--auto-effort` → `--effort` → Codex config default. The
-*effective* effort is folded into each agent's journal identity, so toggling the
-policy between runs busts only the agents whose effort changed.
+Normal runs omit model and reasoning-effort values. The runner forwards neither,
+so Codex uses the active automatic/configured selection. This also avoids stale
+model names in saved workflows.
 
 ### Resume journal
 
@@ -310,7 +289,7 @@ Both viewers consume the same live model: `runModel.js`'s **`buildLiveRunModel`*
 `status:'running'`, so the HTML viewer now shows in-flight agents (amber, pulsing,
 with elapsed) exactly as the ASCII map does. The workflow itself runs unchanged —
 its result JSON still prints to stdout — so `--tui`/`--gui` compose with everything
-else (`--frontier --auto-effort`, `--resume`, …).
+else (``, `--resume`, …).
 
 `agent(prompt, { isolation: 'worktree', cwd: <repo> })` runs the Codex thread in a
 detached `git worktree` at HEAD, so parallel agents that edit files don't collide.
@@ -383,9 +362,8 @@ the job's stdin (a bash `echo @@ASK…; read answer` is a complete client).
 
 A persisted script written for Claude Code rarely needs editing to run here:
 
-- **Model translation** — a script (or `agentType`) that asks for `claude-opus-4-8`,
-  or a bare `opus`/`sonnet`/`haiku` alias, is mapped to the best available Codex
-  model (queried once via `model/list`). Unknown/`inherit` → Codex config default.
+- **Model inheritance** — legacy provider aliases and `inherit` resolve to the
+  active Codex config default instead of a hardcoded model.
 - **`agentType`** — `agent(p, { agentType: 'reviewer' })` loads
   `.codex/agents/reviewer.md` (project scope first, then `~/.codex`) and uses its
   body as `developerInstructions` and its frontmatter `model` as a fallback.
@@ -402,11 +380,10 @@ A persisted script written for Claude Code rarely needs editing to run here:
 ### `agent(prompt, opts)` options
 
 `schema`, `model`, `agentType`, `effort`, `sandbox`, `cwd`, `systemPrompt`,
-`personality`, `isolation`, `retries`, `timeoutMs`, `label`, `phase`. Per-call `opts`
-override the CLI `--model/--effort/--sandbox/--retries` defaults — except that
-`--frontier`/`--pin-model` force the model and `--pin-effort` forces the effort
-regardless of `opts`. A per-call `effort` overrides `--auto-effort` (so omit it
-unless you deliberately want to escape the layer-width policy for one agent).
+`personality`, `isolation`, `retries`, `timeoutMs`, `label`, `phase`. Generated
+workflows omit `model` and `effort`; Codex chooses both from active configuration.
+Other per-call options override matching CLI defaults.
+
 
 ## Implemented vs. extension points
 
@@ -414,8 +391,7 @@ unless you deliberately want to escape the layer-width policy for one agent).
 final-message capture, native `outputSchema` structured output, `agent`,
 `parallel`, `pipeline`, `phase`, `log`, `budget` (token metering + enforcement),
 **per-call `opts.phase` grouping**, **per-agent metrics** (phase/effort/model/
-tokens/time persisted to the journal, rendered by the viewer), **model translation
-+ `model/list` preflight**, **`agentType`** resolution, **retry-with-backoff +
+tokens/time persisted to the journal, rendered by the viewer), **model inheritance**, **`agentType`** resolution, **retry-with-backoff +
 app-server reconnect**, an **isolated `node:vm` script sandbox** (no fs/shell/
 process/fetch/import; non-deterministic builtins blocked), **`isolation:'worktree'`**,
 the **resume journal** (`--resume`), the **named-workflow registry**

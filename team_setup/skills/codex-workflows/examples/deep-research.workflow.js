@@ -8,7 +8,7 @@
 // instructions to "search the web and fetch sources" (requires a Codex with web
 // tools) — the fan-out / verify / synthesize structure is identical.
 //
-//   node runner/bin/run-workflow.js examples/deep-research.workflow.js --frontier --auto-effort --sandbox read-only \
+//   node runner/bin/run-workflow.js examples/deep-research.workflow.js --sandbox read-only \
 //     --args '{"question":"How is auth enforced across routes?","dir":"src"}'
 
 export const meta = {
@@ -113,7 +113,7 @@ const verified = verdicts.filter(Boolean).filter((c) => c.verdict && c.verdict.r
 const dropped = verdicts.filter(Boolean).length - verified.length;
 log(`${verified.length} claims survived cross-check, ${dropped} dropped`);
 
-// Report: one synthesizer (a lone gate → xhigh under --auto-effort) writes the
+// Report: one synthesizer (a lone gate → xhigh under the active Codex settings) writes the
 // cited report. It RETURNS the prose (per the "heavy final stage" guidance) rather
 // than writing a file, so a long synthesis can't trip the per-turn timeout.
 phase("Report");

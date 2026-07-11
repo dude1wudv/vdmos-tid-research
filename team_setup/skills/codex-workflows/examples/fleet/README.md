@@ -18,9 +18,9 @@ cd examples/fleet
 RUNNER=../../runner
 
 node $RUNNER/bin/run-workflow.js hunt-deep.workflow.js \
-  --frontier --auto-effort --interactive --budget 1200000 1>deep.result.json 2>deep.log &
+  --interactive --budget 1200000 1>deep.result.json 2>deep.log &
 node $RUNNER/bin/run-workflow.js hunt-wide.workflow.js \
-  --frontier --auto-effort --interactive --budget 3500000 1>wide.result.json 2>wide.log &
+  --interactive --budget 3500000 1>wide.result.json 2>wide.log &
 ```
 
 Each gets its own journal under `.workflow-journal/` (distinct scripts →
@@ -65,13 +65,13 @@ node $RUNNER/bin/fleet.js answer --journal .workflow-journal/hunt-wide.workflow.
 
 # Stalled or dead-end run? Kill its process (fleet status shows the pid), then either
 # harvest what's journaled or resume it later — completed work replays at 0 tokens:
-node $RUNNER/bin/run-workflow.js hunt-wide.workflow.js --resume --frontier --auto-effort --interactive
+node $RUNNER/bin/run-workflow.js hunt-wide.workflow.js --resume --interactive
 
 # Fork a run that's onto something: copy the journal, rerun an edited variant against
 # the copy — the unchanged prefix replays free; sessionful workers re-attach WARM:
 cp .workflow-journal/hunt-deep.workflow.jsonl .workflow-journal/hunt-deep-fork.jsonl
 node $RUNNER/bin/run-workflow.js hunt-deep-fork.workflow.js \
-  --journal .workflow-journal/hunt-deep-fork.jsonl --resume --frontier --auto-effort --interactive
+  --journal .workflow-journal/hunt-deep-fork.jsonl --resume --interactive
 ```
 
 Stepping away? Launch with `--notify-cmd` and a pending gate **pushes** to you

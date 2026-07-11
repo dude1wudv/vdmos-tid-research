@@ -9,11 +9,11 @@
 //   • a race of sessionful workers + cancel the losers   (phase Hunt, agent.waitAny)
 //   • steering the winner on warm context  (session.steer — a 2nd turn, no re-read)
 //   • a human() decision gate              (answer it live in the viewer, or default)
-//   • a lone synthesis gate                (phase Fix, xhigh under --auto-effort)
+//   • a lone synthesis gate                (phase Fix, xhigh under the active Codex settings)
 //
 // The bundled run under .workflow-journal/ is what `npm run demo` opens. To run it
 // for real:  node runner/bin/run-workflow.js examples/incident-demo/checkout-incident.workflow.js \
-//              --frontier --auto-effort --sandbox read-only --gui
+//              --sandbox read-only --gui
 // Runs under --plan (no Codex, no tokens): human() returns its default; the race is counted.
 
 export const meta = {
@@ -44,7 +44,7 @@ const leads = [
   ["hunt:pool", "Test the hypothesis that this is DB connection-pool exhaustion under load."],
   ["hunt:cache", "Test the hypothesis that this is a cache stampede after a TTL expiry."],
 ];
-// Start the workers inside parallel() so --auto-effort sees the real layer
+// Start the workers inside parallel() so automatic Codex settings sees the real layer
 // width (3 → `high`, the shape in the bundled journal); a plain loop starts
 // each at width 1 → `xhigh`, so the documented rerun wouldn't reproduce it.
 const workers = (

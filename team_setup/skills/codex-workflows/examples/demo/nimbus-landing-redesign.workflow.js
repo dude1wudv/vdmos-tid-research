@@ -6,7 +6,7 @@
 //
 // To run it for real against your local Codex App Server:
 //
-//   node runner/bin/run-workflow.js examples/demo/nimbus-landing-redesign.workflow.js --frontier
+//   node runner/bin/run-workflow.js examples/demo/nimbus-landing-redesign.workflow.js
 //
 // Shape: Audit (2 lenses) → Concept (3 directions) → Judge (2 personas) →
 // Synthesize (1). A barrier between phases: concepts read the full audit, judges
@@ -123,24 +123,24 @@ const synthPrompt = (audit, concepts, judges) => `${BRIEF}\n\nYou are the lead d
 /* ── orchestration (barrier-structured) ──────────────────────────────────── */
 phase("Audit");
 const audits = (await parallel(LENSES.map((l) => () =>
-  agent(auditPrompt(l), { schema: AUDIT_SCHEMA, label: `audit:${l.key}`, phase: "Audit", model: "gpt-5.4", effort: "medium" })))).filter(Boolean);
+  agent(auditPrompt(l), { schema: AUDIT_SCHEMA, label: `audit:${l.key}`, phase: "Audit" })))).filter(Boolean);
 const auditDigest = JSON.stringify(audits, null, 2);
 log(`Audit complete — ${audits.length}/${LENSES.length} lenses`);
 
 phase("Concept");
 const concepts = (await parallel(DIRECTIONS.map((d) => () =>
-  agent(conceptPrompt(d, auditDigest), { schema: CONCEPT_SCHEMA, label: `concept:${d.key}`, phase: "Concept", model: "gpt-5.5", effort: "high" })))).filter(Boolean);
+  agent(conceptPrompt(d, auditDigest), { schema: CONCEPT_SCHEMA, label: `concept:${d.key}`, phase: "Concept" })))).filter(Boolean);
 const conceptsDigest = JSON.stringify(concepts, null, 2);
 log(`Concepts generated — ${concepts.length}/${DIRECTIONS.length} directions`);
 
 phase("Judge");
 const judges = (await parallel(JUDGES.map((j) => () =>
-  agent(judgePrompt(j, conceptsDigest, auditDigest), { schema: RANKING_SCHEMA, label: `judge:${j.key}`, phase: "Judge", model: "gpt-5.4", effort: "medium" })))).filter(Boolean);
+  agent(judgePrompt(j, conceptsDigest, auditDigest), { schema: RANKING_SCHEMA, label: `judge:${j.key}`, phase: "Judge" })))).filter(Boolean);
 const judgesDigest = JSON.stringify(judges, null, 2);
 log(`Judging complete — ${judges.length}/${JUDGES.length} panels`);
 
 phase("Synthesize");
 const recommendation = await agent(synthPrompt(auditDigest, conceptsDigest, judgesDigest),
-  { schema: FINAL_SCHEMA, label: "synthesize", phase: "Synthesize", model: "gpt-5.5", effort: "high" });
+  { schema: FINAL_SCHEMA, label: "synthesize", phase: "Synthesize" });
 
 return { audits, concepts, judges, recommendation };

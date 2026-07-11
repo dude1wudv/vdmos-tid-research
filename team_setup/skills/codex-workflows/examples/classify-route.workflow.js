@@ -2,19 +2,15 @@
 // branches to a specialized handler. This is the blog's "classify-and-act"
 // pattern — but note the deliberate divergence from the native example:
 //
-//   Native routes cheap stages to a smaller model (Sonnet vs Opus). This re-host
-//   keeps ONE frontier model for every agent and lets *thinking effort* be the
-//   lever instead: under --auto-effort the lone classifier and the lone handler
-//   both run at xhigh, and you bound cost with --effort / --budget, not by
-//   downgrading the model. (See references/authoring.md → "one model, effort is
-//   the lever".)
+//   Model and reasoning effort are intentionally omitted. Codex chooses both from
+//   the active configuration, while `--budget` bounds the run.
 //
-//   node runner/bin/run-workflow.js examples/classify-route.workflow.js --frontier --auto-effort --sandbox read-only \
+//   node runner/bin/run-workflow.js examples/classify-route.workflow.js --sandbox read-only \
 //     --args '{"task":"explain how the auth module works","dir":"src"}'
 
 export const meta = {
   name: "classify-route",
-  description: "Classify a task, then branch to a specialized handler (one model, effort scales)",
+  description: "Classify a task, then branch to a specialized handler",
   phases: [
     { title: "Classify", detail: "label the task category + complexity" },
     { title: "Handle", detail: "branch to the matching specialist" },
@@ -48,7 +44,7 @@ const cls = (await agent(
 )) || { category: "explain", complexity: "medium", rationale: "classifier unavailable — default route" };
 
 // Branch: each specialist gets a prompt tuned to its job. Same model for all;
-// effort is governed by --auto-effort (a lone handler is a critical gate → xhigh).
+// effort is governed by automatic Codex settings (a lone handler is a critical gate → xhigh).
 const HANDLERS = {
   explain: `Explain, with file:line citations from ${DIR}, how this works: ${TASK}. Be concrete and structured.`,
   fix: `Investigate and propose a concrete fix (diff-level steps, files to touch) for: ${TASK}. Read ${DIR} as needed.`,

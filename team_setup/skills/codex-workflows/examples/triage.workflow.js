@@ -7,7 +7,7 @@
 // labels — not the raw text — which shrinks the prompt-injection surface. Acting
 // on those proposals is a separate, human-gated step, not part of this run.
 //
-//   node runner/bin/run-workflow.js examples/triage.workflow.js --frontier --auto-effort --sandbox read-only \
+//   node runner/bin/run-workflow.js examples/triage.workflow.js --sandbox read-only \
 //     --args '{"items":[{"id":"1024","text":"crash on empty config"},{"id":"1030","text":"NPE in config loader"}]}'
 
 export const meta = {

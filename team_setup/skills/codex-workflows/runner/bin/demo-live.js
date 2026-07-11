@@ -4,7 +4,7 @@
 // journal as agents finish) to map-run.js --watch (which redraws it), both pointed
 // at the same journal. The live map exits on its own when the run finishes.
 //
-// Needs a logged-in `codex` CLI (it uses --frontier) and spends a small amount of
+// Needs a logged-in `codex` CLI and spends a small amount of
 // tokens (the default example is ~3 agents). Run it from a real terminal.
 //
 //   node bin/demo-live.js [--script PATH] [--args JSON] [--budget N]
@@ -65,7 +65,7 @@ console.error(`  log:     ${wfLog}`);
 const out = openSync(wfLog, "w");
 const wf = spawn(
   "node",
-  [bin("run-workflow.js"), script, "--frontier", "--auto-effort", "--sandbox", "read-only", "--budget", String(opts.budget), "--journal", journal, "--args", argsJson],
+  [bin("run-workflow.js"), script, "--sandbox", "read-only", "--budget", String(opts.budget), "--journal", journal, "--args", argsJson],
   { stdio: ["ignore", out, out] },
 );
 

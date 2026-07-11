@@ -13,7 +13,7 @@
 // case: a caught race is live state you cannot reconstruct by re-pasting text.
 //
 //   node .../bin/run-workflow.js examples/flaky-bug-perturbation.workflow.js \
-//     --frontier --sandbox workspace-write --budget 4000000 \
+//     --sandbox workspace-write --budget 4000000 \
 //     --args '{"testCmd":"node --test test/flaky.test.js","reproRuns":80}'
 //
 // Runs under --plan (the perturbation playbook is a fixed, bounded list).

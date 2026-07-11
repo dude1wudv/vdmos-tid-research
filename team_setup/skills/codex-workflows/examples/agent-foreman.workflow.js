@@ -17,7 +17,7 @@
 // live human input — escalation returns a structured needs_human object and ends.
 //
 //   node .../bin/run-workflow.js examples/agent-foreman.workflow.js \
-//     --frontier --sandbox read-only --budget 5000000 \
+//     --sandbox read-only --budget 5000000 \
 //     --args '{"goal":"Audit the repo for missing input validation and propose fixes","maxSteps":8,"involvement":"checkpointed"}'
 //
 // Runs under --plan (bounded by maxSteps; the planned foreman picks the first enum).

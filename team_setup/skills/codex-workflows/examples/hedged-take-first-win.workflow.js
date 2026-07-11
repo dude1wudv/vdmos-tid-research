@@ -13,7 +13,7 @@
 //  slot as each one lands — see references/authoring.md → Sessionful workers.)
 //
 //   node .../bin/run-workflow.js examples/hedged-take-first-win.workflow.js \
-//     --frontier --sandbox read-only --budget 3000000 \
+//     --sandbox read-only --budget 3000000 \
 //     --args '{"problem":"...","strategies":["...","...","..."]}'
 //
 // Runs under --plan (the race loop is bounded by the number of strategies).

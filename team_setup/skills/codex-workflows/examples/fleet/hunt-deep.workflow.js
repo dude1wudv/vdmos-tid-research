@@ -7,7 +7,7 @@
 //
 // Run it as part of the fleet (see this directory's README), or alone:
 //   node runner/bin/run-workflow.js examples/fleet/hunt-deep.workflow.js \
-//     --frontier --auto-effort --interactive --budget 1200000
+//     --interactive --budget 1200000
 // Answer its checkpoints from outside:
 //   node runner/bin/fleet.js answer --journal <journal> --id round1 --answer \
 //     'drop that lead; look at the test fixtures instead'

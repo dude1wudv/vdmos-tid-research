@@ -137,17 +137,16 @@ const exec = promisify(execFile);
   await rm(repo, { recursive: true, force: true });
 }
 
-// 8) model resolution: Claude ids/aliases map; available passthrough; unknown -> default.
+// 8) model resolution: aliases and unspecified models inherit Codex config.
 {
-  const have = ["gpt-5.5", "gpt-5.4", "gpt-5.4-mini", "gpt-5.3-codex"];
-  assert.equal(resolveModel("claude-opus-4-8", have), "gpt-5.5", "opus -> strongest");
-  assert.equal(resolveModel("opus", have), "gpt-5.5", "bare opus alias maps");
-  assert.equal(resolveModel("haiku", have), "gpt-5.4-mini", "haiku -> mini");
-  assert.equal(resolveModel("gpt-5.4", have), "gpt-5.4", "available id passes through");
+  const have = ["gpt-current", "gpt-previous", "gpt-mini"];
+  assert.equal(resolveModel("claude-opus", have), undefined, "Claude ids -> config default");
+  assert.equal(resolveModel("opus", have), undefined, "bare aliases -> config default");
+  assert.equal(resolveModel("gpt-current", have), "gpt-current", "available explicit id passes through");
   assert.equal(resolveModel("inherit", have), undefined, "inherit -> config default");
   assert.equal(resolveModel(undefined, have), undefined, "undefined -> config default");
   assert.equal(resolveModel("made-up-model", have), undefined, "unknown -> config default");
-  assert.equal(resolveModel("claude-opus", []), "gpt-5.5", "claude maps even with empty model list");
+  assert.equal(resolveModel("claude-opus", []), undefined, "Claude ids inherit without model list");
 }
 
 // 9) agentType: read system prompt + model from .codex/agents/<name>.md.

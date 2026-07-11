@@ -14,7 +14,7 @@
 // pre-answers it for unattended runs.
 //
 //   node .../bin/run-workflow.js examples/human-gate.workflow.js \
-//     --frontier --auto-effort --sandbox read-only --gui \
+//     --sandbox read-only --gui \
 //     --args '{"topic":"missing input validation"}'
 //
 //   # unattended (CI): pre-answer the gate — no pause at all

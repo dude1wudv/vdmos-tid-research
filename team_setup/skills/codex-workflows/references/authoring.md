@@ -64,10 +64,10 @@ The only global that calls a model. Runs `prompt` as one Codex thread+turn.
 | opt | meaning |
 | --- | --- |
 | `schema` | JSON Schema (object root, `additionalProperties:false` recommended) → Codex `outputSchema`; result is `JSON.parse`d |
-| `model` | **Leave unset in scripts.** Runs are pinned to one latest-frontier model with `--frontier`, which overrides any per-call `model` anyway. (If you do set it, Claude ids/aliases auto-map to a Codex model.) |
+| `model` | **Leave unset.** Codex uses the active automatic/configured model. |
 | `agentType` | name of a subagent in `.codex/agents/<name>.md`; its body becomes the system prompt, its frontmatter `model` a fallback |
 | `systemPrompt` | explicit developer instructions (overrides `agentType` body) |
-| `effort` | `none`/`minimal`/`low`/`medium`/`high`/`xhigh`. **Usually leave unset and run with `--auto-effort`**, which scales effort to each layer's parallel width (1→`xhigh`, 2+→`high` — the floor) so lone gate agents think hardest while every fan-out still gets `high`. A per-call `effort` *overrides* the policy, so set it only as a deliberate exception. Precedence: `--pin-effort` > per-call `effort` > `--auto-effort` > `--effort` > Codex config default (`model_reasoning_effort`, often `xhigh`). |
+| `effort` | **Leave unset.** Codex uses the active automatic/configured reasoning effort. |
 | `sandbox` | `read-only` \| `workspace-write` \| `danger-full-access` (default `workspace-write`) |
 | `isolation` | `'worktree'` → run in a detached git worktree at HEAD (parallel file-editing agents don't collide); kept if it leaves changes |
 | `cwd` | working directory for the thread (default the runner's cwd) |
@@ -124,9 +124,7 @@ The sessionful API hangs off `agent` (not new globals):
 Starts a thread and begins the first turn, then returns a handle **without waiting
 for the turn to finish**. Same `opts` as `agent()` (`agentType`, `systemPrompt`,
 `model`, `effort`, `sandbox`, `cwd`, `personality`, `schema`, `timeoutMs`, `phase`,
-`label`, `isolation:'worktree'`). Effort resolves exactly like `agent()` (so under
-`--auto-effort` a worker in a `parallel([…])` fan-out gets `high`, a lone start gets
-`xhigh`). Holds a concurrency slot for the running turn — **a detached running
+`label`, `isolation:'worktree'`). Model and effort resolve exactly like `agent()`; when omitted, both inherit the active Codex configuration. Holds a concurrency slot for the running turn — **a detached running
 worker counts against the cap** until its turn settles.
 
 ### `agent.waitAny(sessions, opts?) → Promise<{ session, index, snapshot, pendingSessions, timedOut }>`
@@ -393,49 +391,7 @@ web search if your Codex has web tools).
   mode: for a field the model may leave empty, make it **nullable**
   (`type:['string','null']`) rather than omitting it from `required`. The result is
   parsed JSON; the runner also tolerates ```json fences as a fallback.
-- **One model, effort is the lever.** Runs use `--frontier`, which pins a single
-  latest-frontier model (e.g. `gpt-5.5`) and **overrides any per-call `model`** —
-  so leave `model` out of `agent()` opts. This is a deliberate divergence from the
-  native blog's "classify-and-route to Sonnet vs Opus": instead of *model* routing
-  for cost, this re-host keeps one model and uses **thinking effort** as the dial
-  (`--auto-effort` scales it to layer width; `--effort`/`--pin-effort`/`--budget`
-  bound it). Mixing models or downgrading "cheap" stages is what produces
-  inconsistent multi-model runs — don't.
-- **Size the budget with `--plan` first.** A dry run executes the orchestration
-  with `agent()` stubbed (no model, no tokens), counts agents per phase/effort,
-  and prints an estimated `--budget`. Fan-outs sized from *agent output* (a
-  `pipeline`/`parallel` over a previous agent's array) come back empty in a dry
-  run, so the count is a **lower bound** — re-run `--plan` on a small `--args`
-  slice for a tighter number.
-- **Per-agent metrics are recorded.** Each completed `agent()` journals its phase,
-  effort, resolved model, tokens, and wall time. `view-run.js` renders them
-  (per-agent, per-phase, per-run); `view-run.js <dir> --watch` rebuilds the HTML
-  live as a run progresses.
-- **Effort scales to layer width — let `--auto-effort` set it.** Don't hand-set
-  `effort` per agent. Run with `--auto-effort` and the runner reads each layer's
-  fan-out width (thunks in a `parallel()`, items in a `pipeline()` stage) and
-  picks effort: **1→`xhigh`** (a lone agent is a critical gate — consolidate,
-  judge, synthesize, report — so it thinks hardest) and **2+→`high`** (the
-  floor — every fan-out still thinks hard; the policy never drops to `medium`).
-  This means you express importance *structurally* — a synthesis you want done
-  well should be its own single-agent step, not buried inside a fan-out. Reserve
-  a per-call `effort` (which overrides the policy) for a rare exception.
-- **Determinism**: no `Math.random()`/`Date.now()`/argless `new Date()` in the
-  script (blocked). Pass any timestamps/seeds via `args`; vary agent prompts by
-  index, not randomness.
-- **Scale to the ask.** "find any bugs" → a few finders, single-vote verify.
-  "thoroughly audit" → larger finder pool, 3–5 vote adversarial verify, a
-  synthesis stage. `log()` anything you cap or drop so it doesn't read as full
-  coverage.
-- **Heavy final stages are fragile.** A single report/synthesis agent that takes
-  the whole run as input, emits a long body, *and* writes a file is the most
-  common cause of a timed-out run (the 600s per-turn limit). Prefer: have the
-  agent **return** the artifact as a `schema` string and write the file from a
-  thin downstream step, keep its input trimmed, or raise its per-call
-  `timeoutMs`. If it does time out, the file is often already written and earlier
-  agents are journaled — assemble from the journal rather than re-running.
-- **Fenced code inside agent-written markdown.** When an agent emits markdown that
-  embeds triple-backtick blocks (e.g. a `/goal` containing ```bash fences) inside
-  another fence, the inner fence closes the outer one and headings leak into the
-  doc. Tell the agent to wrap such blocks in a **longer** fence (4–5 backticks)
-  than anything they contain.
+- **Model and reasoning effort inherit from Codex.** Do not set per-agent
+  `model` or `effort`, and do not add runner model/effort flags unless the user
+  explicitly asks for an override. This keeps saved workflows current as models
+  and defaults change.

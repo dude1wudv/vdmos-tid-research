@@ -8,7 +8,7 @@
 // is honest either way. The sandboxed script can't read the clock, so the date
 // comes in via --args (demo-live injects today's date automatically).
 //
-//   node runner/bin/run-workflow.js examples/market-news.workflow.js --frontier --auto-effort \
+//   node runner/bin/run-workflow.js examples/market-news.workflow.js \
 //     --sandbox danger-full-access --args '{"date":"June 3, 2026"}'
 
 export const meta = {

@@ -12,7 +12,7 @@
 // per-turn token counts: the Ingest turn is large; the follow-ups are small.)
 //
 //   node .../bin/run-workflow.js examples/warm-context-interrogation.workflow.js \
-//     --frontier --sandbox read-only --budget 3000000 \
+//     --sandbox read-only --budget 3000000 \
 //     --args '{"target":"runner/src","questions":["...","..."]}'
 //
 // Runs under --plan (planned sessions return schema skeletons; the question loop is

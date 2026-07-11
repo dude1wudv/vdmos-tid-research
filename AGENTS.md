@@ -22,7 +22,7 @@ There is no build system. Useful local commands are:
 python scripts\search_openalex.py --max-results 20
 python scripts\import_seed_papers.py
 powershell -ExecutionPolicy Bypass -File scripts\run_paper_search_mcp.ps1 -Query "VDMOS total ionizing dose" -Limit 20
-powershell -ExecutionPolicy Bypass -File scripts\analyze_with_codex.ps1 -Model gpt-5.5
+powershell -ExecutionPolicy Bypass -File scripts\analyze_with_codex.ps1
 ```
 
 `search_openalex.py` refreshes `03_metadata/`; `import_seed_papers.py` creates paper cards and updates `06_synthesis/literature_matrix.csv`; the PowerShell wrappers run optional MCP/Codex-assisted analysis.

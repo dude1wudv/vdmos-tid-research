@@ -15,7 +15,7 @@
 //
 //   node runner/bin/run-workflow.js examples/harness-zoo/claim-check/claim-check.workflow.js \
 //     --args-file examples/harness-zoo/claim-check/sample-args.json \
-//     --frontier --auto-effort --sandbox read-only --budget 1000000 --gui
+//     --sandbox read-only --budget 1000000 --gui
 //
 // Patterns: structured Extract → deep-verification fan-out (one verifier per
 // claim, each an independent skeptic told to default to "unsupported" when the

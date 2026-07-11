@@ -11,10 +11,9 @@ export const meta = {
 phase("Answer");
 
 const [pong, capital] = await parallel([
-  () => agent("Reply with exactly one word: pong. No punctuation, nothing else.", { effort: "low" }),
+  () => agent("Reply with exactly one word: pong. No punctuation, nothing else.", {}),
   () =>
     agent("What is the capital of France? Respond using the provided schema.", {
-      effort: "low",
       schema: {
         type: "object",
         additionalProperties: false,

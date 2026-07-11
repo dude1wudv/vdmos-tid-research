@@ -13,7 +13,7 @@
 // to drill a lead is to steer the worker that already has it loaded.
 //
 //   node .../bin/run-workflow.js examples/lead-following-research.workflow.js \
-//     --frontier --sandbox read-only --budget 5000000 \
+//     --sandbox read-only --budget 5000000 \
 //     --args '{"topic":"how request auth flows through this codebase","maxRounds":6,"maxThreads":4}'
 //
 // Runs under --plan (bounded by maxRounds; the controller's planned decision is the

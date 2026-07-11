@@ -14,11 +14,11 @@ Two arms answer the **same questions** about the **same corpus**:
 
 ```bash
 node runner/bin/run-workflow.js examples/benchmarks/warm-vs-cold.workflow.js \
-  --frontier --effort medium --sandbox read-only
+  --sandbox read-only
 node runner/bin/summarize-run.js .          # By-phase + Sessionful workers tables
 ```
 
-### Measured result (2026-06-09 · codex 0.137.0 · gpt-5.5 · effort medium · corpus `runner/src`, ~3.3k lines · 3 questions)
+### Measured result (2026-06-09 · codex 0.137.0 · inherited Codex model and effort · corpus `runner/src`, ~3.3k lines · 3 questions)
 
 | | tokens | wall time |
 | :--- | ---: | ---: |

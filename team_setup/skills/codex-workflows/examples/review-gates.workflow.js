@@ -7,12 +7,12 @@
 // the whole point: a producer rationalizes its own choices, so it must never judge
 // them, and reviewers stay uncorrelated when they can't see each other.
 //
-//   node .../bin/run-workflow.js review-gates.workflow.js --frontier --auto-effort \
+//   node .../bin/run-workflow.js review-gates.workflow.js \
 //     --sandbox read-only --budget 4000000 \
 //     --args '{"task":"Design the data model + migration plan to add teams to a single-tenant app","kind":"implementation plan"}'
 //
 // Patterns: fresh-context review gate (producer != reviewer != synthesizer) +
-// perspective-diverse, refute-by-default review. Under --auto-effort the lone
+// perspective-diverse, refute-by-default review. Under automatic Codex settings the lone
 // producer and decision gates think hardest (xhigh); the review fan-out gets the
 // floor (high). Works for any artifact: a plan, a design, a spec, a migration.
 
@@ -85,7 +85,7 @@ const LENSES = [
   { key: "tests-and-risk", brief: "How would this be tested? What's the riskiest step, and the rollback?" },
 ];
 
-// ── Produce: one agent drafts the artifact (lone gate → xhigh under --auto-effort)
+// ── Produce: one agent drafts the artifact (lone gate → xhigh under the active Codex settings)
 phase("Produce");
 const draft = await agent(
   `Task: ${TASK}\n\nProduce a concrete, self-contained ${KIND}. Make your key decisions explicit ` +

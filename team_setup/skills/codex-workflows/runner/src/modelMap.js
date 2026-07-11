@@ -8,53 +8,21 @@ export function modelId(m) {
   return null;
 }
 
-// Claude tier -> ordered Codex preferences (first available wins).
-const FAMILY_PREFERENCES = {
-  opus: ["gpt-5.5", "gpt-5.4", "gpt-5.3-codex", "gpt-5.2"],
-  sonnet: ["gpt-5.4", "gpt-5.5", "gpt-5.3-codex", "gpt-5.4-mini"],
-  haiku: ["gpt-5.4-mini", "gpt-5.4", "gpt-5.2"],
-};
-
-// Matches Claude full ids ("claude-opus-4-8") and bare aliases ("opus").
-function claudeFamily(id) {
-  const s = String(id).toLowerCase();
-  if (/opus/.test(s)) return "opus";
-  if (/sonnet/.test(s)) return "sonnet";
-  if (/haiku/.test(s)) return "haiku";
-  return null;
+// Legacy provider aliases are intentionally not translated to a concrete model.
+// Let Codex select the active configured model instead.
+function isLegacyAlias(id) {
+  return /(?:claude-|^)(?:opus|sonnet|haiku)(?:-|$)/i.test(String(id));
 }
 
-/**
- * Resolve `requested` to a Codex model id (or undefined to use Codex's config
- * default).
- *   undefined / "inherit" / "default" -> undefined
- *   Claude id or alias                -> mapped family preference (best available)
- *   already-available id              -> as-is
- *   unknown but unavailable           -> undefined (config default) + warn
- * If `available` is empty (model/list unavailable), Claude ids still map to their
- * top preference and other ids pass through unchanged.
- */
+/** Resolve an explicit available Codex model, otherwise inherit Codex config. */
 export function resolveModel(requested, available = [], log = () => {}) {
   if (!requested || /^(inherit|default)$/i.test(requested)) return undefined;
-
-  const family = claudeFamily(requested);
-  if (family) {
-    const prefs = FAMILY_PREFERENCES[family] || [];
-    const pick = available.length
-      ? (prefs.find((m) => available.includes(m)) ??
-         available.find((m) => !/mini|spark/.test(m)) ??
-         available[0])
-      : prefs[0];
-    if (pick) {
-      log(`model: '${requested}' (Claude) → '${pick}'`);
-      return pick;
-    }
+  if (isLegacyAlias(requested)) {
+    log(`model: '${requested}' is a legacy alias → using Codex config default`);
     return undefined;
   }
-
-  if (!available.length) return requested; // non-Claude id, can't validate — trust it
+  if (!available.length) return requested;
   if (available.includes(requested)) return requested;
-
   log(`model: '${requested}' not exposed by Codex → using config default (have: ${available.join(", ")})`);
   return undefined;
 }

@@ -11,7 +11,7 @@
 //     { status: "needs_human", … } return value. v1 never blocks on live stdin.
 //
 //   node .../bin/run-workflow.js examples/sessionful-workers.workflow.js \
-//     --frontier --auto-effort --sandbox read-only --budget 3000000 \
+//     --sandbox read-only --budget 3000000 \
 //     --args '{"goal":"Audit auth","areaA":"auth middleware","areaB":"route handlers"}'
 //
 // Patterns: start → waitAny → controller decision → steer (same thread) → wait.

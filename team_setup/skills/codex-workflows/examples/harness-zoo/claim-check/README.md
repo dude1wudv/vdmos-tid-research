@@ -117,21 +117,18 @@ Provide **`doc` or `docPath`** (at least one). A **bare string** is taken as `do
 ```bash
 node runner/bin/run-workflow.js examples/harness-zoo/claim-check/claim-check.workflow.js \
   --args-file examples/harness-zoo/claim-check/sample-args.json \
-  --frontier --auto-effort --sandbox read-only --budget 1000000 --gui
+  --sandbox read-only --budget 1000000 --gui
 ```
 
 ClaimCheck is a `2 + N`-agent **standard** harness, so it runs with
-**`--auto-effort`**: the N parallel verifiers get `high`, while the lone gates —
-Extract and the Ledger synthesis — get `xhigh`, since a weak output at either
-single-agent gate would sink the whole audit. Keep it **`--sandbox read-only`** so the
-skeptics read the repo but never edit it.
+**Model and effort**: inherited from the active Codex configuration.
 
 A **bare string** document works too:
 
 ```bash
 node runner/bin/run-workflow.js examples/harness-zoo/claim-check/claim-check.workflow.js \
   --args '"This project has zero dependencies and runs on Node 18+."' \
-  --frontier --auto-effort --sandbox read-only --budget 1000000
+  --sandbox read-only --budget 1000000
 ```
 
 Via the skill, just describe it:

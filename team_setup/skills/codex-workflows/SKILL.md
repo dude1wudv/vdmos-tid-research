@@ -49,19 +49,15 @@ Operating rules in this mode:
 
 ## Default execution checklist
 
-Every run, in order (the sections below expand each step):
+Every run, in order:
 
-1. **Preflight** Codex once (`handshake.js`); note the latest frontier model.
-2. **Compile** the rough intent: classify the job → scale → archetype → pattern
-   (name the failure mode it prevents) → task contract. **State your assumptions.**
-3. **Author** the script into the repo (`./<name>.workflow.js`).
-4. **Settings:** `--frontier` · effort by scale (`--effort medium` for a
-   `quick_harness`, `--auto-effort` for `standard`/`deep`) · `--sandbox read-only`
-   unless it must write · a bounded `--budget` · strict schemas (`additionalProperties:false`).
-5. **Size it** — run `--plan` first for any expensive or complex workflow.
-6. **Run** on the Codex runner (never the native `Workflow` tool).
-7. **Surface** — inline ASCII map + `summarize-run` highlights; cite the script,
-   journal, viewer, report, and run-summary paths (see *Output behavior*).
+1. **Preflight** Codex once (`handshake.js`).
+2. **Compile** the rough intent and state assumptions.
+3. **Author** the smallest useful workflow script.
+4. **Settings:** omit model and reasoning-effort overrides so Codex uses the active automatic/configured selection; set only sandbox, budget, and output schema as needed.
+5. **Size it** with `--plan` for expensive or complex workflows.
+6. **Run** on the Codex runner.
+7. **Surface** the script, journal, result, and concise run summary.
 
 ## Mode detection
 
@@ -94,50 +90,25 @@ In default rough-intent mode, do steps 1–2 **silently** and state your assumpt
 before authoring. The mechanics below — handshake, the run command, the inline map —
 are unchanged; steps 2 and 4 are where rough intent gets compiled.
 
-1. **Preflight** — once per session, or whenever a run fails to connect, confirm
-   Codex is reachable and authed:
+1. **Preflight** — once per session, or whenever a run fails to connect:
    ```bash
    node ~/.codex/skills/codex-workflows/runner/test/handshake.js
    ```
-   It prints `state: ready` and the available models. If it fails, tell the user
-   to run `codex login` (the runner needs a logged-in `codex` CLI on PATH).
-   From that list, note the **latest frontier model** — the newest, strongest
-   general model (highest `gpt-5.x`/successor that is not a `-mini`/`-spark`
-   variant; `model/list` flags it `isDefault` and its description calls it the
-   strongest). Today that is `gpt-5.5`. Every agent in the run uses it (see
-   *Model*).
+   It must report `state: ready`; otherwise ask the user to run `codex login`.
 
-2. **Compile** the rough intent into a workflow (see *Compiling rough intent into a
-   workflow*): classify the job → pick the scale → pick the archetype → pick the
-   pattern and name the failure mode it prevents → build the task contract → compose
-   the phases → cast the personas → apply the standards. **State the resulting
-   assumptions** to the user before authoring.
+2. **Compile** the rough intent into a workflow and state assumptions.
 
-3. **Author** a workflow script from that compile (see *Authoring*). Write it into
-   the user's project so they can read and rerun it — `./<name>.workflow.js`, or
-   `workflows/<name>.workflow.js` / `examples/harness-zoo/<name>/` for a reusable
-   harness. Scripts are plain JavaScript using only the injected globals (no imports).
+3. **Author** a plain JavaScript workflow in the user's project.
 
-4. **Choose run settings** (see *Run defaults*): `--frontier`, the effort flag for
-   the chosen scale (`--auto-effort` for a standard/deep harness, `--effort medium`
-   for a quick one), a read-only sandbox unless the run must write, and a bounded
-   `--budget`. For an expensive or complex workflow, **`--plan` first** — a no-token
-   dry run that counts agents per phase/effort and estimates a `--budget`.
+4. **Choose run settings:** omit model and reasoning-effort flags and omit per-agent
+   `model` / `effort`; Codex then uses the current automatic/configured selection.
+   Set sandbox and a bounded budget explicitly. Use `--plan` first when costly.
 
-5. **Run** it — **always pass `--frontier`**, plus the effort flag for the chosen
-   scale: `--auto-effort` for a standard/deep harness (it scales each agent's effort
-   to its layer's parallel width, so lone synthesis/judge gates think hardest), or
-   `--effort medium` for a quick harness (see *Effort*). `--frontier` pins every
-   agent to the latest frontier model (see *Model*):
+5. **Run** without model or effort overrides:
    ```bash
-   node ~/.codex/skills/codex-workflows/runner/bin/run-workflow.js <script.js> --frontier --auto-effort [other flags]
-   #   quick_harness:  … <script.js> --frontier --effort medium [other flags]
+   node ~/.codex/skills/codex-workflows/runner/bin/run-workflow.js <script.js> [other flags]
    ```
-   Progress streams on **stderr**; the workflow's return value prints as JSON on
-   **stdout**. Capture stdout for the result (`… 1>/tmp/result.json`) when it's
-   large. To **watch the run live**, add `--tui` (live ASCII map in a new terminal
-   window) and/or `--gui` (live HTML viewer in the browser) — see *Running → Live
-   monitoring*.
+   Progress streams on stderr and the workflow result prints on stdout.
 
 6. **Surface** the result to the user (see *Output behavior*) — summarize it,
    mention the script path, and **render the run's ASCII map inline in this
@@ -189,20 +160,11 @@ each bets on, per-run budgets) before launching. Two axes, freely mixed:
   vs a `sessionful_controller_loop` investigation, all aimed at the same goal.
   One script per variant.
 
-Split the user's overall budget across variants (status shows each run's
-spend against its ceiling). **Size read-heavy fan-outs realistically:** an
-agent whose job is *reading a repo/corpus* costs **~400–600k tokens
-regardless of its effort tier** — the input dominates, so `--effort low`
-does not make a sweep cheap, and `--plan`'s per-effort estimate undercounts
-it (measured: four "low" sweeps = 2.1M, 525k each, vs a 150k/agent plan
-estimate). At `xhigh` — which `--auto-effort` gives every sessionful worker's
-turns (width 1) — a reading turn runs **~1–1.5M** (measured: a walkthrough
-worker's first turn + one steer tripped a 2.5M ceiling). Budget ≈
-`readers × 500k + xhigh reading turns × 1.2M + non-readers × the plan
-estimate`, with headroom. A tripped ceiling is recoverable (`--resume` replays the
-prefix free) but costs a supervision round-trip. Apply the *Anti-overbuild
-rule* to the fleet too: 2 well-differentiated variants beat 4 redundant ones
-— every variant must bet on something the others don't.
+Split the user's overall budget across variants and size read-heavy fan-outs
+realistically. Use `--plan` as a lower-bound estimate, add headroom for agents that
+read large repositories or corpora, and recover interrupted runs with `--resume`.
+Apply the anti-overbuild rule to fleets too: two differentiated variants beat four
+redundant ones.
 
 ### 2 · Author for supervision
 
@@ -232,7 +194,7 @@ enables the answer channel headlessly):
 
 ```bash
 node ~/.codex/skills/codex-workflows/runner/bin/run-workflow.js hunt-orm.workflow.js \
-  --frontier --auto-effort --interactive --budget 1500000 1>hunt-orm.result.json
+  --interactive --budget 1500000 1>hunt-orm.result.json
 # same script, different slice → isolate with --run-id:
 node …/run-workflow.js hunt.workflow.js --args '{"slice":"auth"}' --run-id auth --interactive …
 ```
@@ -297,10 +259,8 @@ productization · goal hardening · run summarization · harness design.**
 **Rule: choose the smallest harness that can reliably solve the task** (see the
 *Anti-overbuild rule*).
 
-**Effort by scale:** a `quick_harness` runs at a flat **`--effort medium`** (or
-`--pin-effort medium`) — a small analytical run doesn't need layer-scaled effort.
-`standard_harness` and `deep_harness` run at **`--auto-effort`** (lone gates get
-`xhigh`, fan-outs floor at `high`). See *Run defaults* and *Effort*.
+**Model and reasoning effort:** every harness scale inherits the active Codex
+automatic/configured selection. Do not encode either value in the workflow.
 
 ### 3 · Pick the archetype
 
@@ -485,94 +445,23 @@ failure mode: don't turn "check my README for typos" into a 12-agent panel.
 
 ## Run defaults
 
-Policy for every run (flag *syntax* and precedence live in *Running* and *Effort* —
-this section is the policy, not the reference):
+| Situation | Setting |
+|-----------|---------|
+| Always | use the Codex runner, not the native `Workflow` tool |
+| Model and reasoning effort | omit overrides; inherit the active Codex automatic/configured selection |
+| Default sandbox | pass `--sandbox read-only` unless the run must write |
+| Writing or requested edits | use `--sandbox workspace-write` |
+| Cost | set a bounded `--budget`; use `--plan` first for expensive runs |
+| Structured output | use strict JSON schemas with `additionalProperties: false` |
 
-| Situation | Setting | Why |
-|-----------|---------|-----|
-| Always | the Codex runner, **not** the native `Workflow` tool | routes work to Codex/GPT, not Claude subagents |
-| Always | write the script into the repo | reproducible and rereadable |
-| Model | `--frontier` | one frontier model for every agent (see *Model*) |
-| Effort — `quick_harness` | `--effort medium` (or `--pin-effort medium`) | a small analytical run doesn't need layer-scaled effort; a flat, cheaper tier suffices |
-| Effort — `standard` / `deep` | `--auto-effort` | scales effort to layer width; lone synthesis/judge gates get `xhigh`, fan-outs floor at `high` |
-| Default sandbox | **`--sandbox read-only`** (pass it explicitly) | the runner's own default is `workspace-write` — don't rely on it |
-| Writing a report / running experiments / requested edits | `--sandbox workspace-write` | only when the run must write |
-| Never (unless explicitly requested **and** justified) | `--sandbox danger-full-access` | unsandboxed |
-| Cost | a bounded `--budget`, sized via `--plan` | hard ceiling; `--plan` estimates it |
-| Expensive / complex run | **`--plan` first** | no-token dry run before the live run |
-| Structured output | JSON schemas with `additionalProperties: false` | strict and parseable |
-| After the run | viewer via `view-run.js --open`; summary via `summarize-run.js` or `--summary` | inspect cost / shape |
+No workflow linter or `--concurrency` flag exists. Reduce fan-out in the script when needed.
 
-Three facts to encode correctly, since they're easy to get wrong:
+## Model and reasoning effort: inherit Codex
 
-- **No workflow linter exists** — the only pre-flight is **`--plan`**. Use it.
-- **No `--concurrency` flag exists** — concurrency is fixed at `min(16, cores−2)`.
-  Don't recommend one; if a run is resource / eval-bound, lower the fan-out width
-  in the script instead.
-- **`--summary` prints inline; `summarize-run.js --out PATH` writes a file** — use
-  the latter when you need a run-summary *path*. The HTML viewer is a *file* from
-  `view-run.js --open`; `--gui` is a *live window*, not a saved artifact.
-
-**Productization** (for reusable harnesses): parameterize with `args`; avoid
-hardcoded one-off paths; add a short README/usage note for a `harness-zoo` workflow;
-name it for future install into `.codex/workflows/`; keep the script plain
-JavaScript using only the injected globals (no imports / fs — agents do all I/O).
-
-## Model: one frontier model for every agent
-
-Use a **single model — the latest frontier model — for every agent in the run.**
-Do not mix models, and do not downgrade "cheap" or "simple" stages to a smaller
-or older model. The frontier model is the one identified at preflight (newest,
-strongest, `isDefault`; currently **`gpt-5.5`**) — never `gpt-5.4`/`gpt-5.2` or a
-`-mini`/`-spark` variant.
-
-Enforce it with **`--frontier`** (always pass it): the runner auto-detects the
-latest frontier model from `model/list` and pins **every** agent to it,
-**overriding any per-call `model`** a script sets. This is a hard guarantee — even
-if a script asks for `gpt-5.4`, `--frontier` forces it to the frontier and logs
-the override. (To pin a specific model instead, use `--pin-model gpt-5.5`.)
-
-Also good practice, though `--frontier` makes it non-essential: don't set a
-per-call `model` in scripts — leave `model` out of every `agent()` opts object.
-
-Need to bound cost? Lower effort (see below) and set `--budget` — do not switch models.
-
-## Effort: scale thinking to layer width
-
-Thinking effort is the second dial (after model). The principle: **the fewer
-agents run in parallel at a step, the more pivotal each one is, so the harder it
-should think.** A lone agent in its layer is almost always a critical *gate* — a
-consolidation, a judge/synthesis, a final report — where one weak output sinks the
-whole run; it earns maximum reasoning. A 12-wide persona fan-out is the opposite:
-each agent is one voice among many, and redundancy covers individual misses.
-
-**For a standard or deep harness, pass `--auto-effort`** (a small `quick_harness`
-runs at a flat `--effort medium` instead — see *Harness scale selector*). The runner
-reads each layer's parallel width (the number of thunks in a `parallel()`, or items
-in a `pipeline()` stage) and sets effort automatically:
-
-| Parallel agents in the layer | Effort  | Typical role |
-|------------------------------|---------|--------------|
-| **1** (lone)                 | `xhigh` | consolidate / judge / synthesize / report — critical gate |
-| **2+** (any fan-out)         | `high`  | floor — wide fan-outs still think hard |
-
-So in a forge-style run, the `consolidate`, `portfolio-judge`, and `report-writer`
-agents automatically get `xhigh`; every fan-out — the 3–4-wide pain/mechanism/
-recombination waves *and* the 12-persona / 8-critic layers alike — gets `high`.
-The floor is `high`; the policy never drops to `medium`. No per-agent bookkeeping.
-
-Precedence (highest first): **`--pin-effort E`** (force every agent to `E`) →
-a script's **per-call `effort`** → **`--auto-effort`** layer policy → flat
-**`--effort E`** → Codex config default. Because per-call effort overrides the
-policy, **do not hand-set `effort` in scripts** — leave it out and let
-`--auto-effort` govern; reserve a per-call `effort` for a rare, deliberate
-exception (e.g. forcing `xhigh` on one unusually hard agent *inside* a wide
-layer).
-
-Bound cost without touching the model: keep `--auto-effort` but add a `--budget`
-backstop, or drop everything a tier with `--pin-effort medium`. For a small
-`quick_harness`, flat **`--effort medium`** is the right default (cheaper, uniform);
-the layer-aware policy matters most for multi-phase standard/deep runs.
+Do not select a concrete model or reasoning effort in generated workflows. Omit
+per-agent `model` and `effort` fields and omit runner model/effort flags. The runner
+then leaves both values unset, so Codex uses the active automatic/configured
+selection. Only add an override when the user explicitly requests one for that run.
 
 ## Authoring (quick reference)
 
@@ -627,9 +516,8 @@ Globals:
   sessions for steerable/iterative work (see *4b · One-shot vs sessionful workers*).
 
 Key `agent()` opts: `schema` (JSON Schema → Codex `outputSchema`, result parsed),
-`model` (Claude ids/aliases auto-map to a Codex model), `agentType` (loads
-`.codex/agents/<name>.md` as the system prompt), `systemPrompt`, `effort`
-(usually omit — let `--auto-effort` scale it to layer width; see *Effort*),
+`model` and `effort` (both normally omitted so Codex chooses automatically),
+`agentType` (loads `.codex/agents/<name>.md` as the system prompt), `systemPrompt`,
 `sandbox` (`read-only` | `workspace-write` | `danger-full-access`), `isolation:
 'worktree'`, `cwd`, `personality`, `retries`, `label`, `phase` (group/attribute
 this agent — set it inside concurrent `pipeline`/`parallel` stages), `timeoutMs`.
@@ -645,76 +533,27 @@ ask many), `flaky-bug-perturbation` (hold + perturb live state), `hedged-take-fi
 
 ## Running
 
-```
+```text
 run-workflow <script.js>
-  --args JSON | --args-file PATH   value exposed to the script as `args`
-  --frontier       pin ALL agents to the auto-detected latest frontier model (recommended; overrides per-call model)
-  --pin-model M    pin ALL agents to model M (overrides per-call model)
-  --model M        fallback model when not pinned; Claude ids/aliases auto-map
-  --effort E       none|minimal|low|medium|high|xhigh; flat fallback; unset → Codex config default
-  --auto-effort    scale effort to layer width: 1→xhigh, 2+→high (floor) (recommended; overrides --effort)
-  --pin-effort E   force ALL agents to effort E (overrides per-call effort)
-  --sandbox S      read-only | workspace-write | danger-full-access  (default workspace-write)
-  --budget N       token ceiling backing budget.total / budget.remaining()
-  --budget-meter M what budget.spent() counts: total (default) | output (native pool)
-  --plan           dry run: count agents per phase/effort + estimate a --budget (no tokens)
-  --tui            open a LIVE ASCII map of the run in a new terminal window
-  --gui            open a LIVE HTML viewer of the run in your browser (--monitor = both)
-  --interactive    enable the human() answer channel headlessly — answered via
-                   fleet.js answer (a supervising agent) or the answers sidecar
-  --run-id NAME    suffix the default journal/sidecars so concurrent runs of the
-                   SAME script don't collide (fleet mode)
-  --notify-cmd C   run shell command C (detached, best-effort; event JSON in
-                   $WORKFLOW_EVENT) when a gate goes pending / the run ends;
-                   implies --interactive
-  --retries N      transient-error retries per agent (default 3)
-  --resume         reuse prior results from the journal (skip unchanged agents)
+  --args JSON | --args-file PATH
+  --sandbox read-only|workspace-write|danger-full-access
+  --budget N [--budget-meter total|output]
+  --plan
+  --tui | --gui | --monitor
+  --interactive
+  --run-id NAME
+  --retries N
+  --resume
   --journal PATH | --fresh | --no-journal
 ```
 
-- **Live monitoring (`--tui` / `--gui`)** — when the user wants to *watch* the run,
-  add `--tui` and/or `--gui`. The runner auto-opens a live monitor that tracks the
-  journal + event stream as the run progresses, showing **every agent (running +
-  done)** with constant updates: `--tui` opens the ASCII execution map in a new
-  terminal window; `--gui` opens the self-contained HTML viewer in the browser;
-  `--monitor` opens both. They run alongside the workflow (which still prints its
-  result JSON to stdout as usual), so pass them in addition to `--frontier
-  --auto-effort`. Both need journaling (not `--no-journal`). The `--gui` viewer
-  updates **in place** (no reload/flicker), shows each running agent's **streaming
-  output** in the drawer, and settles to the finished run automatically.
+Normal runs omit model and reasoning-effort options. Codex selects both from the
+active configuration. Keep sandbox and budget explicit. Use `--plan` before a
+costly run and `--resume` after interruption; completed journal entries replay
+without another model call.
 
-- **Cost** — a run can spawn many agents and use real tokens. Keep the single
-  frontier model (see *Model*) and bound cost with `--auto-effort` (already
-  cheaper on wide layers) plus a `--budget` backstop — **not** by downgrading to a
-  smaller model. To squeeze further, `--pin-effort low`. Use `--sandbox read-only`
-  unless agents must edit files.
-- **Sizing `--budget`** — it is a *hard ceiling that throws mid-run*, not an
-  advisory: size it for the **whole fan-out**, not one agent. Run **`--plan`**
-  first — a no-token dry run that counts agents per phase/effort and prints an
-  estimated `--budget` (a lower bound for fan-outs sized from agent output). Rule
-  of thumb: medium-effort frontier (`gpt-5.5`) spends **~0.3–0.5M tokens/agent**
-  (reasoning included), so an N-agent run wants `--budget ≈ N × 500k` with
-  headroom. (A 35-agent run blew past an 8M ceiling after only ~17 agents.)
-  **Read-heavy agents break the per-effort estimate**: an agent that reads a
-  repo/corpus costs ~400–600k *even at `--effort low`* (input dominates) — cost
-  those at ~500k each no matter the effort tier.
-  Tripping it isn't fatal — the CLI prints a ready-to-paste `--resume` command
-  with a higher ceiling, and the cached agents replay at 0 tokens.
-- **Effort (important)** — prefer **`--auto-effort`**, which sets each agent's
-  effort from its layer's parallel width (1→`xhigh`, 2+→`high`; the floor is
-  `high`; see *Effort*). Otherwise the runner only sends an effort when you set one (per-call
-  `effort` or `--effort`); when **nothing** is set, each agent inherits the Codex
-  config default — `model_reasoning_effort` in `~/.codex/config.toml`, currently
-  `xhigh` — so an effort-less workflow runs **every** agent at the highest tier
-  (slow and token-heavy across a fan-out). So for any multi-agent run, pass
-  `--auto-effort` (best) or at least a flat `--effort`; never leave effort
-  unspecified.
-- **Resume** — every run journals each completed `agent()` result. If a run is
-  interrupted or trips `--budget`, rerun with `--resume` (and the **same**
-  model + effort flags + sandbox) — completed agents return from cache (0 tokens)
-  and only the rest run. The effective effort is part of each agent's cache
-  identity, so toggling `--auto-effort`/`--pin-effort` between runs re-runs the
-  agents whose effort changed. `--fresh` discards the journal.
+Live monitors require journaling. `--tui` opens an ASCII map, `--gui` opens the
+HTML viewer, and `--monitor` opens both.
 
 ## Behaviors to know
 
@@ -722,11 +561,8 @@ run-workflow <script.js>
   coordinate agents, with no `process`/`fetch`/`require`/`import()`/`fs`/timers.
   The *agents* do all file/command I/O (via the Codex sandbox). Don't write a
   script that tries to read files itself — have an `agent()` do it.
-- **Model mapping** — a script that requests `claude-opus-4-8` or a bare
-  `opus`/`sonnet`/`haiku` is remapped to an available Codex model. Don't rely on
-  that: pin every agent with `--frontier` (or `--pin-model gpt-5.5`) — see
-  *Model*. (`--model` is only the *fallback* default; a per-call `model` in the
-  script overrides it, so it does NOT guarantee one model for every agent.)
+- **Model inheritance** — legacy provider aliases resolve to the Codex config
+  default instead of a hardcoded model. Generated workflows should omit `model`.
 - **Determinism** — `Math.random()`, `Date.now()`, and argless `new Date()` are
   blocked inside scripts (they'd desync resume). Pass values via `args`.
 - **Per-turn timeout, and "failed" ≠ "did nothing"** — each `agent()` turn must

@@ -15,7 +15,7 @@
 // would let it rationalize). That contrast is exactly when to use which.
 //
 //   node .../bin/run-workflow.js examples/stateful-dialogue.workflow.js \
-//     --frontier --sandbox read-only --budget 3000000 \
+//     --sandbox read-only --budget 3000000 \
 //     --args '{"subject":"Should service X adopt event sourcing?","roleA":"proponent","roleB":"skeptic","rounds":3}'
 //
 // Runs under --plan (bounded by the rounds count).
