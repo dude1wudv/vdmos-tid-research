@@ -1,0 +1,1 @@
+case_id,attempt_id,parent_run_id,phase,target_vce_v,actual_vce_v,let_mev_cm2_mg,let_pc_um,y_um,length_um,wt_um,s_s,time_end_s,mesh_variant,tmax_k,t1680_s,t2500_s,peak_ic_a_um,peak_power_w_um,status,run_dir,deck_sha256,mesh_sha256,plt_file,log_file,tdr_file,notes
