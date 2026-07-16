@@ -243,8 +243,9 @@ if ($null -eq $corePolicy.enabled -or $null -eq $corePolicy.reserved_cores -or $
 }
 if ($corePolicy.unmanaged_process_policy -ne 'exclude_affinity') { throw 'Unsupported unmanaged_process_policy; fail closed.' }
 $reservedCores = @($corePolicy.reserved_cores | ForEach-Object { [int] $_ })
-if ($reservedCores.Count -eq 0 -or @($reservedCores | Where-Object { $_ -lt 0 }).Count -gt 0) { throw 'reserved_cores must contain non-negative integers.' }
+if (@($reservedCores | Where-Object { $_ -lt 0 }).Count -gt 0) { throw 'reserved_cores must contain only non-negative integers.' }
 $policyReservedCsv = $reservedCores -join ','
+$policyReservedQuoted = if ([string]::IsNullOrEmpty($policyReservedCsv)) { "''" } else { ConvertTo-PosixQuoted $policyReservedCsv }
 $policyLeaseRoot = [string] $corePolicy.lease_root
 $policyMaxSlots = [int] $corePolicy.max_managed_slots
 $policyLockTimeout = [int] $corePolicy.lock_timeout_seconds
@@ -455,7 +456,7 @@ exit 0
     $remoteCommand = $remoteCommand.Replace('__BIN_DIR__', (ConvertTo-PosixQuoted "$SentaurusRoot/bin"))
     $remoteCommand = $remoteCommand.Replace('__LEASE_SCRIPT__', (ConvertTo-PosixQuoted $remoteLeaseScript))
     $remoteCommand = $remoteCommand.Replace('__LEASE_ROOT__', (ConvertTo-PosixQuoted $policyLeaseRoot))
-    $remoteCommand = $remoteCommand.Replace('__RESERVED_CORES__', (ConvertTo-PosixQuoted $policyReservedCsv))
+    $remoteCommand = $remoteCommand.Replace('__RESERVED_CORES__', $policyReservedQuoted)
     $remoteCommand = $remoteCommand.Replace('__MAX_MANAGED_SLOTS__', [string]$policyMaxSlots)
     $remoteCommand = $remoteCommand.Replace('__LOCK_TIMEOUT__', [string]$policyLockTimeout)
     $remoteCommand = $remoteCommand.Replace('__RUN_DIR__', (ConvertTo-PosixQuoted $remoteRunDir))

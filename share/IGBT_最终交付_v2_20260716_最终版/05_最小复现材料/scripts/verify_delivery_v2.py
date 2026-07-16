@@ -229,7 +229,7 @@ def main() -> int:
         fail("delivery_summary MOSFET boundary is missing or incorrect")
     if summary_data.get("low_let_scope") != "diagnostic_only/MESH_SENSITIVE appendix":
         fail("delivery_summary low-LET boundary is missing or incorrect")
-    if summary_data.get("redesign_650v_scope") != "PENDING; no new static/HeavyIon numerical evidence":
+    if summary_data.get("redesign_650v_scope") != "PENDING / FAILED_NUMERICAL_ONLY / CANCELLED_BY_SCOPE_CHANGE status appendix; no new 550 V SDevice result":
         fail("delivery_summary 650 V boundary is missing or incorrect")
     print(json.dumps({"delivery_directory": directory, "archive": archive, "gzp": gzp, "summary": "PASS"}, ensure_ascii=False, indent=2))
     return 0
