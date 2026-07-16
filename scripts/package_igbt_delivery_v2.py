@@ -64,6 +64,9 @@ def sanitize(text: str) -> str:
         text = text.replace(old, new)
     # Source-code string literals contain escaped Windows separators.
     text = text.replace("C:\\\\Users\\\\sun\\\\", "<HOST_USER_ROOT>\\\\")
+    # Absolute source links are provenance pointers, not package links. Keep
+    # them as an explicit non-navigational marker after path redaction.
+    text = re.sub(r"\\]\\((?:<REPOSITORY_ROOT>|<HOST_USER_ROOT>)[^)]*\\)", "](#source-provenance-not-included)", text)
     return text
 
 

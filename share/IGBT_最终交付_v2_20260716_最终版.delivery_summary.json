@@ -1,9 +1,9 @@
 {
   "schema": "igbt_final_delivery_summary/v2",
-  "created_utc": "2026-07-16T11:09:09.202077+00:00",
+  "created_utc": "2026-07-16T11:11:29.460703+00:00",
   "share_directory": "share/IGBT_最终交付_v2_20260716_最终版",
   "zip_relative_path": "share/IGBT_最终交付_v2_20260716_最终版.zip",
-  "zip_sha256": "58ad41e15199c572dc94fe3c97f1fb8131bbb1b824584bc6c4369a2cde3d80cd",
+  "zip_sha256": "21571bf92fd8d2eb44f113876e6598e820c1a36bd2d870a037cc41a5b47b8edd",
   "zip_size_bytes": 15064447,
   "gzp_relative_path": "01_IGBT可继续仿真工程/IGBT_SEB_20260714_Final_Continuation.gzp",
   "gzp_sha256": "30a49adba4b5e50b823e39d98f84915f4a02462044c33269f1280831bd0ffa2c",
