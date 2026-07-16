@@ -1,0 +1,1 @@
+summary_scope,case_id,run_id,device_family,high_terminal_name,bias_quantity,target_blocking_voltage_v,actual_blocking_voltage_v,rated_voltage_v,bv_static_v,bv_criterion,derating_basis,termination_reason,lifecycle,exit_code,wall_time_seconds,local_run_dir

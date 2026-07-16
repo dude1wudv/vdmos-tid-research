@@ -1,0 +1,93 @@
+{
+  "schema_version": "igbt_seb_r2_locked_sidecar/v1",
+  "thermal_variant_id": "R2_ELECTRICAL_LOCKED_TEMPERATURE_FIELD",
+  "run_id": "A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443",
+  "lifecycle": "SUCCEEDED",
+  "exit_code": 0,
+  "time_end_s": 6e-08,
+  "source_plt": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/transient_r2_locked300.plt",
+  "plt_sample_count": 148,
+  "r2_electrical_long_csv": "docs/changes/2026-07-13-igbt-seb-现有数据复盘/data/r2_thermal_electrical_long.csv",
+  "r2_electrical_long_row_count": 148,
+  "plt_variables_used": [
+    "time",
+    "Collector InnerVoltage",
+    "Collector TotalCurrent"
+  ],
+  "plt_tmax": "ABSENT",
+  "temperature_delivery": "TDR_frozen_field",
+  "temperature_equation_not_solved": true,
+  "temperature_equation": "NOT coupled in transient solves: Coupled {Poisson Electron Hole}",
+  "tdr_temperature_snapshots": [
+    {
+      "checkpoint_id": "pre",
+      "time_s": 0.0,
+      "time_ns": 0.0,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_pre_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    },
+    {
+      "checkpoint_id": "0.4ns",
+      "time_s": 4e-10,
+      "time_ns": 0.4,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_0p4ns_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    },
+    {
+      "checkpoint_id": "10ns",
+      "time_s": 1e-08,
+      "time_ns": 10.0,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_10ns_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    },
+    {
+      "checkpoint_id": "40ns",
+      "time_s": 4e-08,
+      "time_ns": 40.0,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_40ns_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    },
+    {
+      "checkpoint_id": "50ns",
+      "time_s": 5e-08,
+      "time_ns": 50.0,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_50ns_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    },
+    {
+      "checkpoint_id": "60ns",
+      "time_s": 6e-08,
+      "time_ns": 59.99999999999999,
+      "source_tdr": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R2_thermo_locked_300_to60__20260713T093117597Z__4c085443/artifacts/field_60ns_des.tdr",
+      "temperature_variable": "LatticeTemperature",
+      "tmin_k": 300.0,
+      "frozen_field_tmax_k": 324.6332156891672,
+      "temperature_delivery": "TDR_frozen_field",
+      "interpretation": "Frozen loaded field; do not use as dynamic Tmax or ΔT."
+    }
+  ],
+  "interpretation_boundary": "Frozen TDR field provides a loading-state audit only. It is not a transient temperature solution; no R2 dynamic Tmax, ΔT, or thermal derivative is reported.",
+  "diagnostic_only": true,
+  "mesh_status": "MESH_SENSITIVE",
+  "a01_status": "INDETERMINATE"
+}

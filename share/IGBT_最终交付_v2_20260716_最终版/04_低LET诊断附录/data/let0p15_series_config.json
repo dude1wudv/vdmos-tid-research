@@ -1,0 +1,16 @@
+[
+  {
+    "series_id": "thermal_steady",
+    "label": "Thermal-steady initial state",
+    "color": "#111111",
+    "temperature_color": "#D55E00",
+    "path": "docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let0p15_thermal_raw.csv"
+  },
+  {
+    "series_id": "cold300_nonsteady",
+    "label": "300 K cold initial state",
+    "color": "#0072B2",
+    "temperature_color": "#E69F00",
+    "path": "docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let0p15_cold300_raw.csv"
+  }
+]

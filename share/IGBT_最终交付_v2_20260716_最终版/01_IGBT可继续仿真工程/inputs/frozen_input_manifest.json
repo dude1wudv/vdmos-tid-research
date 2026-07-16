@@ -1,0 +1,57 @@
+{
+  "schema": "igbt_mosfet_seb_frozen_inputs/v1",
+  "campaign": "igbt_mosfet_seb_paper_20260714",
+  "created_on": "2026-07-14",
+  "formal_voltage_boundary": "ideal_voltage_electrode",
+  "forbidden_formal_sources": [
+    "local_runtime/igbt_bv_first_round_source",
+    "any Rc=1e11 result",
+    "any 2500 V A01 result"
+  ],
+  "inherited_sources": [
+    {
+      "role": "451.15um_geometry_doping_mesh_strategy",
+      "path": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt01/sde_seb.cmd",
+      "sha256": "465d8aff50f020c570d0772fa339b54a25d4f141dc74245b019e6243794680d2",
+      "formal_result": false
+    },
+    {
+      "role": "heavyion_and_native_save_load_style",
+      "path": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/case.cmd",
+      "sha256": "eb8781479988f847e1749643377463cd59f9dd0371efb70ed7d0ad4f9c7a324c",
+      "formal_result": false
+    },
+    {
+      "role": "sdevice_parameter_baseline",
+      "path": "local_runtime/igbt_seb_full_20260712_035027/baseline_snapshot/sdevice.par",
+      "sha256": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+      "formal_result": false
+    }
+  ],
+  "frozen_heavy_ion": {
+    "let_mev_cm2_mg": 15.0,
+    "let_f_pc_um": 0.1555,
+    "start_um": [
+      0.0,
+      3.5
+    ],
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "length_um": 50.0,
+    "wt_hi_um": 0.1,
+    "strike_time_s": 1e-10,
+    "exact_output_time_s": 2.1e-09,
+    "post_strike_label": "注入后 2.000 ns"
+  },
+  "derived_mosfet_only_changes": {
+    "bottom_depth_um": 0.5,
+    "peak_cm3": 5e+19,
+    "contact": "Collector->Drain",
+    "dopant": "BoronActiveConcentration->ArsenicActiveConcentration",
+    "all_other_geometry_mesh_physics_thermal_heavyion": "frozen"
+  },
+  "runtime_root": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714",
+  "remote_root": "<REMOTE_PRIVATE_ROOT>/codex_runs/igbt_mosfet_seb_paper_20260714"
+}

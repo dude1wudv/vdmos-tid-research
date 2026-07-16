@@ -1,0 +1,365 @@
+{
+  "schema_version": "650v_device_parameter_dsl/v1",
+  "structure_id": "mosfet_650v_superjunction_reference_model",
+  "device_family": "MOSFET",
+  "rated_voltage_v": 650,
+  "publication_profile": "650v_commercial_comparison_pending_calibration",
+  "datasheet_target": {
+    "part": "IPDQ65R099CFD7",
+    "manufacturer": "Infineon Technologies",
+    "official_product_url": "https://www.infineon.com/part/IPDQ65R099CFD7",
+    "facts": [
+      "VDS max 650 V",
+      "RDS(on) max 99 mOhm at VGS=10 V and Tj=25 C",
+      "ID max 29 A",
+      "VGS(th) 3.5 V to 4.5 V"
+    ],
+    "scope_note": "公开数据表仅作电学目标；二维 SJ 模型不是专有 CoolMOS 单元的复制。"
+  },
+  "gate_contact": {
+    "electrode_model": "n_type_polysilicon",
+    "material": "PolySi",
+    "conductivity_type": "N",
+    "source_evidence": "Sentaurus W-2024.09 Power/MOSFET_SuperJunction applies Material=PolySi(N) to the gate electrode; required to preserve the seed contact work-function semantics"
+  },
+  "static_targets": {
+    "temperature_k": 298.15,
+    "vth": {
+      "min_v": 3.5,
+      "typ_v": 4.0,
+      "max_v": 4.5,
+      "criterion_current_a": 0.00048,
+      "bias_relation": "VDS=VGS"
+    },
+    "conduction": {
+      "gate_voltage_v": 10.0,
+      "current_a": 9.7,
+      "typ_resistance_ohm": 0.087,
+      "max_resistance_ohm": 0.099
+    },
+    "off_leakage": {
+      "blocking_voltage_v": 650.0,
+      "max_current_a": 8e-06
+    }
+  },
+  "candidate_freeze": {
+    "status": "FROZEN_REFERENCE_MODEL_STATIC_MESH_TRACK_PASSED_HEAVYION_AUTHORIZED",
+    "candidate_id": "mosfet_attempt24_sj_scale_0p8",
+    "candidate_values": {
+      "sj_pillar_doping_scale": 0.8
+    },
+    "baseline_mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+    "baseline_run_set": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/baseline_candidates_igbt300us_mosfet_attempt24.json",
+    "baseline_extraction": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+    "scope_note": "baseline 四静态门通过；refined-v1 的 Vth 差 0.118263 V 历史失败保留。refined-v2-local 在固定 baseline AreaFactor 下完成三级趋势并通过不变阈值，四静态案和调度证据均闭合。六份既有 TDR 已完成关断场复核，轨迹按 500 V ImpactIonization 敏感标记冻结且不是 seed track。该结构仍只是参考模型，HeavyIon 仍须由精确哈希绑定的独立证据显式授权。"
+  },
+  "parameters": {
+    "drift_thickness": {
+      "seed_value": 45.0,
+      "candidate_value": 64.0,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "attempt16 reached the 1e-6 A/um criterion at 629.6 V with peak impact ionization still inside the drift at x=56.0 um; retain 64 um and test balanced pillar-density scaling instead of further thickness growth",
+      "confidence": "high",
+      "calibration_status": "CANDIDATE_RETAINED_BUT_BV_NOT_PASSED"
+    },
+    "n_pillar_donor_concentration": {
+      "seed_value": 5500000000000000.0,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "SJ charge-balance seed assumption",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "p_pillar_acceptor_concentration": {
+      "seed_value": 5500000000000000.0,
+      "candidate_value": 1.8333333333333332e+16,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "attempt13 charge-balance candidate derived from NA*Wp=ND*pitch with ND=5.5e15 cm^-3, pitch=6.0 um, and Wp=1.8 um; this is a reference-model calibration value, not a datasheet fact",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_ATTEMPT13_PENDING"
+    },
+    "sj_pillar_doping_scale": {
+      "seed_value": 1.0,
+      "candidate_value": 0.8,
+      "final_value": null,
+      "unit": "ratio",
+      "source_evidence": "attempt24 scale 0.8 is bound to the successful baseline run set: BV 824.279280 V, Vth 4.012162 V, RDSon 0.087 ohm, and 650 V leakage 7.3603472e-6 A. refined-v1 fixed-baseline-AreaFactor Vth shifted by 0.118263 V and remains a preserved FAILED history. refined-v2-local produced Vth 3.856898 V; its v1-to-v2 shift is 0.0369998 V with estimated remaining error 0.0168462 V, while BV, conduction, leakage, four static gates, and scheduler evidence all pass the unchanged contract.",
+      "confidence": "high",
+      "calibration_status": "FROZEN_REFERENCE_MODEL_STATIC_MESH_V2_PASSED_TRACK_PENDING"
+    },
+    "pillar_pitch": {
+      "seed_value": 6.0,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "SJ reference-model assumption",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "p_pillar_width": {
+      "seed_value": 1.8,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "candidate 0.9 um rejected: the physical 1e-6 A/um criterion regressed from 63.44 V to 59.74 V in run MOSFET650_BV__candidate_attempt11_p_pillar_width_0p9__20260715T163421611Z__e48ba83b",
+      "confidence": "low",
+      "calibration_status": "REJECTED_CANDIDATE_RESTORED_TO_SEED"
+    },
+    "p_pillar_drain_setback": {
+      "seed_value": 0.0,
+      "candidate_value": 1.5,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "attempt14 moved peak impact ionization from x=44.296875 um beside the drain to x=37.96875 um inside the drift region while BV remained 563.7 V; retain 1.5 um as a topology correction, not as a BV gain",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_RETAINED_TOPOLOGY_CORRECTION"
+    },
+    "gate_oxide_thickness": {
+      "seed_value": 0.06,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "0.06 um reference-model assumption; attempt19 wires this existing DSL value into SDE after audit found the prior polygon hardcoded to a nonuniform ~0.02-0.09 um envelope",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_IMPLEMENTATION_CORRECTION_PENDING_STATIC_GATES"
+    },
+    "body_implant_y_start": {
+      "seed_value": 3.0,
+      "candidate_value": 2.86,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "attempt20 aligns the P-body surface implant start with the corrected 0.06 um oxide outer edge at y=2.86 um; attempt19 doping audit measured only ~5.7e15 cm^-3 net acceptor at y=2.9 um. The earlier 2.7 um candidate predated SJ charge-balance and oxide-contract corrections and remains rejected as a non-equivalent structure.",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_ATTEMPT20_RETAINED_VTH_2P61V"
+    },
+    "body_peak_acceptor_concentration": {
+      "seed_value": 1.5e+17,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "attempts21-23 were rejected: increasing P-body peak shifted the raw transfer curve but collapsed datasheet-point conduction and made AreaFactor physically implausible. Restore 1.5e17 cm^-3 and tune Vth with orthogonal interface charge.",
+      "confidence": "high",
+      "calibration_status": "REJECTED_CANDIDATES_RESTORED_TO_SEED"
+    },
+    "interface_fixed_charge_concentration": {
+      "seed_value": 0.0,
+      "candidate_value": -500000000000.0,
+      "final_value": null,
+      "unit": "cm^-2",
+      "source_evidence": "first-order Cox estimate for the corrected 0.06 um oxide: negative fixed charge should shift the body-aligned Vth from 2.61 V toward the 4 V typical target while preserving P-body conduction and strict SJ charge balance; syntax follows the Sentaurus TrenchGateNMOS_Ron_BV interface contract",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_INTERFACE_CHARGE_ATTEMPT01_PENDING"
+    },
+    "body_implant_y_end": {
+      "seed_value": 5.2,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "candidate 4.6 um rejected: MOSFET BV current criterion occurred at 0.198 V in run MOSFET650_BV__candidate_attempt06_body_implant_y_end_4p6__20260715T153353705Z__b4cb4528",
+      "confidence": "low",
+      "calibration_status": "REJECTED_CANDIDATE_RESTORED_TO_SEED"
+    },
+    "source_implant_y_end": {
+      "seed_value": 4.2,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "seed source implant extent retained",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "gate_corner_radius": {
+      "seed_value": 0.0,
+      "candidate_value": 0.2,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "0.2 um learned-reference fillet converted the 51.71 V numerical failure into a physical 1e-6 A/um criterion at 63.44 V in run MOSFET650_BV__candidate_attempt07_gate_corner_radius_0p2__20260715T155352640Z__9da6bd9d",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_RETAINED_BUT_BV_NOT_PASSED"
+    },
+    "body_implant_depth": {
+      "seed_value": 2.0,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "candidate 1.2 um rejected: the physical 1e-6 A/um criterion moved from 63.44 V to 61.32 V in run MOSFET650_BV__candidate_attempt08_body_implant_depth_1p2__20260715T160938652Z__a69b50fd",
+      "confidence": "medium",
+      "calibration_status": "REJECTED_CANDIDATE_RESTORED_TO_SEED"
+    },
+    "interface_mobility_model": {
+      "seed_value": "Lombardi",
+      "final_value": null,
+      "unit": "model",
+      "source_evidence": "Si/SiO2 interface mobility contract",
+      "confidence": "medium",
+      "calibration_status": "PENDING_VTH_RDS_CALIBRATION"
+    },
+    "track_x": {
+      "seed_value": 3.0,
+      "final_value": 3.2,
+      "unit": "um",
+      "source_evidence": "500 V verified-mesh ImpactIonization localization; start is 0.01 um beyond the x=3.19 um Si/Oxide tip. Evidence: field_track_localization_v2.json SHA-256 880ca5633509b92ab662c5c603202807dc89df1f631c832022981b2133a12e7e",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_y": {
+      "seed_value": 4.0,
+      "final_value": 5.99,
+      "unit": "um",
+      "source_evidence": "500 V ImpactIonization maximum is at y=6.0 um; the frozen path is clamped by the recorded 0.01 um strict-Silicon interior margin on run MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_length": {
+      "seed_value": 45.0,
+      "final_value": 60.79,
+      "unit": "um",
+      "source_evidence": "strict-interior depth path from x=3.20 to x=63.99 um on the 64 um verified refined-v2-local mesh",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_direction": {
+      "seed_value": [
+        0.0,
+        1.0
+      ],
+      "final_value": [
+        1.0,
+        0.0
+      ],
+      "unit": "unit_vector",
+      "source_evidence": "device-depth direction aligned with the strict-interior Silicon path and verified field cutline; replaces the geometry-invalid seed direction",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    }
+  },
+  "mesh_consistency_contract": {
+    "schema_version": "650v_static_mesh_contract/v1",
+    "comparison": "same frozen physical candidate and identical static decks/parameters; only SDE mesh controls change",
+    "area_factor_policy": "use baseline AreaFactor unchanged for refined Vth, conduction, and 650 V leakage comparisons; refined self-calibrated AreaFactor is diagnostic only",
+    "bv_policy": "first raw high-terminal InnerVoltage sample whose absolute eCurrent+hCurrent reaches 1e-6 A/um; solver failure is never BV",
+    "profiles": {
+      "baseline": {
+        "global_size_um": [
+          2.0,
+          1.0,
+          0.1,
+          0.1
+        ],
+        "active_size_um": [
+          0.4,
+          0.2,
+          0.02,
+          0.02
+        ],
+        "offset_maxlevel": 6,
+        "interface_hlocal_um": 0.003,
+        "interface_factor": 1.5
+      },
+      "refined": {
+        "global_size_um": [
+          1.0,
+          0.5,
+          0.05,
+          0.05
+        ],
+        "active_size_um": [
+          0.2,
+          0.1,
+          0.01,
+          0.01
+        ],
+        "offset_maxlevel": 7,
+        "interface_hlocal_um": 0.0015,
+        "interface_factor": 1.5
+      },
+      "refined_v2": {
+        "global_size_um": [
+          0.5,
+          0.25,
+          0.025,
+          0.025
+        ],
+        "active_size_um": [
+          0.1,
+          0.05,
+          0.005,
+          0.005
+        ],
+        "offset_maxlevel": 8,
+        "interface_hlocal_um": 0.00075,
+        "interface_factor": 1.5
+      },
+      "refined_v2_local": {
+        "global_size_um": [
+          1.0,
+          0.5,
+          0.05,
+          0.05
+        ],
+        "active_size_um": [
+          0.1,
+          0.05,
+          0.005,
+          0.005
+        ],
+        "offset_maxlevel": 7,
+        "interface_hlocal_um": 0.0015,
+        "interface_factor": 1.5
+      }
+    },
+    "thresholds": {
+      "bv_relative_max": 0.02,
+      "vth_absolute_v_max": 0.1,
+      "conduction_relative_max": 0.05,
+      "off_leakage_relative_max": 0.1
+    },
+    "pass_requirements": [
+      "all refined datasheet static gates pass",
+      "all four baseline/refined deltas are within threshold",
+      "all eight refined runs are successful leased one-thread SDevice runs",
+      "each device run set binds one immutable refined mesh hash"
+    ],
+    "rationale": "BV uses a 2% discretization bound; Vth uses a 0.1 V absolute bound; conduction allows 5%; leakage allows 10% because it is a sub-pA/um interpolated quantity. Missing or non-finite evidence fails closed."
+  },
+  "physics_contract": [
+    "Thermodynamic",
+    "high-field mobility",
+    "SRH",
+    "Auger",
+    "Avalanche",
+    "Si/SiO2 interface mobility",
+    "Si/Oxide interface fixed-charge calibration",
+    "SJ charge balance",
+    "body diode"
+  ],
+  "static_gates": {
+    "bv": "PASSED",
+    "vth": "PASSED",
+    "conduction": "PASSED",
+    "off_leakage": "PASSED",
+    "mesh_consistency": "PASSED",
+    "heavy_ion_authorized": true,
+    "baseline_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+    "refined_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_v2_local_extraction.json",
+    "mesh_consistency_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency_v2.json",
+    "refined_v1_mesh_consistency_failure": {
+      "status": "FAILED_HISTORY_RETAINED",
+      "metric": "vth_absolute_v",
+      "baseline": 4.012161559996825,
+      "refined_v1": 3.8938981091184983,
+      "delta": 0.11826345087832646,
+      "threshold": 0.1,
+      "evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency.json"
+    },
+    "refined_v2_mesh_consistency": {
+      "status": "PASSED",
+      "refined_v2": 3.856898348408629,
+      "v1_to_v2_delta": 0.0369997607098691,
+      "estimated_remaining_error": 0.01684617434612834,
+      "evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency_v2.json"
+    },
+    "combined_campaign_gate": "AUTHORIZED_EXACT_BOUND_EVIDENCE",
+    "bv_criterion": "I(Drain) >= 1e-6 A/um during monotonic off-state ramp; first raw high-terminal InnerVoltage sample",
+    "authorization_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/heavy_ion_authorization.json"
+  }
+}

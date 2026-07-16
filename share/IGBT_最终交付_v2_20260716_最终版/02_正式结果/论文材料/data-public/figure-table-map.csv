@@ -1,0 +1,12 @@
+figure_or_table_id,type,title,data_source,artifact_kind,interpretation_boundary
+F01,figure,有界AI-TCAD端到端流程,工作流边界与证据图,新绘制SVG,是流程规格不是运行时间数据
+F02,figure,失败—恢复漏斗,failure-taxonomy.csv,新绘制SVG,事件类别可重叠且不构成成功率
+F03,figure,事件与attempt谱系,公开事件/尝试摘要,新绘制SVG,只展示典型链不替代全账本
+F04,figure,资源租约与执行边界,核心策略与包装器记录字段,新绘制SVG,机制存在不等于逐run合规已证实
+F05,figure,证据门控图,stage-evidence.csv与claims.csv,新绘制SVG,7月11与7月14不可合并为同一成功率
+F06,figure,2.1ns数值比较图,2026-07-14 data/campaign_2ns_numerical_comparison_figure_data.csv,既有sidecar数值图,不是SVisual空间场
+F07,figure,2.1ns晶格温度对照,2026-07-14 TDR+metadata,既有真实SVisual空间场,只作空间场展示不从截图取数
+T01,table,过程指标,stage-evidence.csv,Markdown表,明确分母与日期
+T02,table,A01负结果与门控,case_summary/tuning_steps,Markdown表,不得改写为SEB分类
+T03,table,7月14生产验收,case_acceptance.csv,Markdown表,固定模型短瞬态验收
+T04,table,主张对抗审计,claims.csv,Markdown表,每条含禁止外推与缺口

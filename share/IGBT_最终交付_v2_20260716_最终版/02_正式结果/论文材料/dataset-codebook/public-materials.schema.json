@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-assisted TCAD public material manifest",
+  "type": "object",
+  "required": ["package_version", "datasets", "privacy"],
+  "properties": {
+    "package_version": {"type": "string"},
+    "datasets": {"type": "array", "items": {"type": "object", "required": ["path", "primary_key", "provenance"], "properties": {"path": {"type": "string", "pattern": "^(data-public|figures|tables)/"}, "primary_key": {"type": "string"}, "provenance": {"type": "string"}, "access": {"enum": ["public", "restricted"]}}}},
+    "privacy": {"type": "object", "required": ["credentials_included", "absolute_private_paths_included"], "properties": {"credentials_included": {"const": false}, "absolute_private_paths_included": {"const": false}}}
+  }
+}

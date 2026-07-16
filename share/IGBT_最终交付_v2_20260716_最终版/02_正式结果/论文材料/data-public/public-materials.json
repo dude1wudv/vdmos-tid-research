@@ -1,0 +1,12 @@
+{
+  "package_version": "0.2-final-delivery-boundaries",
+  "datasets": [
+    {"path": "data-public/claims.csv", "primary_key": "claim_id", "provenance": "7/11 and 7/14 public reports/CSVs", "access": "public"},
+    {"path": "data-public/stage-evidence.csv", "primary_key": "stage_id", "provenance": "derived counts with denominators", "access": "public"},
+    {"path": "data-public/artifact-links.csv", "primary_key": "event_id+attempt_id+artifact_id+claim_id", "provenance": "7/11 public ledgers", "access": "public"},
+    {"path": "data-public/lineage.csv", "primary_key": "stage_id+claim_id+run_id+artifact_id", "provenance": "7/11 public ledgers plus 7/14 case acceptance and 650 V/low-LET boundary records", "access": "public"},
+    {"path": "data-public/failure-taxonomy.csv", "primary_key": "failure_id", "provenance": "7/11 evidence summaries", "access": "public"},
+    {"path": "data-public/figure-table-map.csv", "primary_key": "figure_or_table_id", "provenance": "package figure/table specifications", "access": "public"}
+  ],
+  "privacy": {"credentials_included": false, "absolute_private_paths_included": false}
+}

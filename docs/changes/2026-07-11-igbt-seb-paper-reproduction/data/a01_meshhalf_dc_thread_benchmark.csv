@@ -1,0 +1,4 @@
+attempt_id,threads,wall_budget_s,last_converged_vce_v,successful_steps,newton_retries,wall_per_v_s_v,cpu_user_s,max_rss_kb,trajectory_equivalent,decision
+attempt13_meshhalf_dcbench_t1,1,300,0.3125,4,3,960.13,292.06,2154880,true,selected_lowest_resource
+attempt14_meshhalf_dcbench_t2,2,300,0.3125,4,3,960.16,331.99,2172216,true,rejected_slower
+attempt15_meshhalf_dcbench_t4,4,300,0.3125,4,3,960.13,355.57,2178216,true,rejected_slower

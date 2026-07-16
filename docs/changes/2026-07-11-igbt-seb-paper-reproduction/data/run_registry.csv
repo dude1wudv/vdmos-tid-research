@@ -1,0 +1,2 @@
+run_id,execution_mode,worker_id,case_id,attempt_id,parent_run_id,lifecycle,started_at,ended_at,staging_manifest_sha256,merge_status,merged_at,merged_by
+DIAGNOSTIC_CLOSURE--A01_v2500_let15_y3p5--attempt18_meshhalf_transient_to60--legacy,DIAGNOSTIC_CLOSURE,legacy_attempt18_closure,A01_v2500_let15_y3p5,attempt18_meshhalf_transient_to60,A01_v2500_let15_y3p5__attempt17_meshhalf_dc_from500,SUCCEEDED,2026-07-12T18:44:31+08:00,2026-07-12T21:17:44+08:00,29059d501417d5c9eee2f07c29243ac51224cc49fe3c3214fd7f2a12beed2146,MERGED,2026-07-12T22:10:15.5348068+08:00,main

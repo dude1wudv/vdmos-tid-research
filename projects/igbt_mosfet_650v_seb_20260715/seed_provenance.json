@@ -1,0 +1,21 @@
+{
+  "sentaurus_version": "W-2024.09",
+  "copied_at_utc": "2026-07-15T13:31:00Z",
+  "policy": "Synopsys original files are private runtime learning seeds only and are not tracked.",
+  "seeds": [
+    {
+      "device": "IGBT",
+      "source_path": "/usr/synopsys/sentaurus/W-2024.09/tcad/W-2024.09/Applications_Library/Power/IGBT_TrenchFieldStop",
+      "local_runtime_path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/seed_IGBT_TrenchFieldStop",
+      "copied_tree_sha256": "8dc278d50c7e56667ed8b365a9d2a39afd303704c7ef34c97fc2828ee1a7ca21",
+      "derivation": "topology/physics learning seed; no original file is tracked; independent IGBT DSL is rendered separately"
+    },
+    {
+      "device": "MOSFET",
+      "source_path": "/usr/synopsys/sentaurus/W-2024.09/tcad/W-2024.09/Applications_Library/Power/MOSFET_SuperJunction",
+      "local_runtime_path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/seed_MOSFET_SuperJunction",
+      "copied_tree_sha256": "f63875b137a398d31dc454aedae9ec0ad177c5247cb0389f2d17668f83c82640",
+      "derivation": "topology/physics learning seed; no original file is tracked; independent SJ MOSFET DSL is rendered separately"
+    }
+  ]
+}

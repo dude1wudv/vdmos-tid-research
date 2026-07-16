@@ -1,0 +1,8 @@
+case_id,device_family,device_role,t_init_k,target_vce_v,v_gate_v,v_emitter_source_v,let_mev_cm2_mg,let_f_pc_um,track_x_um,track_y_um,direction_x,direction_y,length_um,wt_hi_um,strike_time_s,total_time_s,post_strike_time_s,mesh_variant,parent_restart_id,run_class,shared_reference,preregistered_status
+IGBT_T243_V550_L15,IGBT,reference_structure,243.15,550,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T243_V550_L15_restart,paper_main,false,PLANNED
+IGBT_T298_V550_L15,IGBT,reference_structure,298.15,550,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T298_V550_L15_restart,paper_main,true,PLANNED
+IGBT_T323_V550_L15,IGBT,reference_structure,323.15,550,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T323_V550_L15_restart,paper_main,false,PLANNED
+IGBT_T343_V550_L15,IGBT,reference_structure,343.15,550,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T343_V550_L15_restart,paper_main,false,PLANNED
+IGBT_T298_V500_L15,IGBT,reference_structure,298.15,500,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T298_V500_L15_restart,paper_main,false,PLANNED
+IGBT_T298_V525_L15,IGBT,reference_structure,298.15,525,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T298_V525_L15_restart,paper_main,false,PLANNED
+IGBT_T298_V575_L15,IGBT,reference_structure,298.15,575,0,0,15,0.1555,0,3.5,1,0,50,0.1,1e-10,2.1e-9,2e-9,baseline,IGBT_T298_V575_L15_restart,paper_main,false,PLANNED

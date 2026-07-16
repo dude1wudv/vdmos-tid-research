@@ -1,0 +1,9 @@
+case_id,run_class,dc_restart_status,transient_2ns_status,overall_status
+IGBT_T243_V550_L15,paper_main,PASS,PASS,PASS
+IGBT_T298_V550_L15,paper_main,PASS,PASS,PASS
+IGBT_T323_V550_L15,paper_main,PASS,PASS,PASS
+IGBT_T343_V550_L15,paper_main,PASS,PASS,PASS
+IGBT_T298_V500_L15,paper_main,PASS,PASS,PASS
+IGBT_T298_V525_L15,paper_main,PASS,PASS,PASS
+IGBT_T298_V575_L15,paper_main,PASS,PASS,PASS
+MOSFET_T298_V550_L15,comparison_appendix,PASS,PASS,PASS

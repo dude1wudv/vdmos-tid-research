@@ -1,0 +1,326 @@
+{
+  "schema_version": "650v_static_extraction/v2",
+  "mesh_variant": "baseline",
+  "run_set": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/baseline_candidates_igbt300us_mosfet_attempt24.json",
+  "run_set_sha256": "f8ef36372a79d49be334890d328f6d623dcd4de7d9804bb04fb5af0ad0b3a2c5",
+  "baseline_binding": null,
+  "area_factor_semantics": "one device-specific effective out-of-plane width self-calibrated from the baseline typical conduction point, then reused for baseline Vth and leakage",
+  "results": {
+    "IGBT": {
+      "device_family": "IGBT",
+      "structure_id": "igbt_650v_trench_field_stop_reference_model",
+      "device_dsl": "projects/igbt_mosfet_650v_seb_20260715/devices/igbt_650v.json",
+      "device_dsl_sha256": "813f17f265b91d3dadf9f1a5c3d9c8afe3c17a3fc05880f9e186f2ca3ee68132",
+      "mesh_variant": "baseline",
+      "mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+      "area_factor": {
+        "value": 52755946.32810768,
+        "policy": "self_calibrated_baseline",
+        "unit": "um effective out-of-plane width",
+        "definition": "datasheet conduction current divided by raw 2D current at the datasheet typical conduction point",
+        "calibration_voltage_v": 1.55,
+        "raw_current_a_um": 7.582083686116825e-07,
+        "target_total_current_a": 40.0,
+        "diagnostic_self_calibrated_value": 52755946.32810768,
+        "diagnostic_relative_delta_from_fixed": 0.0
+      },
+      "conduction": {
+        "quantity": "VCE_sat",
+        "value": 1.55,
+        "baseline_calibrated_value": 1.55,
+        "maximum_allowed_value": 2.0,
+        "status": "WITHIN_DATASHEET_MAX",
+        "passed": true,
+        "raw_target_current_a_um": 7.582083686116825e-07,
+        "selection": {
+          "value": 1.55,
+          "selection_method": "linear_interpolation",
+          "left_x": 7.34995766603817e-07,
+          "right_x": 7.814209706195479e-07
+        },
+        "diagnostic_current_at_baseline_typical_voltage": {
+          "value": 7.582083686116825e-07,
+          "selection_method": "linear_interpolation",
+          "left_x": 1.53333333333333,
+          "right_x": 1.56666666666667
+        }
+      },
+      "vth": {
+        "voltage_v": 6.448419139306199,
+        "selection_method": "log_current_interpolation",
+        "left_voltage_v": 6.44,
+        "left_current_a_um": 1.7295738446524515e-11,
+        "right_voltage_v": 6.53,
+        "right_current_a_um": 4.605595006084086e-11,
+        "datasheet_total_current_criterion_a": 0.001,
+        "raw_2d_current_criterion_a_um": 1.895520921529206e-11,
+        "minimum_v": 5.0,
+        "maximum_v": 7.0,
+        "bias_relation": "VCE=VGE",
+        "passed": true
+      },
+      "off_leakage": {
+        "blocking_voltage_v": 650.0,
+        "raw_current_a_um": 3.6815179347205356e-13,
+        "total_current_a": 1.942219625700824e-05,
+        "maximum_total_current_a": 2.5e-05,
+        "passed": true,
+        "selection": {
+          "value": 3.6815179347205356e-13,
+          "selection_method": "raw_exact",
+          "left_x": 650.0,
+          "right_x": 650.0
+        }
+      },
+      "bv": {
+        "bv_v": 707.497688089023,
+        "current_a_um": 1.0180208497166925e-06,
+        "selection_method": "first_raw_sample_meeting_electrical_criterion",
+        "prior_voltage_v": 702.249960897567,
+        "prior_current_a_um": 1.6367503979348213e-12,
+        "criterion_a_um": 1e-06,
+        "rated_voltage_v": 650.0,
+        "passed": true,
+        "solver_failure_used_as_bv": false
+      },
+      "static_gate_passed": true,
+      "baseline_static_gate_passed": true,
+      "refined_static_gate_passed": null,
+      "mesh_consistency_status": "PASSED",
+      "sources": {
+        "bv": {
+          "run_id": "IGBT650_BV__candidate_lifetime_300us__20260715T223649071Z__70af9ade",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_BV__candidate_lifetime_300us__20260715T223649071Z__70af9ade/run_manifest.json",
+          "run_manifest_sha256": "3df5d86c4fe756f14fa5e686bd4e2e964f0661f4e5457021195c99bd83845083",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_BV__candidate_lifetime_300us__20260715T223649071Z__70af9ade/artifacts/igbt_bv.plt",
+          "source_plt_sha256": "c340a6f4b2a10f30dd48fcf5610b5abe351ad6a678023c396dc919210a673cc7",
+          "mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "104"
+          }
+        },
+        "conduction": {
+          "run_id": "IGBT650_STATIC_CONDUCTION__candidate_lifetime_300us__20260715T222430442Z__bd89a631",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_CONDUCTION__candidate_lifetime_300us__20260715T222430442Z__bd89a631/run_manifest.json",
+          "run_manifest_sha256": "14399fd7fd38d5c1a6b178b60fb950715d9c1fd0c22becfcbbaa0942462868c1",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_CONDUCTION__candidate_lifetime_300us__20260715T222430442Z__bd89a631/artifacts/Conduction_igbt_conduction.plt",
+          "source_plt_sha256": "dd522f2b254a90bb39643eff459842d755e9808f8946fe061893a5f8a9a12298",
+          "mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "81"
+          }
+        },
+        "vth": {
+          "run_id": "IGBT650_STATIC_VTH__candidate_lifetime_300us__20260715T223304957Z__4b68c039",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_VTH__candidate_lifetime_300us__20260715T223304957Z__4b68c039/run_manifest.json",
+          "run_manifest_sha256": "a03362dc438ca201e68607e5a5ac8605fed4fd5f267d08dbc7bdee3782f0cab4",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_VTH__candidate_lifetime_300us__20260715T223304957Z__4b68c039/artifacts/Vth_igbt_vth.plt",
+          "source_plt_sha256": "2738e5e72aa3ecd71fba34beb78d570f96fd63efb1e89f9e5dbc85cec27197f4",
+          "mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "61"
+          }
+        },
+        "off_leakage": {
+          "run_id": "IGBT650_STATIC_OFF_LEAKAGE__candidate_lifetime_300us__20260715T222835835Z__76e1ab1c",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_OFF_LEAKAGE__candidate_lifetime_300us__20260715T222835835Z__76e1ab1c/run_manifest.json",
+          "run_manifest_sha256": "8f44e48d90182311b396a5ae14da253be301594795f7b9e32f9e0a60d41ad182",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_STATIC_OFF_LEAKAGE__candidate_lifetime_300us__20260715T222835835Z__76e1ab1c/artifacts/OffLeakage_igbt_off_leakage.plt",
+          "source_plt_sha256": "a239fa074883b3b378292a007c01d5458e5ce85d52723d29af841876a8c83e84",
+          "mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "124"
+          }
+        }
+      }
+    },
+    "MOSFET": {
+      "device_family": "MOSFET",
+      "structure_id": "mosfet_650v_superjunction_reference_model",
+      "device_dsl": "projects/igbt_mosfet_650v_seb_20260715/devices/mosfet_650v_sj.json",
+      "device_dsl_sha256": "6b40bbebf63216d295ee01056553e1ff39a01f245a86c9abb714ed1cff3b110f",
+      "mesh_variant": "baseline",
+      "mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+      "area_factor": {
+        "value": 53502886.18183474,
+        "policy": "self_calibrated_baseline",
+        "unit": "um effective out-of-plane width",
+        "definition": "datasheet conduction current divided by raw 2D current at the datasheet typical conduction point",
+        "calibration_voltage_v": 0.8438999999999999,
+        "raw_current_a_um": 1.812986306389829e-07,
+        "target_total_current_a": 9.7,
+        "diagnostic_self_calibrated_value": 53502886.18183474,
+        "diagnostic_relative_delta_from_fixed": 0.0
+      },
+      "conduction": {
+        "quantity": "RDS_on",
+        "value": 0.087,
+        "baseline_calibrated_value": 0.087,
+        "maximum_allowed_value": 0.099,
+        "status": "WITHIN_DATASHEET_MAX",
+        "passed": true,
+        "raw_target_current_a_um": 1.812986306389829e-07,
+        "selection": {
+          "value": 0.8438999999999999,
+          "selection_method": "linear_interpolation",
+          "left_x": 1.7297908692094123e-07,
+          "right_x": 1.8922819574524423e-07
+        },
+        "diagnostic_current_at_baseline_typical_voltage": {
+          "value": 1.812986306389829e-07,
+          "selection_method": "linear_interpolation",
+          "left_x": 0.837500000000001,
+          "right_x": 0.850000000000001
+        }
+      },
+      "vth": {
+        "voltage_v": 4.012161559996825,
+        "selection_method": "log_current_interpolation",
+        "left_voltage_v": 3.965,
+        "left_current_a_um": 6.1443807952230745e-12,
+        "right_voltage_v": 4.03,
+        "right_current_a_um": 1.0352411605156225e-11,
+        "datasheet_total_current_criterion_a": 0.00048,
+        "raw_2d_current_criterion_a_um": 8.971478629557918e-12,
+        "minimum_v": 3.5,
+        "maximum_v": 4.5,
+        "bias_relation": "VDS=VGS",
+        "passed": true
+      },
+      "off_leakage": {
+        "blocking_voltage_v": 650.0,
+        "raw_current_a_um": 1.375691612861046e-13,
+        "total_current_a": 7.3603471784209215e-06,
+        "maximum_total_current_a": 8e-06,
+        "passed": true,
+        "selection": {
+          "value": 1.375691612861046e-13,
+          "selection_method": "raw_exact",
+          "left_x": 650.0,
+          "right_x": 650.0
+        }
+      },
+      "bv": {
+        "bv_v": 824.279280266482,
+        "current_a_um": 1.0118943116107309e-06,
+        "selection_method": "first_raw_sample_meeting_electrical_criterion",
+        "prior_voltage_v": 822.978580929071,
+        "prior_current_a_um": 9.64901304984849e-07,
+        "criterion_a_um": 1e-06,
+        "rated_voltage_v": 650.0,
+        "passed": true,
+        "solver_failure_used_as_bv": false
+      },
+      "static_gate_passed": true,
+      "baseline_static_gate_passed": true,
+      "refined_static_gate_passed": null,
+      "mesh_consistency_status": "FAILED",
+      "sources": {
+        "bv": {
+          "run_id": "MOSFET650_BV__candidate_attempt24_sj_scale_0p8__20260715T220228915Z__7007484d",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_BV__candidate_attempt24_sj_scale_0p8__20260715T220228915Z__7007484d/run_manifest.json",
+          "run_manifest_sha256": "d0756398fd4329c87511c59088bba4c8b8ac6243d8b4b25d7359dddf2e5d5c26",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_BV__candidate_attempt24_sj_scale_0p8__20260715T220228915Z__7007484d/artifacts/mosfet_bv.plt",
+          "source_plt_sha256": "14cbf278fb02a1f3f1f3d8b583d075f4eb87b92dccf980e563815f23c5f9559d",
+          "mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "151"
+          }
+        },
+        "conduction": {
+          "run_id": "MOSFET650_STATIC_CONDUCTION__candidate_attempt24_sj_scale_0p8__20260715T212639126Z__49bb6bcc",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_CONDUCTION__candidate_attempt24_sj_scale_0p8__20260715T212639126Z__49bb6bcc/run_manifest.json",
+          "run_manifest_sha256": "0c1744b218a65fefcd0ab5e56f8821a7715366a97699d8268d473c6ad018a03a",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_CONDUCTION__candidate_attempt24_sj_scale_0p8__20260715T212639126Z__49bb6bcc/artifacts/Conduction_mosfet_conduction.plt",
+          "source_plt_sha256": "bbf6b1fff7f004211735994eef9313e6bb5283795f45a17025267d575ba3eab5",
+          "mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "81"
+          }
+        },
+        "vth": {
+          "run_id": "MOSFET650_STATIC_VTH__candidate_attempt24_sj_scale_0p8__20260715T215313385Z__aa3dac82",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_VTH__candidate_attempt24_sj_scale_0p8__20260715T215313385Z__aa3dac82/run_manifest.json",
+          "run_manifest_sha256": "494712cd20783467f758984c87a0b9095a1839e98cd8d5776abc96c27281d648",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_VTH__candidate_attempt24_sj_scale_0p8__20260715T215313385Z__aa3dac82/artifacts/Vth_mosfet_vth.plt",
+          "source_plt_sha256": "bcd8568fcb0afb2f60f1709f24ed6424527b2c610dce240e7b4479b4e0b0edff",
+          "mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "60"
+          }
+        },
+        "off_leakage": {
+          "run_id": "MOSFET650_STATIC_OFF_LEAKAGE__candidate_attempt24_sj_scale_0p8__20260715T215649765Z__74bb2714",
+          "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_OFF_LEAKAGE__candidate_attempt24_sj_scale_0p8__20260715T215649765Z__74bb2714/run_manifest.json",
+          "run_manifest_sha256": "7d3778aad99220072dd3d0eadabff071964c40b17e557ad68fcb1bf109c02ed7",
+          "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_STATIC_OFF_LEAKAGE__candidate_attempt24_sj_scale_0p8__20260715T215649765Z__74bb2714/artifacts/OffLeakage_mosfet_off_leakage.plt",
+          "source_plt_sha256": "6262fc708b9b813122a8278e9ec4584f15e1c9e0af4b678c47b3134a012dfa76",
+          "mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "175"
+          }
+        }
+      }
+    }
+  },
+  "all_static_gates_passed": true,
+  "all_baseline_static_gates_passed": true,
+  "all_refined_static_gates_passed": null,
+  "heavy_ion_authorized": false
+}

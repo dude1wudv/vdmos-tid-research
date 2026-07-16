@@ -1,0 +1,96 @@
+{
+  "schema": "igbt_mosfet_seb/lattice_temperature_svisual_render/v1",
+  "status": "PASS",
+  "claim": "注入后 2.000 ns；真实 SVisual LatticeTemperature 空间场渲染",
+  "renderer": "Sentaurus Visual W-2024.09 headless",
+  "source_time_s": 2.1e-09,
+  "post_injection_time_s": 2e-09,
+  "field_requested": "LatticeTemperature",
+  "field_used": {
+    "IGBT": "LatticeTemperature",
+    "MOSFET": "LatticeTemperature"
+  },
+  "common_render_settings": {
+    "roi_um": [
+      0.0,
+      0.0,
+      451.15,
+      4.2
+    ],
+    "view": "2D XY; x=0.0..451.15 um, y=0.0..4.2 um",
+    "unit": "K",
+    "colorbar_k": [
+      298.15,
+      300.4
+    ],
+    "colormap": "default",
+    "levels": 30,
+    "individual_panel_resolution_requested_px": [
+      1800,
+      520
+    ]
+  },
+  "inputs": {
+    "IGBT": {
+      "tdr_path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0/artifacts/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+      "tdr_sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+      "silicon_minimum_k": 298.15,
+      "silicon_maximum_k": 300.386549973,
+      "silicon_maximum_xyz_um": [
+        170.757232666,
+        0.0,
+        0.0
+      ]
+    },
+    "MOSFET": {
+      "tdr_path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/MOSFET_T298_V550_L15__transient_main_attempt01__20260715T075808408Z__44b93ad1/artifacts/MOSFET_T298_V550_L15_tr_at2p1ns_des.tdr",
+      "tdr_sha256": "5b34b9a5d2fb445baae592e3ecc05b652a3fff0915b64e78edbf9dab6f1f8dd0",
+      "silicon_minimum_k": 298.15,
+      "silicon_maximum_k": 298.868790661,
+      "silicon_maximum_xyz_um": [
+        180.456344604,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "published_pngs": {
+    "comparison": {
+      "path": "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/figures/lattice_temperature_post2ns_svisual_comparison.png",
+      "sha256": "c91b58e00a04b5615a4825481e71a384d281bd62e6e3fcd01d0f7d3d74d2412e",
+      "readable": true,
+      "dimensions_px": [
+        3616,
+        520
+      ],
+      "composition": "lossless side-by-side placement of the two SVisual-generated PNG panels; no field reconstruction or numerical sidecar rendering"
+    },
+    "IGBT": {
+      "path": "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/figures/igbt_lattice_temperature_post2ns_svisual.png",
+      "sha256": "53daea590c2c270165d6e25b3ec42f8190a168a995354c63b6824ffc1527eed1",
+      "readable": true,
+      "dimensions_px": [
+        1800,
+        520
+      ],
+      "origin": "direct SVisual -bx export"
+    },
+    "MOSFET": {
+      "path": "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/figures/mosfet_lattice_temperature_post2ns_svisual.png",
+      "sha256": "d8e96a4b075445eddb4bcddec32949761a26db10cf07b3e18296fb7b2ad28fdb",
+      "readable": true,
+      "dimensions_px": [
+        1800,
+        520
+      ],
+      "origin": "direct SVisual -bx export"
+    }
+  },
+  "reproducibility": {
+    "svisual_script": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/figures/lattice_temperature_2ns_svisual/render_lattice_temperature_post2ns.py",
+    "command_runner": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/figures/lattice_temperature_2ns_svisual/run_render_lattice_temperature_post2ns.ps1",
+    "command": "powershell -ExecutionPolicy Bypass -File local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/figures/lattice_temperature_2ns_svisual/run_render_lattice_temperature_post2ns.ps1",
+    "execution_mode": "svisual -bx -python; reads frozen TDR only; does not invoke SDevice"
+  },
+  "conclusion_boundary": "空间云图只显示本冻结模型和工况下的温度分布；不得单靠此图声称 MOSFET 热点更近氧化层。现有数值结论仍为不支持。"
+}

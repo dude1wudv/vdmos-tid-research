@@ -1,0 +1,2 @@
+device_family,mesh_variant,area_factor_um,bv_v,bv_passed,vth_v,vth_passed,conduction_quantity,conduction_value,conduction_maximum_allowed_value,conduction_passed,off_leakage_raw_a_um,off_leakage_total_a,off_leakage_maximum_total_a,off_leakage_passed,static_gate_passed,mesh_consistency_status
+MOSFET,refined_v2,53502886.18183474,1038.24549899301,True,3.837667774492424,True,RDS_on,0.0794474692647897,0.099,True,9.42076392389485e-14,5.040380599660811e-06,8e-06,True,True,PENDING_THREE_LEVEL_COMPARISON

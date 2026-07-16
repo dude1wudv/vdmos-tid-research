@@ -1,0 +1,286 @@
+{
+  "schema_version": "650v_device_parameter_dsl/v1",
+  "structure_id": "igbt_650v_trench_field_stop_reference_model",
+  "device_family": "IGBT",
+  "rated_voltage_v": 650,
+  "publication_profile": "650v_commercial_comparison_pending_calibration",
+  "datasheet_target": {
+    "part": "STGWA40HP65FB2",
+    "manufacturer": "STMicroelectronics",
+    "official_product_url": "https://www.st.com/en/power-transistors/stgwa40hp65fb2.html",
+    "official_datasheet_url": "https://www.st.com/resource/en/datasheet/stgwa40hp65fb2.pdf",
+    "facts": [
+      "650 V trench-gate field-stop IGBT",
+      "40 A class"
+    ],
+    "scope_note": "公开数据表仅作电学目标；本模型不是专有芯片结构的复制。"
+  },
+  "gate_contact": {
+    "electrode_model": "barrier_offset",
+    "barrier_ev": -0.5,
+    "source_evidence": "Sentaurus W-2024.09 Power/IGBT_TrenchFieldStop applies Barrier=-0.50 to the gate electrode; required to preserve the seed contact work-function semantics"
+  },
+  "static_targets": {
+    "temperature_k": 298.15,
+    "vth": {
+      "min_v": 5.0,
+      "typ_v": 6.0,
+      "max_v": 7.0,
+      "criterion_current_a": 0.001,
+      "bias_relation": "VCE=VGE"
+    },
+    "conduction": {
+      "gate_voltage_v": 15.0,
+      "current_a": 40.0,
+      "typ_voltage_v": 1.55,
+      "max_voltage_v": 2.0
+    },
+    "off_leakage": {
+      "blocking_voltage_v": 650.0,
+      "max_current_a": 2.5e-05
+    }
+  },
+  "candidate_freeze": {
+    "status": "FROZEN_REFERENCE_MODEL_STATIC_MESH_TRACK_PASSED_HEAVYION_AUTHORIZED",
+    "candidate_id": "igbt_lifetime_300us",
+    "candidate_values": {
+      "minority_carrier_lifetime_s": 0.0003
+    },
+    "baseline_mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+    "baseline_run_set": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/baseline_candidates_igbt300us_mosfet_attempt24.json",
+    "baseline_extraction": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+    "scope_note": "静态门与 IGBT refined-mesh 一致性指标均通过；这仍只是参考模型，不表示专有商用芯片结构复现。MOSFET refined-v2-local 三级趋势也已闭合。六份既有 TDR 已完成关断场复核，轨迹按 500 V ImpactIonization 敏感标记冻结且不是 seed track；HeavyIon 仍须由精确哈希绑定的独立证据显式授权。"
+  },
+  "parameters": {
+    "drift_thickness": {
+      "seed_value": 55.0,
+      "candidate_value": 74.0,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "attempt15 passed the rated-voltage BV gate: current was 8.277e-7 A/um at 650.3 V and reached the 1e-6 A/um criterion at 662.3 V; retain 74 um pending Vth, conduction, leakage, and refined-mesh gates",
+      "confidence": "high",
+      "calibration_status": "BV_GATE_PASSED_PENDING_OTHER_STATIC_GATES"
+    },
+    "drift_donor_concentration": {
+      "seed_value": 110000000000000.0,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "650 V reference-model assumption; to calibrate against BV",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "field_stop_thickness": {
+      "seed_value": 2.0,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "IGBT trench-field-stop topology assumption",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "field_stop_donor_concentration": {
+      "seed_value": 5e+16,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "IGBT trench-field-stop topology assumption",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "gate_oxide_thickness": {
+      "seed_value": 0.08,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "0.08 um reference-model assumption; attempt16 wires this existing DSL value into SDE after audit found the prior polygon hardcoded to a nonuniform ~0.02-0.09 um envelope",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_IMPLEMENTATION_CORRECTION_PENDING_STATIC_GATES"
+    },
+    "body_implant_y_start": {
+      "seed_value": 3.0,
+      "candidate_value": 2.88,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "attempt17 aligns the P-body surface implant start with the corrected 0.08 um oxide outer edge at y=2.88 um; attempt16 doping audit measured only ~1.1e16 cm^-3 net acceptor at y=2.9 um because the previous y=3.0 start covered the channel only by its lateral Gaussian tail",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_ATTEMPT17_RETAINED_VTH_1P94V"
+    },
+    "body_peak_acceptor_concentration": {
+      "seed_value": 1.5e+17,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "cm^-3",
+      "source_evidence": "attempts18-20 were rejected: increasing P-body peak shifted the raw transfer curve but collapsed datasheet-point on-state current and drove AreaFactor from 54.2 m to 1.23 km. Restore 1.5e17 cm^-3 and tune Vth with orthogonal interface charge.",
+      "confidence": "high",
+      "calibration_status": "REJECTED_CANDIDATES_RESTORED_TO_SEED"
+    },
+    "interface_fixed_charge_concentration": {
+      "seed_value": 0.0,
+      "candidate_value": -1100000000000.0,
+      "final_value": null,
+      "unit": "cm^-2",
+      "source_evidence": "first-order Cox estimate for the corrected 0.08 um oxide: negative fixed charge should shift the body-aligned Vth from 1.94 V toward the 6 V typical target without deepening the P-body; syntax follows the Sentaurus TrenchGateNMOS_Ron_BV interface contract",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_INTERFACE_CHARGE_ATTEMPT01_PENDING"
+    },
+    "body_implant_y_end": {
+      "seed_value": 5.2,
+      "candidate_value": null,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "candidate 4.6 um rejected: IGBT BV current criterion moved from 163.19 V to 31.56 V in run IGBT650_BV__candidate_attempt09_body_implant_y_end_4p6__20260715T153223999Z__bdbd553f",
+      "confidence": "low",
+      "calibration_status": "REJECTED_CANDIDATE_RESTORED_TO_SEED"
+    },
+    "source_implant_y_end": {
+      "seed_value": 4.2,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "seed source implant extent retained",
+      "confidence": "low",
+      "calibration_status": "UNVERIFIED_REFERENCE_MODEL_ASSUMPTION"
+    },
+    "gate_corner_radius": {
+      "seed_value": 0.0,
+      "candidate_value": 0.2,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "0.3 um attempt12 was rejected because it left the criterion effectively unchanged at 530.97 V; retain the 0.2 um attempt11 parent for the next single-variable thickness test",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_RETAINED_BUT_BV_NOT_PASSED"
+    },
+    "body_implant_depth": {
+      "seed_value": 2.0,
+      "candidate_value": 5.65,
+      "final_value": null,
+      "unit": "um",
+      "source_evidence": "5.65 um learned-reference depth raised the physical 1e-6 A/um criterion from 169.63 V to 530.98 V in run IGBT650_BV__candidate_attempt11_body_implant_depth_5p65__20260715T160655130Z__397fe4aa; still below the 650 V gate",
+      "confidence": "medium",
+      "calibration_status": "CANDIDATE_RETAINED_BUT_BV_NOT_PASSED"
+    },
+    "minority_carrier_lifetime": {
+      "seed_value": 2e-06,
+      "candidate_value": 0.0003,
+      "final_value": null,
+      "unit": "s",
+      "source_evidence": "300 us candidate is bound to the successful baseline run set: BV 707.497688 V, Vth 6.448419 V, VCEsat 1.55 V, and 650 V leakage 1.9422196e-5 A. Refined mesh retained all four static gates and met every IGBT mesh-consistency threshold; the combined campaign remains blocked by MOSFET mesh Vth and explicit HeavyIon authorization.",
+      "confidence": "high",
+      "calibration_status": "FROZEN_REFERENCE_MODEL_STATIC_MESH_PASSED_HEAVYION_NOT_AUTHORIZED"
+    },
+    "track_x": {
+      "seed_value": 5.0,
+      "final_value": 3.22,
+      "unit": "um",
+      "source_evidence": "500 V verified-mesh ImpactIonization localization; start is 0.01 um beyond the x=3.21 um Si/Oxide tip. Evidence: field_track_localization_v2.json SHA-256 880ca5633509b92ab662c5c603202807dc89df1f631c832022981b2133a12e7e",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_y": {
+      "seed_value": 5.0,
+      "final_value": 2.14882278442,
+      "unit": "um",
+      "source_evidence": "500 V ImpactIonization maximum y coordinate on run IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29; seed track was not reused",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_length": {
+      "seed_value": 55.0,
+      "final_value": 70.77,
+      "unit": "um",
+      "source_evidence": "strict-interior depth path from x=3.22 to x=73.99 um on the 74 um verified refined mesh",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    },
+    "track_direction": {
+      "seed_value": [
+        0.0,
+        1.0
+      ],
+      "final_value": [
+        1.0,
+        0.0
+      ],
+      "unit": "unit_vector",
+      "source_evidence": "device-depth direction aligned with the strict-interior Silicon path and verified field cutline; replaces the geometry-invalid seed direction",
+      "confidence": "high",
+      "calibration_status": "VERIFIED"
+    }
+  },
+  "mesh_consistency_contract": {
+    "schema_version": "650v_static_mesh_contract/v1",
+    "comparison": "same frozen physical candidate and identical static decks/parameters; only SDE mesh controls change",
+    "area_factor_policy": "use baseline AreaFactor unchanged for refined Vth, conduction, and 650 V leakage comparisons; refined self-calibrated AreaFactor is diagnostic only",
+    "bv_policy": "first raw high-terminal InnerVoltage sample whose absolute eCurrent+hCurrent reaches 1e-6 A/um; solver failure is never BV",
+    "profiles": {
+      "baseline": {
+        "global_size_um": [
+          2.0,
+          1.0,
+          0.1,
+          0.1
+        ],
+        "active_size_um": [
+          0.4,
+          0.2,
+          0.02,
+          0.02
+        ],
+        "offset_maxlevel": 6,
+        "interface_hlocal_um": 0.003,
+        "interface_factor": 1.5
+      },
+      "refined": {
+        "global_size_um": [
+          1.0,
+          0.5,
+          0.05,
+          0.05
+        ],
+        "active_size_um": [
+          0.2,
+          0.1,
+          0.01,
+          0.01
+        ],
+        "offset_maxlevel": 7,
+        "interface_hlocal_um": 0.0015,
+        "interface_factor": 1.5
+      }
+    },
+    "thresholds": {
+      "bv_relative_max": 0.02,
+      "vth_absolute_v_max": 0.1,
+      "conduction_relative_max": 0.05,
+      "off_leakage_relative_max": 0.1
+    },
+    "pass_requirements": [
+      "all refined datasheet static gates pass",
+      "all four baseline/refined deltas are within threshold",
+      "all eight refined runs are successful leased one-thread SDevice runs",
+      "each device run set binds one immutable refined mesh hash"
+    ],
+    "rationale": "BV uses a 2% discretization bound; Vth uses a 0.1 V absolute bound; conduction allows 5%; leakage allows 10% because it is a sub-pA/um interpolated quantity. Missing or non-finite evidence fails closed."
+  },
+  "physics_contract": [
+    "Thermodynamic",
+    "high-field mobility",
+    "SRH",
+    "Auger",
+    "Avalanche",
+    "bipolar injection",
+    "field-stop",
+    "minority-lifetime calibration",
+    "Si/Oxide interface fixed-charge calibration"
+  ],
+  "static_gates": {
+    "bv": "PASSED",
+    "vth": "PASSED",
+    "conduction": "PASSED",
+    "off_leakage": "PASSED",
+    "mesh_consistency": "PASSED",
+    "heavy_ion_authorized": true,
+    "baseline_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+    "refined_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_extraction.json",
+    "mesh_consistency_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency.json",
+    "combined_campaign_gate": "AUTHORIZED_EXACT_BOUND_EVIDENCE",
+    "bv_criterion": "I(high terminal) >= 1e-6 A/um during monotonic off-state ramp; first raw high-terminal InnerVoltage sample",
+    "authorization_evidence": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/heavy_ion_authorization.json"
+  }
+}

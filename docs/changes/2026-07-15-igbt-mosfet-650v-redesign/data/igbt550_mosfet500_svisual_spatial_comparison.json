@@ -1,0 +1,318 @@
+{
+  "schema_version": "igbt550_mosfet500_svisual_spatial_comparison/v1",
+  "status": "PASS",
+  "scope": "COMPARISON_ONLY",
+  "renderer": "Sentaurus Visual W-2024.09 headless",
+  "execution_mode": "svisual -bx -python",
+  "svisual_exit_code": 0,
+  "physical_simulation_started": false,
+  "sdevice_invoked": false,
+  "source_time_s": 2.1e-09,
+  "post_injection_time_s": 2e-09,
+  "required_display_text": [
+    "IGBT 550 V",
+    "MOSFET 500 V",
+    "t=2.1 ns (post-injection 2.0 ns)"
+  ],
+  "source_tdrs": {
+    "IGBT": {
+      "case": "IGBT_T298_V550_L15",
+      "bias": "IGBT 550 V",
+      "local_path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0/artifacts/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+      "sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+      "size_bytes": 6864750,
+      "remote_path": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+      "local_hash_verified": true,
+      "remote_hash_verified": true
+    },
+    "MOSFET": {
+      "case": "MOSFET650_LET15_2P1NS_V500",
+      "bias": "MOSFET 500 V",
+      "local_path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c/artifacts/MOSFET650_V500_tr_at2p1ns_des.tdr",
+      "sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+      "size_bytes": 3704367,
+      "remote_path": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/MOSFET650_V500_tr_at2p1ns_des.tdr",
+      "local_hash_verified": true,
+      "remote_hash_verified": true
+    }
+  },
+  "figures": {
+    "carrier": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_carrier_density_2p1ns_svisual_comparison.png",
+      "sha256": "b5605f62d39a8d765e671b7c6bfd9ae70f7622380ad960b3c6ea37c8e639d8d1",
+      "readable": true,
+      "dimensions_px": [
+        3016,
+        760
+      ],
+      "physical_variable": "TotalCarrierDensity = eDensity + hDensity",
+      "render_field": "Log10TotalCarrierDensity = log10(eDensity + hDensity)",
+      "unit": "cm^-3",
+      "color_scale_strategy": "COMMON_LOG10_RANGE",
+      "color_range": [
+        12.0,
+        20.0
+      ],
+      "caption": "IGBT 550 V（左）/ MOSFET 500 V（右）；t=2.1 ns (post-injection 2.0 ns)。总载流子密度定义为 eDensity+hDensity [cm^-3]，两面板使用相同 log10 色标 12..20。",
+      "composition": "lossless side-by-side placement of direct SVisual PNG panels; no TDR field reconstruction, CSV plotting, rescaling, or manual spatial-field drawing",
+      "panels": {
+        "IGBT": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/igbt_carrier_2p1ns_svisual.png",
+          "sha256": "8b6c8094ec0618d9d9f86944b4a544693d7fd14a2abd1787d93218631e9debcc",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+          "title_context": "IGBT 550 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 1907627466380.0,
+              "xyz_um": [
+                0.0582061782479,
+                3.90000009537,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 6.98499642314e+19,
+              "xyz_um": [
+                0.0,
+                3.35625004768,
+                0.0
+              ]
+            }
+          }
+        },
+        "MOSFET": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/mosfet_carrier_2p1ns_svisual.png",
+          "sha256": "02b0e98690707b1c9d1758deb8fd644529f4bfe956693713c552b6aeff092ff3",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/MOSFET650_V500_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+          "title_context": "MOSFET 500 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 650434334275000.0,
+              "xyz_um": [
+                0.0,
+                4.400390625,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 8.69851376267e+19,
+              "xyz_um": [
+                0.0625,
+                3.65625,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "temperature": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_lattice_temperature_2p1ns_svisual_comparison.png",
+      "sha256": "644006e0ee6fde51a0e2ac5b241be84249f07e0f43391c541a4cb4491136e34a",
+      "readable": true,
+      "dimensions_px": [
+        3016,
+        760
+      ],
+      "physical_variable": "LatticeTemperature",
+      "render_field": "LatticeTemperature",
+      "unit": "K",
+      "color_scale_strategy": "INDEPENDENT_PANEL_RANGES_DUE_TO_LARGE_DYNAMIC_RANGE",
+      "color_range": {
+        "IGBT": [
+          298.15,
+          300.4
+        ],
+        "MOSFET": [
+          298.15,
+          703.3
+        ]
+      },
+      "caption": "IGBT 550 V（左）/ MOSFET 500 V（右）；t=2.1 ns (post-injection 2.0 ns)。LatticeTemperature [K] 因动态范围差异采用面板独立色标；颜色不可直接跨面板判优。",
+      "composition": "lossless side-by-side placement of direct SVisual PNG panels; no TDR field reconstruction, CSV plotting, rescaling, or manual spatial-field drawing",
+      "panels": {
+        "IGBT": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/igbt_temperature_2p1ns_svisual.png",
+          "sha256": "1171e019a30c7fb02cdfd9f33c0c70d2e7b6a470198ddbaca37e997b4350a961",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+          "title_context": "IGBT 550 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 298.15,
+              "xyz_um": [
+                0.0,
+                3.15000009537,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 300.386549973,
+              "xyz_um": [
+                170.757232666,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "MOSFET": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/mosfet_temperature_2p1ns_svisual.png",
+          "sha256": "e1ae7cd7725c96a8e001e65d646b882ceb939aeeaed41e1c39df5bed7b8f5f11",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/MOSFET650_V500_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+          "title_context": "MOSFET 500 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 298.149952379,
+              "xyz_um": [
+                0.0,
+                1.93624818325,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 703.289277824,
+              "xyz_um": [
+                46.0,
+                6.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "current_density": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_current_density_v_2p1ns_svisual_comparison.png",
+      "sha256": "41bc7b92ba0026a14878551f99f506d65d954dab9bf6965a635092327002f234",
+      "readable": true,
+      "dimensions_px": [
+        3016,
+        760
+      ],
+      "physical_variable": "Abs(TotalCurrentDensity-V)",
+      "render_field": "Log10AbsTotalCurrentDensityV = log10(Abs(TotalCurrentDensity-V))",
+      "unit": "A/cm^2",
+      "color_scale_strategy": "COMMON_LOG10_RANGE",
+      "color_range": [
+        -1.0,
+        7.0
+      ],
+      "caption": "IGBT 550 V（左）/ MOSFET 500 V（右）；t=2.1 ns (post-injection 2.0 ns)。实际 TDR 字段为 Abs(TotalCurrentDensity-V) [A/cm^2]，两面板使用相同 log10 色标 -1..7。",
+      "composition": "lossless side-by-side placement of direct SVisual PNG panels; no TDR field reconstruction, CSV plotting, rescaling, or manual spatial-field drawing",
+      "panels": {
+        "IGBT": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/igbt_current_density_2p1ns_svisual.png",
+          "sha256": "559e26104f1afa76b5335df6697632472546606a4ba04adfa1063f1fd13bd517",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+          "title_context": "IGBT 550 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 0.317555984552,
+              "xyz_um": [
+                4.99042987823,
+                0.600000023842,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 629189.199357,
+              "xyz_um": [
+                0.802219390869,
+                2.79658699036,
+                0.0
+              ]
+            }
+          }
+        },
+        "MOSFET": {
+          "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/mosfet_current_density_2p1ns_svisual.png",
+          "sha256": "15d1d225d730e783118e0fb3fe8bcc028755f0c5f7e21346481dcd2f5b4b1c81",
+          "readable": true,
+          "dimensions_px": [
+            1500,
+            760
+          ],
+          "origin": "direct Sentaurus Visual W-2024.09 -bx PNG export from the bound VM TDR",
+          "source_tdr": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/MOSFET650_V500_tr_at2p1ns_des.tdr",
+          "source_tdr_sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+          "title_context": "MOSFET 500 V | t=2.1 ns (post-injection 2.0 ns)",
+          "extrema": {
+            "minimum": {
+              "value": 7.98243996788,
+              "xyz_um": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "maximum": {
+              "value": 3335083.99778,
+              "xyz_um": [
+                0.0,
+                3.28125,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "visible_observations": {
+    "carrier": "两案总载流子密度高值均位于 x≈0 的一端；IGBT 最大值 6.98499642314e19 cm^-3 @ (0, 3.356250) um，MOSFET 最大值 8.69851376267e19 cm^-3 @ (0.0625, 3.65625) um。",
+    "temperature": "IGBT 晶格温度热点位于 y=0 边界附近，300.386549973 K @ (170.757233, 0) um；MOSFET 热点位于 y=6 边界附近，703.289277824 K @ (46, 6) um。",
+    "current_density": "Abs(TotalCurrentDensity-V) 高值均集中在 x≈0 的一端；IGBT 最大值 6.29189199357e5 A/cm^2 @ (0.802219, 2.796587) um，MOSFET 最大值 3.33508399778e6 A/cm^2 @ (0, 3.28125) um。"
+  },
+  "comparison_limitations": [
+    "NOT_COMMON_BIAS: historical IGBT is 550 V while current MOSFET is 500 V.",
+    "NOT_SAME_STRUCTURE: historical 451.15 um IGBT and current 650 V SJ MOSFET have different structures and spatial extents.",
+    "NOT_SAME_TRACK: HeavyIon tracks differ between the two cases.",
+    "AREA_FACTOR_2D_SEMANTICS_MISMATCH: values retain native two-dimensional normalization and are not a common chip-area normalization.",
+    "Panel colors alone do not establish advantage; temperature panels use independent ranges and the carrier/current panels use common log10 ranges.",
+    "No SEB pass, safety, threshold, commercial performance, or device ranking conclusion is allowed."
+  ],
+  "reproducibility": {
+    "probe": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/probe_2ns_comparison_provenance.json",
+    "renderer": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/render_2ns_comparison.py",
+    "runner": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/run_render_2ns_comparison.ps1",
+    "publisher": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/publish_2ns_comparison.py",
+    "runner_provenance": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/render_2ns_comparison_provenance.json",
+    "svisual_metadata": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/render_2ns_comparison.svisual.json",
+    "command": "powershell -ExecutionPolicy Bypass -File local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/run_render_2ns_comparison.ps1"
+  }
+}

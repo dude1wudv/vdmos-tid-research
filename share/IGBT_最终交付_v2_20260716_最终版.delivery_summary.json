@@ -1,0 +1,26 @@
+{
+  "schema": "igbt_final_delivery_summary/v2",
+  "created_utc": "2026-07-15T22:18:24.154230+00:00",
+  "share_directory": "share/IGBT_最终交付_v2_20260716_最终版",
+  "zip_relative_path": "share/IGBT_最终交付_v2_20260716_最终版.zip",
+  "zip_sha256": "b122fa6b50abfc3b39c144170d35df484be6fff4b0beac6d9fe633cae685c970",
+  "zip_size_bytes": 13061480,
+  "gzp_relative_path": "01_IGBT可继续仿真工程/IGBT_SEB_20260714_Final_Continuation.gzp",
+  "gzp_sha256": "30a49adba4b5e50b823e39d98f84915f4a02462044c33269f1280831bd0ffa2c",
+  "gzp_verification_level": "PACK_UNPACK_WORKBENCH_OPEN_SVISUAL_VIEW_EXTRACT",
+  "gzp_open_evidence": "PASS",
+  "gzp_continuation_evidence": "NOT_RERUN_AFTER_PACKAGING",
+  "formal_fact_source": [
+    "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation",
+    "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714"
+  ],
+  "formal_igbt_case_count": 7,
+  "formal_igbt_thermal_and_2p1ns_status": "7/7 PASS",
+  "mosfet_appendix_case_count": 1,
+  "main_scope": "7 IGBT four-temperature/multi-bias short-transient cases with one local track-refined gate",
+  "mosfet_scope": "comparison appendix only",
+  "low_let_scope": "diagnostic_only/MESH_SENSITIVE appendix",
+  "redesign_650v_scope": "PENDING; no new static/HeavyIon numerical evidence",
+  "new_sdevice_started_by_packager": false,
+  "gzp_rebuilt_by_packager": false
+}

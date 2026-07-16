@@ -1,0 +1,7 @@
+﻿key_id,series_id,time_s,ic_a_um,tmax_k,meaning,source_path,source_row
+pulse_local_max,baseline,9.68746337891e-11,6.66764339138e-05,324.633215859,recorded pulse local maximum,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,21
+post_pulse_sample_min,baseline,2.53956733647e-10,1.06864391152e-06,324.633219535,recorded post-pulse sample minimum; not recovered to pre-strike baseline,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,59
+time_10ns,baseline,1e-08,7.78879627141e-06,324.66958561,closest raw point to 10 ns,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,75
+time_50ns,baseline,5e-08,0.000329382986819,328.185795447,closest raw point to 50 ns,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,100
+time_60ns,baseline,5.99869794307e-08,0.000692011683581,339.603414586,closest raw point to 60 ns,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,115
+available_window_end,baseline,8.19333762393e-08,0.00317242536956,395.229382452,last available A01 point; not a recovery or classification point,local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/transient.csv,1858

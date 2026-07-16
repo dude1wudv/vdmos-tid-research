@@ -1,0 +1,9 @@
+{
+  "schema": "sentaurus_parameter_snapshot/v1",
+  "source_path": "local_runtime/igbt_seb_full_20260712_035027/baseline_snapshot/sdevice.par",
+  "sha256": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+  "size_bytes": 97878,
+  "sentaurus_release": "W-2024.09",
+  "copy_policy": "full parameter file is copied into ignored campaign runtime; tracked project keeps this immutable hash snapshot",
+  "known_model_scope": ["Thermodynamic", "AnalyticTEP", "DopingDep", "HighFieldSaturation", "SRH", "Auger", "Avalanche(Lackner)"]
+}

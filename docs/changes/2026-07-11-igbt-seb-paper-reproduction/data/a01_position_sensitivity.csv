@@ -1,0 +1,13 @@
+y_um,time_ns,ic_a_um,ic_difference_vs_y3p5_pct,tmax_k,tmax_difference_vs_y3p5_k,trend,scope
+3.4,10,7.85470925008e-06,0.013013334640366025,324.670153793,7.064999977046682e-06,GROWING,local_diagnostic_not_formal_position_scan
+3.4,40,0.000133959836348,-6.248374181862538,326.124564885,-0.041104192000034345,GROWING,local_diagnostic_not_formal_position_scan
+3.4,50,0.000293419943387,-10.393445922525302,327.725168655,-0.6987417501476898,GROWING,local_diagnostic_not_formal_position_scan
+3.4,60,0.000618865275295,-18.61549639873028,336.925458787,1.1480998680000312,GROWING,local_diagnostic_not_formal_position_scan
+3.5,10,7.85368722348e-06,0.0,324.670146728,0.0,GROWING,local_diagnostic_not_formal_position_scan
+3.5,40,0.000142888014132,0.0,326.165669077,0.0,GROWING,local_diagnostic_not_formal_position_scan
+3.5,50,0.0003274536627458146,0.0,328.4239104051477,0.0,GROWING,local_diagnostic_not_formal_position_scan
+3.5,60,0.000760421515043,0.0,335.777358919,0.0,GROWING,local_diagnostic_not_formal_position_scan
+3.6,10,7.85439729267e-06,0.009041220636785141,324.670146692,-3.600001718950807e-08,GROWING,local_diagnostic_not_formal_position_scan
+3.6,40,0.000134701492289,-5.729327188659283,326.12815219,-0.03751688700003797,GROWING,local_diagnostic_not_formal_position_scan
+3.6,50,0.000294329147223,-10.115787145287635,327.737490916,-0.6864194891476814,GROWING,local_diagnostic_not_formal_position_scan
+3.6,60,0.000622172430949,-18.180585551446736,337.002672018,1.2253130990000045,GROWING,local_diagnostic_not_formal_position_scan

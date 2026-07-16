@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "reserved_cores": [0],
+  "max_managed_slots": 4,
+  "lease_root": "<REMOTE_PRIVATE_ROOT>/.cache/vdmos-sdevice-core-leases",
+  "lock_timeout_seconds": 20,
+  "unmanaged_process_policy": "exclude_affinity"
+}

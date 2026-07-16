@@ -1,0 +1,29 @@
+{
+  "relative_path": "01_IGBT可继续仿真工程/IGBT_SEB_20260714_Final_Continuation.gzp",
+  "exists": true,
+  "size_bytes": 10494473,
+  "sha256": "30a49adba4b5e50b823e39d98f84915f4a02462044c33269f1280831bd0ffa2c",
+  "magic_hex": "1f8b0800",
+  "format": "gzip",
+  "copied_into_delivery": true,
+  "gzip_read_to_eof": "PASS",
+  "tar_open": "PASS",
+  "member_count": 54,
+  "regular_member_count": 52,
+  "project_root": "IGBT_SEB_20260714_Final_Continuation",
+  "required_identity_files": {
+    "IGBT_SEB_20260714_Final_Continuation/.project": true,
+    "IGBT_SEB_20260714_Final_Continuation/HeavyIon_des.cmd": true,
+    "IGBT_SEB_20260714_Final_Continuation/ThermalRestart_des.cmd": true,
+    "IGBT_SEB_20260714_Final_Continuation/delivery_metadata/package_manifest.json": true,
+    "IGBT_SEB_20260714_Final_Continuation/gtree.dat": true
+  },
+  "internal_identity": "IGBT_SEB_20260714_Final_Continuation / 7-case IGBT continuation Workbench project",
+  "unpack_structure": "PASS",
+  "verification_level": "PACK_UNPACK_WORKBENCH_OPEN_SVISUAL_VIEW_EXTRACT",
+  "opened_in_workbench": "PASS",
+  "svisual_view_probe": "PASS",
+  "svisual_extract_probe": "PASS",
+  "continued_run": "NOT_RERUN_AFTER_PACKAGING",
+  "relation_to_formal_20260714": "Bound to the 20260714 formal IGBT fact source by the embedded 7-case run index and package manifest."
+}

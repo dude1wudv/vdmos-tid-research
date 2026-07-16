@@ -1,1 +1,27 @@
 artifact_id,case_id,attempt_id,kind,local_path,remote_path,sha256,size_bytes,generated_at,publicable,source_command_id
+ART0001,NA,NA,mesh,private mesh path,private remote mesh path,5c7c098706bcf07dc2656a1bfd547aea3415b02167d6afb0439c0a28f35f5265,542709,2026-07-12T04:35:20+08:00,false,E0008
+ART0002,S00_v100_let10_y3p5,attempt02,screenshot,figures/smoke_heavy_ion_generation_100p2ps.png,NA,3ee4626732fe47ab49b0d0e2a550aee263b337fba4af28164fe37c3f663f6ded,41832,2026-07-12T04:26:54+08:00,true,E0007
+ART0003,A01_v2500_let15_y3p5,multiple,plot,figures/a01_partial_transients.png,NA,91315014547942d3b84c9088fbb70f1072ef54832599981f5ec45e5665de7c4e,144380,2026-07-12T06:24:47+08:00,true,E0014
+ART0004,NA,multiple,plot,figures/attempt_failure_recovery_funnel.png,NA,ec8df84582431eb608ce7fc3a31d7a9a3edd288284f45997be5c5a4bf52d3f6c,54550,2026-07-12T06:24:47+08:00,true,E0015
+ART0005,NA,multiple,plot,figures/tuning_outcomes.png,NA,b1e49e872a6b3e37537b37141614a220ba09e6ba85a20a9567252733123b251d,71955,2026-07-12T06:24:48+08:00,true,E0015
+ART0006,A01_v2500_let15_y3p5,attempt11_input_audit_full_segmented,plot,figures/heavyion_charge_closure.png,NA,edf03468e4b0a37107617799303d291fa635b1fea3821d069c19cc8cfe6c41a9,93983,2026-07-12T14:17:20+08:00,true,E0020
+ART0007,A01_v2500_let15_y3p5,multiple,plot,figures/a01_solver_variant_physics.png,NA,44351397351d9f5bdb28a36e46865596066ecee9a024374107747bebe3d9609a,142372,2026-07-12T14:17:19+08:00,true,E0025
+ART0008,A01_v2500_let15_y3p5,multiple,plot,figures/a01_solver_variant_performance.png,NA,c2bb0eb319cdcb4e61949967fa3bdb68b0b54771b4d8197dfc32a2441e3a5d5e,55290,2026-07-12T14:17:20+08:00,true,E0025
+ART0009,A01_v2500_let15_y3p5,attempt11_input_audit_full_segmented,data,data/heavyion_charge_audit.csv,NA,945e536ea7dacc1112ebcdc57b9412096c95abf6706b16516d97711e94c62757,988,2026-07-12T14:33:58+08:00,true,E0020
+ART0010,A01_v2500_let15_y3p5,multiple,data,data/solver_benchmark_summary.csv,NA,5e80686f4f527b67219963e9ce4e8207a27b2324df4748bc20c938a168fd215d,469,2026-07-12T14:33:58+08:00,true,E0025
+ART0011,A01_v2500_let15_y3p5,attempt12_meshhalf_dc_bias,data,data/a01_meshhalf_mesh_diff.csv,NA,f5f4c66e2dfd3f2752799bcd65cb112929e64ab7c47bda3e04adc57b2d9bda9e,536,2026-07-12T07:05:43+08:00,true,E0026
+ART0012,A01_v2500_let15_y3p5,multiple,data,data/a01_meshhalf_transient_comparison.csv,NA,4dc94c9ce8df1309763777e186eafdbfbe2568ce6a128aa0dc5092ddddc1d5ee,814,2026-07-12T20:43:54.622016+00:00,true,E0031
+ART0013,A01_v2500_let15_y3p5,multiple,data,data/a01_field_evidence.csv,NA,aaf700140422c418d5cf6984d27ba9e24c56e49efdf1ef6da3b129302d11474a,666,2026-07-12T20:43:54.623015+00:00,true,E0031
+ART0014,A01_v2500_let15_y3p5,multiple,data,data/a01_wt_hi_sensitivity.csv,NA,875b74be0a97320e1bb8b55ce9ef5b16b9480defdf2e75812567df56124e6834,1565,2026-07-12T20:43:54.623015+00:00,true,E0035
+ART0015,A01_v2500_let15_y3p5,attempt24_cold300_transient_to60,data,data/a01_thermal_initial_state_sensitivity.csv,NA,c5bcf6689dba2dbd92159e465cedea1bfbec632f3240962f12dbe592afb9ec11,787,2026-07-12T20:43:54.624015+00:00,true,E0037
+ART0016,A01_v2500_let15_y3p5,multiple,data,data/a01_position_sensitivity.csv,NA,d85377dcf681aa3c794df2373e7db14cb724dce611ece6d70f0f5af51b462e0a,1537,2026-07-12T20:43:54.625016+00:00,true,E0039
+ART0017,A01_v2500_let15_y3p5,multiple,data,data/a01_diagnostic_gate_summary.csv,NA,79fa71fb7de3bfd47f8191f7d627856c81daec273b25ae5688fb1c3304d37739,465,2026-07-12T20:43:54.626015+00:00,true,E0040
+ART0018,A01_v2500_let15_y3p5,multiple,plot,figures/a01_mesh_sensitivity.png,NA,82e0bd9c6a630fdcf59e00ec23e38c0e663846042a3928fb37407fc4c86008b0,130352,2026-07-12T20:43:56.586483+00:00,true,E0031
+ART0019,A01_v2500_let15_y3p5,multiple,plot,figures/a01_wt_hi_sensitivity.png,NA,15fdc2f7942513a2663bd07e2599135fd9263b3ea9add050671f24aa466b039b,127870,2026-07-12T20:43:56.804699+00:00,true,E0035
+ART0020,A01_v2500_let15_y3p5,multiple,plot,figures/a01_physical_diagnostics.png,NA,044bd45678c8c1fa026c4bf362424cb7f1b9b159cdecf8873862bcc35d47e71a,263630,2026-07-12T20:43:57.298630+00:00,true,E0039
+ART0021,A01_v2500_let15_y3p5,multiple,plot,figures/a01_field_evidence.png,NA,83e959c2c4ab0760bcd55003573921da6ba3e628365116fb1a4ed1a573e3ad1c,135085,2026-07-12T20:43:57.538022+00:00,true,E0031
+ART0022,A01_v2500_let15_y3p5,multiple,data,data/a01_meshhalf_dc_thread_benchmark.csv,NA,320c66c43329f5cfda209fcf7cd730dadbdf4b90e54b7b62bcd98b9b02231b91,435,2026-07-12T07:51:25.917647+00:00,true,E0044
+ART0023,NA,multiple,data,data/case_summary.csv,NA,b40fa9833e0c95c0d7cfec9f58c34558f24549f8b6705970982ed6e9738d6561,13846,2026-07-12T21:30:45.999836+00:00,true,E0044
+ART0024,NA,multiple,data,data/codex_events.csv,NA,d14f240db16f7f4d5874f4f53296b61d74f1ee190d29a5e4e61b174c7bf6dd38,12785,2026-07-12T21:30:46.019131+00:00,true,E0044
+ART0025,NA,multiple,data,data/run_registry.csv,NA,e7d7a839873db66851984409afe43bb4e7737a63c22dea6c6f414f6db043776a,560,2026-07-12T14:17:34.129394+00:00,true,E0030
+ART0026,NA,multiple,data,data/tuning_steps.csv,NA,3fd7c746bdc63fefd11cdf6486729a2d7582b8df6621cbfb2d542270ad9eda9b,6882,2026-07-12T21:30:45.954556+00:00,true,E0044

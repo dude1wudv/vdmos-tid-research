@@ -1,0 +1,303 @@
+{
+  "schema_version": "650v_static_mesh_consistency/v1",
+  "status": "FAILED",
+  "thresholds": {
+    "bv_relative_max": 0.02,
+    "vth_absolute_v_max": 0.1,
+    "conduction_relative_max": 0.05,
+    "off_leakage_relative_max": 0.1
+  },
+  "threshold_rationale": "BV uses a 2% discretization bound; Vth uses a 0.1 V absolute bound; conduction allows 5%; leakage allows 10% because it is a sub-pA/um interpolated quantity. Missing or non-finite evidence fails closed.",
+  "baseline_extraction": {
+    "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+    "sha256": "f03ebcb4cb57cdecfb098eb9b86aea2a7dd6468c8aef84e8d1e6a0e1b0f92b72"
+  },
+  "refined_extraction": {
+    "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_extraction.json",
+    "sha256": "6b4f37758af9a3113283c738667b048f85110b6b3fb9c9c0f8de349f4e82aee6"
+  },
+  "refined_run_set": {
+    "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/refined_mesh_consistency_v1.json",
+    "sha256": "b64e9e562f97cacfa97baae09a5235bd81f7628c22d583b7d3cc2d012ee6dd63"
+  },
+  "mesh_generation_manifest": {
+    "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/mesh_generation/refined_mesh_manifest.json",
+    "sha256": "ead5fb4f6533eea5ee750cd0830a210c3bda7f6941d1f1a3250b1dd48d89e597"
+  },
+  "devices": {
+    "IGBT": {
+      "status": "PASSED",
+      "device_dsl": "projects/igbt_mosfet_650v_seb_20260715/devices/igbt_650v.json",
+      "device_dsl_sha256": "813f17f265b91d3dadf9f1a5c3d9c8afe3c17a3fc05880f9e186f2ca3ee68132",
+      "baseline_mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664",
+      "refined_mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "baseline_area_factor": 52755946.32810768,
+      "refined_fixed_area_factor": 52755946.32810768,
+      "refined_diagnostic_self_calibrated_area_factor": 47135269.38403092,
+      "fixed_area_factor_passed": true,
+      "refined_static_gates_passed": true,
+      "scheduler_evidence_passed": true,
+      "comparisons": {
+        "bv": {
+          "baseline": 707.497688089023,
+          "refined": 707.789945513928,
+          "delta": 0.0004130860493614784,
+          "delta_mode": "relative",
+          "threshold": 0.02,
+          "threshold_name": "bv_relative_max",
+          "passed": true
+        },
+        "vth": {
+          "baseline": 6.448419139306199,
+          "refined": 6.450387880809743,
+          "delta": 0.0019687415035436473,
+          "delta_mode": "absolute",
+          "threshold": 0.1,
+          "threshold_name": "vth_absolute_v_max",
+          "passed": true
+        },
+        "conduction": {
+          "baseline": 1.55,
+          "refined": 1.4916030904133166,
+          "delta": 0.037675425539795755,
+          "delta_mode": "relative",
+          "threshold": 0.05,
+          "threshold_name": "conduction_relative_max",
+          "passed": true
+        },
+        "off_leakage": {
+          "baseline": 1.942219625700824e-05,
+          "refined": 1.974952372362198e-05,
+          "delta": 0.016853267379358737,
+          "delta_mode": "relative",
+          "threshold": 0.1,
+          "threshold_name": "off_leakage_relative_max",
+          "passed": true
+        }
+      },
+      "baseline_runs": {
+        "bv": {
+          "run_id": "IGBT650_BV__candidate_lifetime_300us__20260715T223649071Z__70af9ade",
+          "run_manifest_sha256": "3df5d86c4fe756f14fa5e686bd4e2e964f0661f4e5457021195c99bd83845083",
+          "source_plt_sha256": "c340a6f4b2a10f30dd48fcf5610b5abe351ad6a678023c396dc919210a673cc7"
+        },
+        "conduction": {
+          "run_id": "IGBT650_STATIC_CONDUCTION__candidate_lifetime_300us__20260715T222430442Z__bd89a631",
+          "run_manifest_sha256": "14399fd7fd38d5c1a6b178b60fb950715d9c1fd0c22becfcbbaa0942462868c1",
+          "source_plt_sha256": "dd522f2b254a90bb39643eff459842d755e9808f8946fe061893a5f8a9a12298"
+        },
+        "vth": {
+          "run_id": "IGBT650_STATIC_VTH__candidate_lifetime_300us__20260715T223304957Z__4b68c039",
+          "run_manifest_sha256": "a03362dc438ca201e68607e5a5ac8605fed4fd5f267d08dbc7bdee3782f0cab4",
+          "source_plt_sha256": "2738e5e72aa3ecd71fba34beb78d570f96fd63efb1e89f9e5dbc85cec27197f4"
+        },
+        "off_leakage": {
+          "run_id": "IGBT650_STATIC_OFF_LEAKAGE__candidate_lifetime_300us__20260715T222835835Z__76e1ab1c",
+          "run_manifest_sha256": "8f44e48d90182311b396a5ae14da253be301594795f7b9e32f9e0a60d41ad182",
+          "source_plt_sha256": "a239fa074883b3b378292a007c01d5458e5ce85d52723d29af841876a8c83e84"
+        }
+      },
+      "refined_runs": {
+        "bv": {
+          "run_id": "IGBT650_REFINED_STATIC_BV__mesh_consistency_v1__20260715T232824034Z__34617479",
+          "run_manifest_sha256": "2169b28d3a4c7f8f82ac1c2c6b746eb0a97b56ddae2081922f212e288fbf0b3e",
+          "source_plt_sha256": "d98e28c70cbad51aa8d6ccc3f1430e7dd9a85b06cc8c1dca042db4afd9cadc56",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "316"
+          }
+        },
+        "conduction": {
+          "run_id": "IGBT650_REFINED_STATIC_CONDUCTION__mesh_consistency_v1__20260715T232824124Z__62e59e82",
+          "run_manifest_sha256": "974b2852517dd1a7b39afc962d928dce2844c4857e140f44706537e2da558ab5",
+          "source_plt_sha256": "5e87d990caac82692677443cc7fe71447ae12b0d3c4a30a797cdc035a5dc45e6",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "244"
+          }
+        },
+        "vth": {
+          "run_id": "IGBT650_REFINED_STATIC_VTH__mesh_consistency_v1__20260715T232824035Z__bfc09029",
+          "run_manifest_sha256": "c244e5e94aa7fde4ffb59a03839a10644114fb048a2d30f72e6e200c2f5ec048",
+          "source_plt_sha256": "5bbc226880dd9666ffdf890f0ecfd8880c49b9b52a2fe972c2e6631374de5053",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 3,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "178"
+          }
+        },
+        "off_leakage": {
+          "run_id": "IGBT650_REFINED_STATIC_OFF_LEAKAGE__mesh_consistency_v1__20260715T232824343Z__8d506c70",
+          "run_manifest_sha256": "cf141148b714f160d8f169a9569b3d6483c32db50e9f60f2c48e1627d488e5b9",
+          "source_plt_sha256": "3b066b669a718249799e5bd29e77bc507d5f57f65f93f6ac2cb2b63d1554ac8c",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 4,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "369"
+          }
+        }
+      }
+    },
+    "MOSFET": {
+      "status": "FAILED",
+      "device_dsl": "projects/igbt_mosfet_650v_seb_20260715/devices/mosfet_650v_sj.json",
+      "device_dsl_sha256": "6b40bbebf63216d295ee01056553e1ff39a01f245a86c9abb714ed1cff3b110f",
+      "baseline_mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+      "refined_mesh_sha256": "949901b1790b164c47e6b2dce92e522bda0ecdb5dc71f8724d9fdc301b39b4ad",
+      "baseline_area_factor": 53502886.18183474,
+      "refined_fixed_area_factor": 53502886.18183474,
+      "refined_diagnostic_self_calibrated_area_factor": 41197619.37311974,
+      "fixed_area_factor_passed": true,
+      "refined_static_gates_passed": true,
+      "scheduler_evidence_passed": true,
+      "comparisons": {
+        "bv": {
+          "baseline": 824.279280266482,
+          "refined": 823.265337910941,
+          "delta": 0.0012300956481804048,
+          "delta_mode": "relative",
+          "threshold": 0.02,
+          "threshold_name": "bv_relative_max",
+          "passed": true
+        },
+        "vth": {
+          "baseline": 4.012161559996825,
+          "refined": 3.8938981091184983,
+          "delta": 0.11826345087832646,
+          "delta_mode": "absolute",
+          "threshold": 0.1,
+          "threshold_name": "vth_absolute_v_max",
+          "passed": false
+        },
+        "conduction": {
+          "baseline": 0.087,
+          "refined": 0.0830245351041854,
+          "delta": 0.045694998802466524,
+          "delta_mode": "relative",
+          "threshold": 0.05,
+          "threshold_name": "conduction_relative_max",
+          "passed": true
+        },
+        "off_leakage": {
+          "baseline": 7.3603471784209215e-06,
+          "refined": 7.640408022063122e-06,
+          "delta": 0.0380499502065994,
+          "delta_mode": "relative",
+          "threshold": 0.1,
+          "threshold_name": "off_leakage_relative_max",
+          "passed": true
+        }
+      },
+      "baseline_runs": {
+        "bv": {
+          "run_id": "MOSFET650_BV__candidate_attempt24_sj_scale_0p8__20260715T220228915Z__7007484d",
+          "run_manifest_sha256": "d0756398fd4329c87511c59088bba4c8b8ac6243d8b4b25d7359dddf2e5d5c26",
+          "source_plt_sha256": "14cbf278fb02a1f3f1f3d8b583d075f4eb87b92dccf980e563815f23c5f9559d"
+        },
+        "conduction": {
+          "run_id": "MOSFET650_STATIC_CONDUCTION__candidate_attempt24_sj_scale_0p8__20260715T212639126Z__49bb6bcc",
+          "run_manifest_sha256": "0c1744b218a65fefcd0ab5e56f8821a7715366a97699d8268d473c6ad018a03a",
+          "source_plt_sha256": "bbf6b1fff7f004211735994eef9313e6bb5283795f45a17025267d575ba3eab5"
+        },
+        "vth": {
+          "run_id": "MOSFET650_STATIC_VTH__candidate_attempt24_sj_scale_0p8__20260715T215313385Z__aa3dac82",
+          "run_manifest_sha256": "494712cd20783467f758984c87a0b9095a1839e98cd8d5776abc96c27281d648",
+          "source_plt_sha256": "bcd8568fcb0afb2f60f1709f24ed6424527b2c610dce240e7b4479b4e0b0edff"
+        },
+        "off_leakage": {
+          "run_id": "MOSFET650_STATIC_OFF_LEAKAGE__candidate_attempt24_sj_scale_0p8__20260715T215649765Z__74bb2714",
+          "run_manifest_sha256": "7d3778aad99220072dd3d0eadabff071964c40b17e557ad68fcb1bf109c02ed7",
+          "source_plt_sha256": "6262fc708b9b813122a8278e9ec4584f15e1c9e0af4b678c47b3134a012dfa76"
+        }
+      },
+      "refined_runs": {
+        "bv": {
+          "run_id": "MOSFET650_REFINED_STATIC_BV__mesh_consistency_v1__20260715T233541084Z__3c4de328",
+          "run_manifest_sha256": "a85593e649c072bd6a44a38db8ac0d408548f6cde294669524099ea19fa09357",
+          "source_plt_sha256": "5f850a4a2e297f78473b9f0badd842aee1d7921d5c473d2775f764bf225d99d9",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 2,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "459"
+          }
+        },
+        "conduction": {
+          "run_id": "MOSFET650_REFINED_STATIC_CONDUCTION__mesh_consistency_v1__20260715T233541444Z__ec55d1f2",
+          "run_manifest_sha256": "30f880767b8d4a5099033415fd58d333dcc46c463339cf4fc08074f2a351b874",
+          "source_plt_sha256": "2bdb449c68ca9f575d51fe5907866c9e07d3d164a142ad7873b230a3240fced6",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 3,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "188"
+          }
+        },
+        "vth": {
+          "run_id": "MOSFET650_REFINED_STATIC_VTH__mesh_consistency_v1__20260715T233541134Z__d4b3156d",
+          "run_manifest_sha256": "3cae3ac9155236cf223817a5708a7ef75cfb3fd2985e3e7e750354d247a3c0bc",
+          "source_plt_sha256": "e8532ddafab06f0ac7cbbf476b3e2f740aa8371038c95354783727f48b61ca1a",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 1,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "158"
+          }
+        },
+        "off_leakage": {
+          "run_id": "MOSFET650_REFINED_STATIC_OFF_LEAKAGE__mesh_consistency_v1__20260715T233541605Z__531e88c6",
+          "run_manifest_sha256": "65d11e0ac475f7b127d724a50eec438c70a55bc6e6d63c279e3da27c6efa67d6",
+          "source_plt_sha256": "9e3155d342e3d1a0df436a500ca07e445d49bc117c160751e375e50f5a597c53",
+          "scheduling_evidence": {
+            "allocation_mode": "AUTO_LEASE",
+            "cpu_core": 4,
+            "sdevice_threads": 1,
+            "lease_acquired": true,
+            "lease_released": true,
+            "affinity_verification": "VERIFIED",
+            "exit_code": "0",
+            "wall_time_seconds": "408"
+          }
+        }
+      }
+    }
+  },
+  "static_mesh_gate_closed": false,
+  "post_static_authorization_ready": false,
+  "heavy_ion_authorized": false,
+  "authorization_state": "STATIC_MESH_GATE_FAILED_POST_STATIC_CAMPAIGN_BLOCKED"
+}

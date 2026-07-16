@@ -1,0 +1,183 @@
+{
+  "schema_version": "igbt550_mosfet500_comparison/v1",
+  "comparison_id": "HISTORICAL_IGBT550_VS_MOSFET650_V500_20260716",
+  "status": "COMPARISON_ONLY",
+  "manifest": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt550_mosfet500_comparison_manifest.json",
+  "comparison_codes": [
+    "NOT_COMMON_BIAS",
+    "NOT_SAME_STRUCTURE",
+    "NOT_SAME_TRACK",
+    "AREA_FACTOR_2D_SEMANTICS_MISMATCH",
+    "NOT_COMMON_GATE_CONTEXT"
+  ],
+  "global_gate": {
+    "status": "FAILED_NUMERICAL_PRESTRIKE_IGBT400",
+    "changed_by_this_build": false,
+    "formal_campaign_summary_run": false
+  },
+  "cases": [
+    {
+      "case_label": "historical_igbt_550v",
+      "case_id": "IGBT_T298_V550_L15",
+      "device_family": "IGBT",
+      "structure_scope": "historical reference structure",
+      "bias_quantity": "VCE",
+      "bias_v": 550.0,
+      "initial_temperature_k": 298.15,
+      "let_mev_cm2_mg": 15.0,
+      "track": {
+        "start_x_um": 0.0,
+        "start_y_um": 3.5,
+        "direction": [1.0, 0.0],
+        "length_um": 50.0
+      },
+      "run_id": "IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0",
+      "runner_lifecycle": "SUCCEEDED",
+      "evidence_status": "HISTORICAL_REFERENCE_SUPPORTED",
+      "seb_status": "NOT_INFERRED_BY_THIS_COMPARISON",
+      "source_time_s": {
+        "status": "EXTRACTED",
+        "value": 2.1e-9,
+        "unit": "s"
+      },
+      "hotspot": {
+        "status": "EXTRACTED",
+        "tmax_k": 300.386549973,
+        "x_um": 170.757232666,
+        "y_um": 0.0,
+        "region": "n-drift",
+        "nearest_interface_type": "top_gate_oxide",
+        "nearest_interface_distance_um": 167.55014392527815
+      },
+      "terminal": {
+        "units_semantics": "native 2D per-um; no chip AreaFactor bound",
+        "sample_count": 95,
+        "time_end_s": 2.1e-9,
+        "baseline_current_a_um": 5.63994029547e-8,
+        "final_current_a_um": "UNEXTRACTED",
+        "peak_abs_current_a_um": "UNEXTRACTED",
+        "peak_current_time_s": "UNEXTRACTED",
+        "collected_charge_pc_um": 0.0015667171079054242,
+        "energy_j_um": 9.268326177934994e-13
+      },
+      "field": {
+        "emax_status": "EXTRACTED",
+        "emax_v_per_cm": 145841.603695,
+        "emax_x_um": 0.019999999553,
+        "emax_y_um": 1.98062098026
+      },
+      "heavy_ion_charge": {
+        "audit_status": "COMPLETE_16_OF_16",
+        "audit_point_count": 16,
+        "nominal_charge_pc": 7.775,
+        "integrated_charge_pc": 8.067321302802348,
+        "closure_error_pct": 3.7597595215736135,
+        "semantics": "2D integral with assumed 1 um out-of-plane thickness"
+      },
+      "evidence": [
+        "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/extracts/IGBT_T298_V550_L15_2ns.json",
+        "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/extracts/IGBT_T298_V550_L15_2ns_fields.csv",
+        "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/data/campaign_2ns_comparison.csv",
+        "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/data/mesh_track_refined_comparison.csv"
+      ]
+    },
+    {
+      "case_label": "current_mosfet_650v_reference_at_500v",
+      "case_id": "MOSFET650_LET15_2P1NS_V500",
+      "device_family": "MOSFET",
+      "structure_scope": "650 V superjunction reference model",
+      "bias_quantity": "VDS",
+      "bias_v": 500.0,
+      "initial_temperature_k": 298.15,
+      "let_mev_cm2_mg": 15.0,
+      "track": {
+        "start_x_um": 3.2,
+        "start_y_um": 5.99,
+        "direction": [1.0, 0.0],
+        "length_um": 60.79
+      },
+      "dc_run_id": "MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491",
+      "run_id": "MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c",
+      "runner_lifecycle": "SUCCEEDED",
+      "evidence_status": "COMPARISON_ONLY",
+      "seb_status": "NOT_EVALUATED_GLOBAL_GATE_FAILED",
+      "source_time_s": {
+        "status": "EXTRACTED",
+        "value": 2.1e-9,
+        "unit": "s"
+      },
+      "hotspot": {
+        "status": "EXTRACTED",
+        "tmax_k": 703.289277824,
+        "x_um": 46.0,
+        "y_um": 6.0,
+        "region": "UNEXTRACTED",
+        "nearest_interface_type": "UNEXTRACTED",
+        "nearest_interface_distance_um": "UNEXTRACTED"
+      },
+      "terminal": {
+        "units_semantics": "native 2D per-um; MOSFET static AreaFactor exists but is not applied",
+        "sample_count": 215,
+        "time_end_s": 2.1e-9,
+        "baseline_current_a_um": 8.54807326231e-14,
+        "final_current_a_um": 0.0399006856085,
+        "peak_abs_current_a_um": 0.0399006856085,
+        "peak_current_time_s": 2.1e-9,
+        "peak_abs_power_w_um": 19.95034280425,
+        "peak_power_time_s": 2.1e-9,
+        "collected_charge_pc_um": 60.18187549388502,
+        "energy_j_um": 3.009093774703226e-8,
+        "final_to_peak_excursion_fraction": 1.0,
+        "tail_abs_current_slope_a_um_s": 12651316.549058944,
+        "recovered_to_10pct_of_peak_excursion": false,
+        "sustained_tail_growth": true
+      },
+      "field": {
+        "emax_status": "EXTRACTED",
+        "emax_v_per_cm": 695104.217396,
+        "emax_x_um": 0.0,
+        "emax_y_um": 4.40625,
+        "prestrike_track_context_status": "SUPPORTED_SEPARATE_FIELD_EVIDENCE",
+        "prestrike_track_emax_v_per_cm_at_500v": 188371.677107,
+        "prestrike_track_emax_x_um": 62.0,
+        "prestrike_track_y_um": 5.99
+      },
+      "heavy_ion_charge": {
+        "audit_status": "COMPLETE_16_OF_16",
+        "audit_point_count": 16,
+        "nominal_charge_pc": 9.452845,
+        "integrated_charge_pc": 9.455064962963664,
+        "closure_error_pct": 0.02348460134133923,
+        "semantics": "2D integral with assumed 1 um out-of-plane thickness"
+      },
+      "extraction_checks": {
+        "exact_tdr_present": true,
+        "all_required_fields_present": true,
+        "all_required_fields_have_finite_values": true,
+        "all_terminal_values_finite": true,
+        "plt_reaches_exact_2p1ns": true,
+        "all_charge_audit_points_present": true,
+        "charge_closure_le_5pct": true
+      },
+      "evidence": [
+        "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/mosfet650_v500_comparison_only_extraction.json",
+        "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/mosfet650_v500_comparison_only_fields.csv",
+        "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/extraction_provenance.json",
+        "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/field_track_localization_v2.json"
+      ]
+    }
+  ],
+  "cross_device_derived_metrics": {
+    "status": "NOT_COMPUTED",
+    "reason": "No common bias, structure, track, AreaFactor, or chip-width normalization; no performance ratio or device ranking is valid."
+  },
+  "allowed_conclusion": "The historical IGBT 550 V evidence and current MOSFET 500 V evidence are separately auditable and can be displayed side by side as non-common-condition observations only.",
+  "prohibited_conclusions": [
+    "device advantage",
+    "SEB PASS",
+    "SEB threshold",
+    "safe operating voltage",
+    "safety ranking",
+    "performance ratio from raw per-um quantities"
+  ]
+}

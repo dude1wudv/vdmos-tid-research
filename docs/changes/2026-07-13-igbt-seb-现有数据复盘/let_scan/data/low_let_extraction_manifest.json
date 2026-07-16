@@ -1,0 +1,166 @@
+{
+  "schema": "low_let_svisual_merge/v1",
+  "series": [
+    {
+      "series_id": "let0p015_thermal",
+      "output_path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p015_thermal_raw.csv",
+      "output_sha256": "624d73c726161ba944608ed7232b20eeb68cca886cac779c6d2bbe256bf3f23b",
+      "sample_count": 185,
+      "time_start_s": 1e-13,
+      "time_end_s": 6e-08,
+      "source_segments": [
+        {
+          "tag": "let0p015_thermal_0to40",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_0to40.csv",
+          "csv_sha256": "8f65f686e7d54f927c939fe07b57caaab1a1290a37c411a29e4b94e352771387",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_0to40.json",
+          "metadata_sha256": "7ed285084a15a71060dd6542381be840a27bf8ab169deb98bac164909306b869",
+          "selected_rows": 101,
+          "selected_start_s": 1e-13,
+          "selected_end_s": 4e-08,
+          "selection_end_s": 4e-08,
+          "previous_end_s": null,
+          "boundary_gap_s": null
+        },
+        {
+          "tag": "let0p015_thermal_40to40p7",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_40to40p7.csv",
+          "csv_sha256": "c556d150bb4c6ac5a4e9921db081df6986a35c4a3b85a53092bbb6076b4a2a0f",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_40to40p7.json",
+          "metadata_sha256": "aefcf28cd5175645e6b9bc33d5ba51c8b4c8048ae1f4fd2f3022e7a1b67f647c",
+          "selected_rows": 25,
+          "selected_start_s": 4.0001e-08,
+          "selected_end_s": 4.07e-08,
+          "selection_end_s": null,
+          "previous_end_s": 4e-08,
+          "boundary_gap_s": 1.000000000001134e-12
+        },
+        {
+          "tag": "let0p015_thermal_40p7to60",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_40p7to60.csv",
+          "csv_sha256": "f47e530644fb5c9cf9ff25fa313c4218bccd67a5aca87b295872cc6f9187d511",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_thermal_40p7to60.json",
+          "metadata_sha256": "f0d590b48980ac9316737516d51545dd1d4a1872538ed35c13d8151e55b33e1a",
+          "selected_rows": 59,
+          "selected_start_s": 4.071e-08,
+          "selected_end_s": 6e-08,
+          "selection_end_s": null,
+          "previous_end_s": 4.07e-08,
+          "boundary_gap_s": 9.999999999998104e-12
+        }
+      ],
+      "resampling": "none"
+    },
+    {
+      "series_id": "let0p015_cold300",
+      "output_path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p015_cold300_raw.csv",
+      "output_sha256": "c031848b655168504c8ef762cabe89177efca542ca58fe6d027459fd8a43bae4",
+      "sample_count": 185,
+      "time_start_s": 1e-13,
+      "time_end_s": 6e-08,
+      "source_segments": [
+        {
+          "tag": "let0p015_cold300_0to40",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_0to40.csv",
+          "csv_sha256": "4b11700a98416892d07795a061cb150a9323f1535d10768a710a668e5e714e58",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_0to40.json",
+          "metadata_sha256": "063dcb23ee21716246031f731271bd3db2e90c2d2b4c34720f3fad287a1c919c",
+          "selected_rows": 101,
+          "selected_start_s": 1e-13,
+          "selected_end_s": 4e-08,
+          "selection_end_s": 4e-08,
+          "previous_end_s": null,
+          "boundary_gap_s": null
+        },
+        {
+          "tag": "let0p015_cold300_40to40p7",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_40to40p7.csv",
+          "csv_sha256": "419335e5f0a9e877d9ecadb9e7a24d04b883e1460dc3e6da04e3be753259843d",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_40to40p7.json",
+          "metadata_sha256": "ca02f8c717bf4317047a174560e2290bfb7f41daaedf06c94f814b848e104b3c",
+          "selected_rows": 25,
+          "selected_start_s": 4.0001e-08,
+          "selected_end_s": 4.07e-08,
+          "selection_end_s": null,
+          "previous_end_s": 4e-08,
+          "boundary_gap_s": 1.000000000001134e-12
+        },
+        {
+          "tag": "let0p015_cold300_40p7to60",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_40p7to60.csv",
+          "csv_sha256": "4b70ddc74cbf15d89f2fecbdf4fcf46a44ba53eb26cfe4ad31665abbe5dc0228",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p015_cold300_40p7to60.json",
+          "metadata_sha256": "0396421e5cb82f63b1109b23b099758b6745ea435b5e1a32f063beee39d062e5",
+          "selected_rows": 59,
+          "selected_start_s": 4.071e-08,
+          "selected_end_s": 6e-08,
+          "selection_end_s": null,
+          "previous_end_s": 4.07e-08,
+          "boundary_gap_s": 9.999999999998104e-12
+        }
+      ],
+      "resampling": "none"
+    },
+    {
+      "series_id": "let0p15_thermal",
+      "output_path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p15_thermal_raw.csv",
+      "output_sha256": "f5ad4db3b0862e01dcc7a14f23485c92c5e7feee201a78e2a7fae981d136ea5f",
+      "sample_count": 152,
+      "time_start_s": 1e-13,
+      "time_end_s": 6e-08,
+      "source_segments": [
+        {
+          "tag": "let0p15_thermal_0to60",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p15_thermal_0to60.csv",
+          "csv_sha256": "f5ad4db3b0862e01dcc7a14f23485c92c5e7feee201a78e2a7fae981d136ea5f",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p15_thermal_0to60.json",
+          "metadata_sha256": "3f2510e99a514ca9a70e506243ffc2823afdd9a5834ec8fd9312b15e94d574e9",
+          "selected_rows": 152,
+          "selected_start_s": 1e-13,
+          "selected_end_s": 6e-08,
+          "selection_end_s": null,
+          "previous_end_s": null,
+          "boundary_gap_s": null
+        }
+      ],
+      "resampling": "none"
+    },
+    {
+      "series_id": "let0p15_cold300",
+      "output_path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p15_cold300_raw.csv",
+      "output_sha256": "bc366e6c3adbb8907a0691788ca2260e92ce0e118ae1057360116864138660e6",
+      "sample_count": 165,
+      "time_start_s": 1e-13,
+      "time_end_s": 6e-08,
+      "source_segments": [
+        {
+          "tag": "let0p15_cold300_0to50",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p15_cold300_0to50.csv",
+          "csv_sha256": "53dcb7156535fbc5b4c84a35f771026a6d7c077f9e640b602a9052e9d722f951",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p15_cold300_0to50.json",
+          "metadata_sha256": "db6a8a2afc0e73db8ae6e90d7e809ef70ffe984f40422b8a981e0371c7822d6e",
+          "selected_rows": 129,
+          "selected_start_s": 1e-13,
+          "selected_end_s": 5e-08,
+          "selection_end_s": 5e-08,
+          "previous_end_s": null,
+          "boundary_gap_s": null
+        },
+        {
+          "tag": "let0p15_cold300_50to60",
+          "csv_path": "local_runtime/lowlet_extract_20260715/let0p15_cold300_50to60.csv",
+          "csv_sha256": "a0b6bbe8fa506c9240ad9a2f689695cc2ba3f8a271a7c64dad27cb536dbfcc2c",
+          "metadata_path": "local_runtime/lowlet_extract_20260715/let0p15_cold300_50to60.json",
+          "metadata_sha256": "20e395294ba4a3456ba083bea1332c0f2e6d8158de2356acee79407fff1b7d5a",
+          "selected_rows": 36,
+          "selected_start_s": 5.001e-08,
+          "selected_end_s": 6e-08,
+          "selection_end_s": null,
+          "previous_end_s": 5e-08,
+          "boundary_gap_s": 1.0000000000004722e-11
+        }
+      ],
+      "resampling": "none"
+    }
+  ]
+}

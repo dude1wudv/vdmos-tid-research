@@ -1,0 +1,47 @@
+{
+  "records": 1593,
+  "series": 10,
+  "fixed_time_rows": 15,
+  "source_files": [
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p015_thermal_raw.csv",
+      "sha256": "624d73c726161ba944608ed7232b20eeb68cca886cac779c6d2bbe256bf3f23b"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p015_cold300_raw.csv",
+      "sha256": "c031848b655168504c8ef762cabe89177efca542ca58fe6d027459fd8a43bae4"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p15_thermal_raw.csv",
+      "sha256": "f5ad4db3b0862e01dcc7a14f23485c92c5e7feee201a78e2a7fae981d136ea5f"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let0p15_cold300_raw.csv",
+      "sha256": "bc366e6c3adbb8907a0691788ca2260e92ce0e118ae1057360116864138660e6"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let1p5_thermal_raw.csv",
+      "sha256": "c2415e29d99d900b9e6936aead0bbb8e90c7333c94651a0797f5cf70f80702e9"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let1p5_cold300_raw.csv",
+      "sha256": "9e40b121e1cbac6529372d6a2285717629f78b3eb5c93b6cced1e6c5cb68803c"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/data/r1_thermal_transient_long.csv",
+      "sha256": "bd6230b7eadeac7b6e02247ba909cfffdd65c3eb9dc73ccde860dca3051df550"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/data/thermal_timing_diagnostic.csv",
+      "sha256": "8bdda1d10569e0238c33e358504d01264875c33524e63eedfb6e7a97c4d1a623"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let150_thermal_raw.csv",
+      "sha256": "d483c62aaa1446effaa96a70be6b081d99c39cc679b4b5280b258b8de0541f64"
+    },
+    {
+      "path": "docs/changes/2026-07-13-igbt-seb-\u73b0\u6709\u6570\u636e\u590d\u76d8/let_scan/data/let150_cold300_raw.csv",
+      "sha256": "f2a9d5fb1bb036e6dd34ed595c539fc8e007012953ba0dcacca9f20137dc551e"
+    }
+  ]
+}

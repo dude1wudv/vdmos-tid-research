@@ -1,0 +1,33 @@
+{
+  "schema": "igbt_mosfet_seb_case/v1",
+  "case_id": "IGBT_T298_V550_L15",
+  "device_family": "IGBT",
+  "device_role": "reference_structure",
+  "phase": "transient",
+  "t_init_k": 298.15,
+  "t_steady_k": "NA",
+  "t_steady_max_k": "NA",
+  "target_vce_v": 550.0,
+  "actual_vce_v": "NA",
+  "let_mev_cm2_mg": 15.0,
+  "let_f_pc_um": 0.1555,
+  "track_x_um": 0.0,
+  "track_y_um": 3.5,
+  "direction": [
+    1.0,
+    0.0
+  ],
+  "length_um": 50.0,
+  "wt_hi_um": 0.1,
+  "strike_time_s": 1e-10,
+  "total_time_s": 2.1e-09,
+  "post_strike_time_s": 2e-09,
+  "mesh_variant": "baseline",
+  "mesh_leaf": "igbt_baseline_msh.tdr",
+  "restart_prefix": "IGBT_T298_V550_L15_restart",
+  "exact_2p1ns_tdr": "IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+  "threads": 1,
+  "source_structure": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt01/sde_seb.cmd",
+  "source_heavy_ion": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/case.cmd",
+  "formal_result_eligible": true
+}

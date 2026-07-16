@@ -1,0 +1,68 @@
+{
+  "schema": "igbt_mosfet_650v_seb_plot_2ns/v1",
+  "source_time_s": 2.1e-9,
+  "strike_time_s": 1e-10,
+  "domain_for_extrema": "Silicon",
+  "coordinate_unit": "um",
+  "required_quantities": [
+    {
+      "logical": "electric_field",
+      "candidates": [
+        "Abs(ElectricField-V)",
+        "ElectricField"
+      ]
+    },
+    {
+      "logical": "temperature",
+      "candidates": [
+        "LatticeTemperature",
+        "Temperature"
+      ]
+    },
+    {
+      "logical": "total_current_density",
+      "candidates": [
+        "Abs(TotalCurrentDensity-V)",
+        "TotalCurrent"
+      ]
+    },
+    {
+      "logical": "joule_heat",
+      "candidates": [
+        "JouleHeat"
+      ]
+    },
+    {
+      "logical": "total_heat",
+      "candidates": [
+        "TotalHeat"
+      ]
+    },
+    {
+      "logical": "impact_ionization",
+      "candidates": [
+        "ImpactIonization",
+        "AvalancheGeneration"
+      ]
+    },
+    {
+      "logical": "heavy_ion_generation",
+      "candidates": [
+        "HeavyIonGeneration"
+      ]
+    },
+    {
+      "logical": "heavy_ion_charge_density",
+      "candidates": [
+        "HeavyIonChargeDensity"
+      ]
+    }
+  ],
+  "plot_rules": {
+    "full_silicon_extrema": true,
+    "frozen_track_cutline_finite_audit": true,
+    "same_quantity_common_scale": true,
+    "raw_tdr_location": "local_runtime only",
+    "no_screenshot_estimation": true
+  }
+}

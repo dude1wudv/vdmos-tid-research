@@ -1,0 +1,8 @@
+panel,series,case_id,x_temperature_k,x_bias_v,metric,value,unit,threshold,gate_utilization_pct
+temperature_or_bias_or_device,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,tmax_k,298.868790661,K,,
+device,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,177.24854935538357,um,,
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,tmax_k,0.011239918335299024,% of gate,5.0,0.22479836670598047
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,terminal_collected_charge_pc_um,0.2422149273467895,% of gate,5.0,4.84429854693579
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,terminal_energy_j_um,0.012332854606491797,% of gate,5.0,0.24665709212983591
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,emax_v_cm,0.0016777563713602788,% of gate,10.0,0.016777563713602787
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,0.0,um of gate,0.01,0.0

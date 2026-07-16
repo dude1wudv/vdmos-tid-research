@@ -1,3 +1,18 @@
+---
+description: 
+alwaysApply: true
+---
+
+---
+description: 
+alwaysApply: true
+---
+
+---
+description: 
+alwaysApply: true
+---
+
 # Repository Guidelines
 
 ## Project Structure & Module Organization

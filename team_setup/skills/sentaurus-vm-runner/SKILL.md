@@ -1,6 +1,6 @@
 ---
 name: sentaurus-vm-runner
-description: Run Synopsys Sentaurus TCAD simulations on the local Linux VM over SSH. Use when the user asks Codex to connect to tcad@192.168.137.131, start or diagnose Sentaurus/SDevice/SDE/SWB, run PN diode or other TCAD examples, recover FlexNet license daemon issues, copy simulation artifacts back to Windows, or automate repeatable Sentaurus experiments from Codex.
+description: Run Synopsys Sentaurus TCAD simulations on the local Linux VM over SSH, with project-level fail-closed automatic single-core leases for independent SDevice jobs. Use when the user asks Codex to connect to tcad@192.168.137.131, start or diagnose Sentaurus/SDevice/SDE/SWB, run PN diode or other TCAD examples, recover FlexNet license daemon issues, copy simulation artifacts back to Windows, or automate repeatable Sentaurus experiments from Codex.
 ---
 
 # Sentaurus VM Runner
@@ -52,3 +52,13 @@ Read `references/pn-diode.md` only when modifying the diode flow or explaining t
 - Redact license signatures and keys if printing license files.
 - Do not edit `/usr/synopsys/...` examples in place; copy to `~/codex_runs` first.
 - If the VM IP changes, update command parameters; do not change the skill for one-off IP drift.
+
+## Core scheduling for project SDevice runs
+
+- For independent, mutually non-dependent Sentaurus/SDevice cases, default to one process per automatic core lease and `sdevice --threads 1`.
+- A mesh/restart/extraction dependency chain is not independent: keep it serial. Do not run a dependent child before its parent evidence exists.
+- In this project, invoke `scripts/run_igbt_seb_case.ps1` for these jobs. Its default `-CpuCore -1` acquires a VM-side core lease and fails closed if no safely isolated core is available. It records lease evidence in the run manifest. The active `max_8_single_thread_sdevice` profile reserves core 0 and caps managed work at eight independent `--threads 1` jobs; the VM may expose more than eight online CPUs, which the allocator discovers dynamically after excluding unmanaged affinity and existing leases.
+- `-CpuCore <n>` is only a compatibility/debug override. `-DisableAutoCpuLease` deliberately permits an unpinned run and must not be used for concurrent work. New SDevice entry points must integrate `scripts/sdevice_core_lease.sh` before allowing bare concurrency.
+- Skill triggering itself is semantic matching, not a system hook. The hard enforcement boundary is calls through `run_igbt_seb_case.ps1`; callers that bypass it must first add the same lease integration.
+
+Read `references/core-scheduling.md` when scheduling, recovering, or auditing project SDevice jobs.

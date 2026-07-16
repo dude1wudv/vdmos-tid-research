@@ -1,0 +1,9 @@
+metric,baseline,meshhalf,absolute_difference,relative_difference_pct
+track_core_max_depth_um,0.2,0.1,-0.1,-50.0
+track_core_max_lateral_um,0.025,0.0125,-0.0125,-50.0
+track_core_min_depth_um,0.02,0.01,-0.01,-50.0
+track_core_min_lateral_um,0.005,0.0025,-0.0025,-50.0
+points,31769,70276,38507,121.209
+triangles,62720,139710,76990,122.750
+min_edge_length_um,0.000757773,0.000757773,0,0
+mesh_sha256,5c7c098706bcf07dc2656a1bfd547aea3415b02167d6afb0439c0a28f35f5265,eaffd57700f0d3b29264ff13204b51dc8d07063221cb542f7e1d20d2f650d268,NA,NA

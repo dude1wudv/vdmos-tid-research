@@ -1,0 +1,8 @@
+{
+  "campaign_id": "igbt_mosfet_650v_seb_20260715",
+  "publication_profile": "650v_commercial_comparison_pending_calibration",
+  "summary_scope": "post_static_dc_restart_and_heavyion_cases_at_325_400_500v_only",
+  "static_calibration_runs_excluded": true,
+  "run_count": 0,
+  "runs": []
+}

@@ -1,0 +1,3 @@
+device_family,mesh_variant,area_factor_um,bv_v,bv_passed,vth_v,vth_passed,conduction_quantity,conduction_value,conduction_maximum_allowed_value,conduction_passed,off_leakage_raw_a_um,off_leakage_total_a,off_leakage_maximum_total_a,off_leakage_passed,static_gate_passed,mesh_consistency_status
+IGBT,refined,52755946.32810768,707.789945513928,True,6.450387880809743,True,VCE_sat,1.4916030904133166,2.0,True,3.743563540836285e-13,1.974952372362198e-05,2.5e-05,True,True,PASSED
+MOSFET,refined,53502886.18183474,823.265337910941,True,3.8938981091184983,True,RDS_on,0.0830245351041854,0.099,True,1.4280366102300455e-13,7.640408022063122e-06,8e-06,True,True,FAILED

@@ -1,0 +1,33 @@
+{
+  "schema": "igbt_mosfet_seb_plot_2ns/v1",
+  "source_time_s": 2.1e-9,
+  "strike_time_s": 1e-10,
+  "display_label_zh": "注入后 2.000 ns",
+  "domain_for_hotspot": "Silicon",
+  "coordinate_unit": "um",
+  "required_quantities": [
+    {"logical": "electron_mobility", "candidates": ["eMobility", "ElectronMobility"]},
+    {"logical": "hole_mobility", "candidates": ["hMobility", "HoleMobility"]},
+    {"logical": "electric_field", "candidates": ["Abs(ElectricField-V)", "ElectricField"]},
+    {"logical": "temperature", "candidates": ["LatticeTemperature", "Temperature"]},
+    {"logical": "electron_density", "candidates": ["eDensity"]},
+    {"logical": "hole_density", "candidates": ["hDensity"]},
+    {"logical": "electron_current", "candidates": ["Abs(eCurrentDensity-V)", "eCurrent"]},
+    {"logical": "hole_current", "candidates": ["Abs(hCurrentDensity-V)", "hCurrent"]},
+    {"logical": "total_current", "candidates": ["Abs(TotalCurrentDensity-V)", "TotalCurrent"]},
+    {"logical": "joule_heat", "candidates": ["JouleHeat"]},
+    {"logical": "total_heat", "candidates": ["TotalHeat"]},
+    {"logical": "avalanche", "candidates": ["ImpactIonization", "AvalancheGeneration"]},
+    {"logical": "heavy_ion_generation", "candidates": ["HeavyIonGeneration"]}
+  ],
+  "hotspot_distance": {
+    "method": "minimum Euclidean distance from Silicon argmax Temperature coordinate to every registered Si/SiO2 interface segment",
+    "no_screenshot_estimation": true,
+    "report": ["x_um", "y_um", "temperature_k", "region", "nearest_interface_type", "distance_um"]
+  },
+  "plot_rules": {
+    "same_quantity_common_scale": true,
+    "metadata_sidecar_required": true,
+    "raw_tdr_location": "local_runtime only"
+  }
+}

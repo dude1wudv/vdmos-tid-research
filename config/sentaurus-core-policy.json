@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "throughput_profile": "max_8_single_thread_sdevice",
+  "profile_note": "Maximum of eight independently leased single-thread SDevice jobs; core 0 remains reserved and VM online CPU count may exceed eight.",
+  "reserved_cores": [0],
+  "max_managed_slots": 8,
+  "lease_root": "/home/tcad/.cache/vdmos-sdevice-core-leases",
+  "lock_timeout_seconds": 20,
+  "unmanaged_process_policy": "exclude_affinity"
+}

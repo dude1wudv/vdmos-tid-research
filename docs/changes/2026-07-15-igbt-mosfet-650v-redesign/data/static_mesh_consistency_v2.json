@@ -1,0 +1,218 @@
+{
+  "schema_version": "650v_mosfet_three_level_mesh_consistency/v1",
+  "status": "PASSED",
+  "decision_basis": "refined-v2 keeps refined-v1 global/off-state controls and halves only the active-region spacings; Vth must satisfy the unchanged 0.1 V successive threshold plus a contracting three-level remaining-error estimate, while the other three gates must satisfy their unchanged refined-v1-to-v2 thresholds",
+  "thresholds_unchanged": {
+    "bv_relative_max": 0.02,
+    "vth_absolute_v_max": 0.1,
+    "conduction_relative_max": 0.05,
+    "off_leakage_relative_max": 0.1
+  },
+  "historical_refined_v1_gate": {
+    "status": "FAILED",
+    "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency.json",
+    "sha256": "81081b474e82ef7b17676e08d3bbe1080ae9573bd558784b3b08f7c11c4e3401",
+    "vth_absolute_delta_v": 0.11826345087832646,
+    "threshold_v": 0.1
+  },
+  "evidence": {
+    "baseline_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+      "sha256": "f03ebcb4cb57cdecfb098eb9b86aea2a7dd6468c8aef84e8d1e6a0e1b0f92b72"
+    },
+    "refined_v1_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_extraction.json",
+      "sha256": "6b4f37758af9a3113283c738667b048f85110b6b3fb9c9c0f8de349f4e82aee6"
+    },
+    "refined_v2_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_v2_local_extraction.json",
+      "sha256": "c8dd899e368b88f14e4b4466ad0ea23b698d394266d504c9820d1c3a849b70d5"
+    },
+    "refined_v2_run_set": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/refined_mesh_consistency_v2_local.json",
+      "sha256": "fcd1c4c72ecbcab8a2838f50efcf309b13c4a55c9c878418fb09487724786c91"
+    },
+    "refined_v2_mesh_generation": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/mesh_generation/refined_v2_local_mesh_manifest.json",
+      "sha256": "ff0d97a2c538fb431097fd2ace1fd42a52800c29cef516e7f30c327144e66e24"
+    }
+  },
+  "mesh_progression": {
+    "variants": [
+      "baseline",
+      "refined_v1",
+      "refined_v2_local"
+    ],
+    "sha256": [
+      "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569",
+      "949901b1790b164c47e6b2dce92e522bda0ecdb5dc71f8724d9fdc301b39b4ad",
+      "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727"
+    ],
+    "points": [
+      3610,
+      8303,
+      19073
+    ],
+    "elements": [
+      7008,
+      16250,
+      37648
+    ],
+    "passed": true
+  },
+  "area_factor": {
+    "baseline_fixed_value": 53502886.18183474,
+    "refined_v1_fixed_value": 53502886.18183474,
+    "refined_v2_fixed_value": 53502886.18183474,
+    "refined_v1_diagnostic_self_calibrated": 41197619.37311974,
+    "refined_v2_diagnostic_self_calibrated": 34462188.85021455,
+    "passed": true
+  },
+  "comparisons": {
+    "bv": {
+      "baseline": 824.279280266482,
+      "refined_v1": 823.265337910941,
+      "refined_v2": 823.455702132625,
+      "baseline_to_v1_delta": 0.0012300956481804048,
+      "v1_to_v2_delta": 0.00023123070159505307,
+      "baseline_to_v2_delta_context_only": 0.0009991493824651095,
+      "delta_mode": "relative",
+      "step_contraction_ratio": 0.1877465919474783,
+      "observed_order_for_halved_contract": 2.4131413752974695,
+      "same_direction_monotonic": false,
+      "extrapolated_limit": null,
+      "estimated_v2_remaining_error": null,
+      "threshold": 0.02,
+      "threshold_name": "bv_relative_max",
+      "successive_delta_passed": true,
+      "acceptance_rule": "unchanged refined-v1 to refined-v2 threshold",
+      "passed": true
+    },
+    "vth": {
+      "baseline": 4.012161559996825,
+      "refined_v1": 3.8938981091184983,
+      "refined_v2": 3.856898348408629,
+      "baseline_to_v1_delta": 0.11826345087832646,
+      "v1_to_v2_delta": 0.0369997607098691,
+      "baseline_to_v2_delta_context_only": 0.15526321158819556,
+      "delta_mode": "absolute",
+      "step_contraction_ratio": 0.3128587947931245,
+      "observed_order_for_halved_contract": 1.6764164345896502,
+      "same_direction_monotonic": true,
+      "extrapolated_limit": 3.840052174062501,
+      "estimated_v2_remaining_error": 0.01684617434612834,
+      "threshold": 0.1,
+      "threshold_name": "vth_absolute_v_max",
+      "successive_delta_passed": true,
+      "acceptance_rule": "unchanged successive Vth threshold plus contracting three-level active-mesh estimate",
+      "passed": true
+    },
+    "conduction": {
+      "baseline": 0.087,
+      "refined_v1": 0.0830245351041854,
+      "refined_v2": 0.08005955135295695,
+      "baseline_to_v1_delta": 0.045694998802466524,
+      "v1_to_v2_delta": 0.03571213915871706,
+      "baseline_to_v2_delta_context_only": 0.07977527180509249,
+      "delta_mode": "relative",
+      "step_contraction_ratio": 0.7458206345501946,
+      "observed_order_for_halved_contract": 0.4230993823139956,
+      "same_direction_monotonic": true,
+      "extrapolated_limit": 0.07135960807133397,
+      "estimated_v2_remaining_error": 0.12191691513953046,
+      "threshold": 0.05,
+      "threshold_name": "conduction_relative_max",
+      "successive_delta_passed": true,
+      "acceptance_rule": "unchanged refined-v1 to refined-v2 threshold",
+      "passed": true
+    },
+    "off_leakage": {
+      "baseline": 7.3603471784209215e-06,
+      "refined_v1": 7.640408022063122e-06,
+      "refined_v2": 7.636721269389755e-06,
+      "baseline_to_v1_delta": 0.0380499502065994,
+      "v1_to_v2_delta": 0.0004825334802435028,
+      "baseline_to_v2_delta_context_only": 0.03754905635145962,
+      "delta_mode": "relative",
+      "step_contraction_ratio": 0.013164113288456021,
+      "observed_order_for_halved_contract": 6.247245842521428,
+      "same_direction_monotonic": false,
+      "extrapolated_limit": null,
+      "estimated_v2_remaining_error": null,
+      "threshold": 0.1,
+      "threshold_name": "off_leakage_relative_max",
+      "successive_delta_passed": true,
+      "acceptance_rule": "unchanged refined-v1 to refined-v2 threshold",
+      "passed": true
+    }
+  },
+  "v2_static_gates_passed": true,
+  "v2_scheduler_evidence_passed": true,
+  "v2_runs": {
+    "bv": {
+      "run_id": "MOSFET650_REFINED_V2_LOCAL_STATIC_BV__mesh_consistency_v2_local_full_static__20260716T025715209Z__7582079d",
+      "run_manifest_sha256": "c3ec5c2e5922dde1de339c181f765716cb2c863b8ccea2fe8dc00831c18f1d2e",
+      "source_plt_sha256": "19316aff4b6282549130863c43f416bdb9576a80bdfc7954bfe43eaadfe86762",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "1076"
+      }
+    },
+    "conduction": {
+      "run_id": "MOSFET650_REFINED_V2_LOCAL_STATIC_CONDUCTION__mesh_consistency_v2_local_full_static__20260716T025715428Z__13f5fc75",
+      "run_manifest_sha256": "13a98e18c6026e7daf706b581857a5709a83d7be1939004d2d46ca75ecd3b895",
+      "source_plt_sha256": "77c5977497d57ced5b5c1c9ad0cddeb6755d2b931606d652205a29aba870fa88",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 3,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "434"
+      }
+    },
+    "vth": {
+      "run_id": "MOSFET650_REFINED_V2_LOCAL_STATIC_VTH__mesh_consistency_v2_local_vth_precheck_retry3__20260716T024828894Z__13f0b01b",
+      "run_manifest_sha256": "f8b12eb42a190fd636cbb7cde08a4169d24560d2dc5b283f26e65d2215902f6f",
+      "source_plt_sha256": "cb8ada6bd962dfc16acc6a1500b49b97784d6e6aeb8ae6f9263e122186334919",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "336"
+      }
+    },
+    "off_leakage": {
+      "run_id": "MOSFET650_REFINED_V2_LOCAL_STATIC_OFF_LEAKAGE__mesh_consistency_v2_local_full_static__20260716T025716462Z__ae1874cd",
+      "run_manifest_sha256": "7a064c6d40f27764b5d3353b51c1604d356bf74626abea4092b5edb595aab6b5",
+      "source_plt_sha256": "821d6f898a05f96db32ce98ae8421548de3b5e157adc800784d164360a813933",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 4,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "906"
+      }
+    }
+  },
+  "static_mesh_gate_closed": true,
+  "heavy_ion_prerequisite_mesh_ready": true,
+  "post_static_authorization_ready": false,
+  "heavy_ion_authorized": false,
+  "authorization_state": "MESH_V2_CONVERGENCE_PASSED_EXPLICIT_HEAVYION_AUTHORIZATION_NOT_ISSUED"
+}

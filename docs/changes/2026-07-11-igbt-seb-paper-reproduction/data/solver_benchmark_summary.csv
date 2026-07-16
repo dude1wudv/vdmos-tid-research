@@ -1,0 +1,5 @@
+variant,change,wall_s,time_end_ns,advanced_ns,wall_s_per_advanced_ns,newton_retries,run_status,physical_equivalence,accepted
+A,baseline Iterations=25 Increment=1.4 Extrapolate,817,60,20,40.85,8,COMPLETE,BASELINE,true
+B1,Iterations 25 to 15,1037,60,20,51.85,12,COMPLETE,PASS,false
+B2,B1 Increment 1.4 to 1.2,1200,51.745815,11.745815,102.164045,12,TIME_BUDGET_EXHAUSTED,NOT_ASSESSABLE,false
+B3,A disable transient Extrapolate,749.94,60,20,37.497,6,COMPLETE,PASS,false

@@ -1,0 +1,11 @@
+{
+  "extraction_method": "headless svisual -b -python extract_r1_thermal_transient.py",
+  "script": "scripts/extract_r1_thermal_transient.py",
+  "variables": ["time", "Collector InnerVoltage", "Collector TotalCurrent", "Tmax"],
+  "cases": [
+    {"case_id": "A01_v2500_let1p5_y3p5_thermal", "run_id": "A01_v2500_let1p5_y3p5_thermal__transient_to60__20260713T102222930Z__2438182a", "raw_csv": "let1p5_thermal_raw.csv", "sample_count": 150, "time_start_s": 1e-13, "time_end_s": 6e-08},
+    {"case_id": "A01_v2500_let1p5_y3p5_cold300", "run_id": "A01_v2500_let1p5_y3p5_cold300__transient_to60_affinity_retry1__20260713T110749706Z__33338186", "raw_csv": "let1p5_cold300_raw.csv", "sample_count": 146, "time_start_s": 1e-13, "time_end_s": 6e-08},
+    {"case_id": "A01_v2500_let150_y3p5_thermal", "run_id": "A01_v2500_let150_y3p5_thermal__transient_to60_affinity_retry1__20260713T110749704Z__9e3892c2", "raw_csv": "let150_thermal_raw.csv", "sample_count": 145, "time_start_s": 1e-13, "time_end_s": 6e-08},
+    {"case_id": "A01_v2500_let150_y3p5_cold300", "run_id": "A01_v2500_let150_y3p5_cold300__transient_to60_affinity_retry1__20260713T110749937Z__8c552664", "raw_csv": "let150_cold300_raw.csv", "sample_count": 142, "time_start_s": 1e-13, "time_end_s": 6e-08}
+  ]
+}

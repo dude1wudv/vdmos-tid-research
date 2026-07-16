@@ -1,0 +1,7 @@
+failure_id,category,incident_count,recovered_count,recovery_rate,canonical_event_or_attempt,evidence,interpretation_boundary
+F01,output_window_missed_pulse,1,1,100%,E0005->E0007,S00 attempt01/02与T0001,仅说明该smoke的证据调度被修复
+F02,invalid_plot_tdr_restart,1,1,100%,E0011->E0012,A01 attempt02/03与T0002-T0004,恢复是改用原生Save/Load而非证明所有restart可靠
+F03,time_budget_checkpoint_gap,1,1,100%,attempt12->attempt13->attempt17,T0010与逐次记录,恢复到DC 2500V不等于A01物理分类恢复
+F04,stiff_short_time_window,3,0,0%,attempt01/03/04,case_summary,未覆盖1us且未达到物理break
+F05,solver_candidate_gate_rejection,3,0,0%,attempt08/09/10,T0006-T0008,拒绝是按性能门的决策而非运行错误
+F06,mesh_sensitivity,1,0,0%,attempt18,诊断门汇总,是结果风险关闭而非可恢复的计算失败

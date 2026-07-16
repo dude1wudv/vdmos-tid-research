@@ -1,0 +1,123 @@
+{
+  "status": "VALID",
+  "matrix_path": "<REPOSITORY_ROOT>/projects/igbt_mosfet_seb_paper_20260714/case_matrix.csv",
+  "matrix_sha256": "36b90d808f57f33a54b4df70909d598d586830afe9f18116ac3068e9db046e1c",
+  "tracked_project_hashes": {
+    "frozen_input_manifest": "586617f8f961ef6c5f836f3305b0d1b937361265ac19e4b67183ae7394d656ad",
+    "plot_2ns_spec": "c1b7ede68eeff3fa8fc8bd0761bb43547cc50b705649cbdd2589a76fd7024a4b",
+    "parameter_snapshot": "ebfcbfd2d45b4aeb9953d21cd5e6ba4cd9cff29098b670203ac578a8da22b9ac"
+  },
+  "main_case_count": 8,
+  "validation_case_count": 2,
+  "source_hashes": {
+    "sde_seb_cmd": "465d8aff50f020c570d0772fa339b54a25d4f141dc74245b019e6243794680d2",
+    "heavy_ion_case_cmd": "eb8781479988f847e1749643377463cd59f9dd0371efb70ed7d0ad4f9c7a324c",
+    "sdevice_par": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1"
+  },
+  "derivation_audit": {
+    "structure_height_um": 451.15,
+    "bottom_profile_depth_um": 0.5,
+    "bottom_peak_cm3": 5e+19,
+    "igbt_bottom_species": "BoronActiveConcentration",
+    "mosfet_bottom_species": "ArsenicActiveConcentration",
+    "igbt_bottom_contact": "Collector",
+    "mosfet_bottom_contact": "Drain",
+    "frozen_regions": [
+      "R.Si",
+      "R.Gox",
+      "R.LOCOS",
+      "R.Spacer",
+      "R.PolyGate",
+      "R.PolyCont"
+    ],
+    "si_sio2_interface_segments_um": [
+      [
+        [
+          0.0,
+          1.98
+        ],
+        [
+          3.22,
+          2.08
+        ]
+      ],
+      [
+        [
+          3.22,
+          2.08
+        ],
+        [
+          3.22,
+          2.72
+        ]
+      ],
+      [
+        [
+          3.22,
+          2.72
+        ],
+        [
+          0.0,
+          2.82
+        ]
+      ],
+      [
+        [
+          0.02,
+          2.0
+        ],
+        [
+          0.02,
+          1.5
+        ]
+      ],
+      [
+        [
+          0.02,
+          1.5
+        ],
+        [
+          0.22,
+          1.3
+        ]
+      ],
+      [
+        [
+          0.22,
+          1.3
+        ],
+        [
+          0.22,
+          0.0
+        ]
+      ]
+    ],
+    "refinement_only_change": {
+      "window_um": [
+        [
+          0.0,
+          3.3
+        ],
+        [
+          55.0,
+          3.7
+        ]
+      ],
+      "baseline_steps_um": [
+        0.2,
+        0.025,
+        0.02,
+        0.005
+      ],
+      "refined_steps_um": [
+        0.1,
+        0.0125,
+        0.01,
+        0.0025
+      ],
+      "local_grid_scale_um": 0.01
+    },
+    "mosfet_wording": "结构匹配的派生对照器件",
+    "strict_derivation_pass": true
+  }
+}

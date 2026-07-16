@@ -1,0 +1,27 @@
+panel,series,case_id,x_temperature_k,x_bias_v,metric,value,unit,threshold,gate_utilization_pct
+temperature_or_bias_or_device,IGBT,IGBT_T243_V550_L15,243.15,550.0,tmax_k,243.300770213,K,,
+device,IGBT,IGBT_T243_V550_L15,243.15,550.0,hotspot_interface_distance_um,1.4702371320468424e-07,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T298_V550_L15,298.15,550.0,tmax_k,300.386549973,K,,
+device,IGBT,IGBT_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,167.55014392527815,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T323_V550_L15,323.15,550.0,tmax_k,328.394635489,K,,
+device,IGBT,IGBT_T323_V550_L15,323.15,550.0,hotspot_interface_distance_um,164.02345927363206,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T343_V550_L15,343.15,550.0,tmax_k,352.33772742,K,,
+device,IGBT,IGBT_T343_V550_L15,343.15,550.0,hotspot_interface_distance_um,161.37845756203168,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T298_V500_L15,298.15,500.0,tmax_k,300.025577708,K,,
+device,IGBT,IGBT_T298_V500_L15,298.15,500.0,hotspot_interface_distance_um,164.90513313793383,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T298_V525_L15,298.15,525.0,tmax_k,300.201006939,K,,
+device,IGBT,IGBT_T298_V525_L15,298.15,525.0,hotspot_interface_distance_um,166.6684678461362,um,,
+temperature_or_bias_or_device,IGBT,IGBT_T298_V575_L15,298.15,575.0,tmax_k,300.580700733,K,,
+device,IGBT,IGBT_T298_V575_L15,298.15,575.0,hotspot_interface_distance_um,169.31348295995474,um,,
+temperature_or_bias_or_device,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,tmax_k,298.868790661,K,,
+device,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,177.24854935538357,um,,
+mesh_convergence,IGBT,IGBT_T298_V550_L15,298.15,550.0,tmax_k,0.026446113851344315,% of gate,5.0,0.5289222770268863
+mesh_convergence,IGBT,IGBT_T298_V550_L15,298.15,550.0,terminal_collected_charge_pc_um,0.9286089135763385,% of gate,5.0,18.572178271526766
+mesh_convergence,IGBT,IGBT_T298_V550_L15,298.15,550.0,terminal_energy_j_um,1.1135105904694176,% of gate,5.0,22.27021180938835
+mesh_convergence,IGBT,IGBT_T298_V550_L15,298.15,550.0,emax_v_cm,0.003979300729672325,% of gate,10.0,0.039793007296723255
+mesh_convergence,IGBT,IGBT_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,0.0,um of gate,0.01,0.0
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,tmax_k,0.011239918335299024,% of gate,5.0,0.22479836670598047
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,terminal_collected_charge_pc_um,0.2422149273467895,% of gate,5.0,4.84429854693579
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,terminal_energy_j_um,0.012332854606491797,% of gate,5.0,0.24665709212983591
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,emax_v_cm,0.0016777563713602788,% of gate,10.0,0.016777563713602787
+mesh_convergence,MOSFET,MOSFET_T298_V550_L15,298.15,550.0,hotspot_interface_distance_um,0.0,um of gate,0.01,0.0

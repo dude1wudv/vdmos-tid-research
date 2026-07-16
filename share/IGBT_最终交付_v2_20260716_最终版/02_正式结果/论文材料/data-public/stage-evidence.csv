@@ -1,0 +1,18 @@
+stage_id,date,stage_name,unit,denominator,numerator,result,source_summary,boundary
+ST11,2026-07-11,预注册有界诊断,attempt,28,28,已结束,05-Codex自动调优研究记录表6,不等于论文复现成功率
+ST11_SMOKE,2026-07-11,HeavyIon smoke,attempt,2,1,1个SMOKE_VALID,case_summary与逐次记录,S00 attempt01为输出证据缺口
+ST11_PHYS,2026-07-11,A01物理分类,anchor,1,0,0个有效SEB/NO_SEB分类,A01三字段门控,最终INDETERMINATE
+ST11_TUNE,2026-07-11,计划内调优接受,tuning_step,16,5,31.25%,tuning_steps accepted=true,不代表总体性能改进率
+ST11_SOLVER,2026-07-11,数值候选性能门,solver_variant,3,0,0/3接受,40-60ns A/B记录,均未达10%门
+ST11_CHARGE,2026-07-11,完整脉冲电荷门,wt_variant,3,3,3/3 PASS,0.1/0.2/0.5um审计,仅此积分口径
+ST11_MESH,2026-07-11,半步网格收敛门,mesh_gate,1,0,FAIL,50/60ns端电流与局部场,不可作网格无关结论
+ST11_RECOVERY,2026-07-11,明确数值失败恢复,incident,2,2,2/2恢复,Plot restart与半步DC分段链,不含未完成物理分类
+ST14,2026-07-14,生产短瞬态交付（含附录）,case,8,8,8/8 PASS,case_acceptance.csv,7个IGBT正式主案 + 1个MOSFET派生附录；不得称8个IGBT主案
+ST14_IGBT,2026-07-14,IGBT 正式主案短瞬态交付,case,7,7,7/7 PASS,case_acceptance.csv（IGBT行）,正式事实源；固定历史匹配二维结构；不作全局温度收敛
+ST14_MOSFET,2026-07-14,MOSFET 派生对照附录,case,1,1,1/1 APPENDIX,case_acceptance.csv（MOSFET行）,只作对照附录，不进入IGBT正式分母
+ST14_TEMP,2026-07-14,IGBT 四温度主线,case,4,4,4/4 PASS,case_matrix.csv与case_acceptance.csv,固定历史匹配二维结构；不作全局温度收敛
+ST14_BIAS,2026-07-14,IGBT 多偏压主线,case,4,4,4/4 PASS,case_matrix.csv与case_acceptance.csv,298.15 K、500/525/550/575 V；与温度主线共享T298/V550，不作普适阈值
+ST14_MESH,2026-07-14,额外track_refined验证,case,2,2,2/2 PASS,正式结果报告,不计入7个IGBT正式主案
+ENV,2026-07-11至14,租约与affinity完整逐run合规,run,NA,NA,未知,run_registry仅1条legacy且公开层缺逐run租约字段,禁止计算合规率
+ST13,2026-07-13,低 LET 诊断附录,series,10,10,diagnostic_only,LET扫描诊断报告与验证JSON,固定模型/网格下的数据复盘；MESH_SENSITIVE，不作阈值或因果结论
+ST15,2026-07-15,650 V redesign,case,NA,NA,PENDING,独立重设计正式结果报告,无新结构有效静态或HeavyIon数值；不得用旧结构替代

@@ -1,0 +1,193 @@
+{
+  "run_id": "A01_v2500_let15_y3p5_thermal__R1_thermo_coupled_to60__20260713T064449946Z__1d9cd23a",
+  "manifest_path": "local_runtime/igbt_seb_thermal_runs/A01_v2500_let15_y3p5_thermal__R1_thermo_coupled_to60__20260713T064449946Z__1d9cd23a/run_manifest.json",
+  "lifecycle": "SUCCEEDED",
+  "exit_code": 0,
+  "wall_time_seconds": 3169,
+  "input_sha256": {
+    "inputs/r1_thermo_coupled_to60.cmd": "c0dae468b78f3b0c787c33773428762812315182ac29e4d0226890b011e8de48",
+    "inputs/sdevice.par": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+    "inputs/igbt_seb_msh.tdr": "5c7c098706bcf07dc2656a1bfd547aea3415b02167d6afb0439c0a28f35f5265",
+    "inputs/r1_thermo_coupled_to60.json": "cc5d7eeeee7f00a78bfe110ce74b8b6099b19cc878454c0d79f54d376efb7979",
+    "inputs/r1_bias2500_des.sav": "72a03b61bf86e7b21626322a35ae9640d7165b5b31e232399372da041d49990b",
+    "inputs/r1_bias2500_circuit_des.sav": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5"
+  },
+  "hash_verification": [
+    {
+      "relative_path": "inputs/r1_thermo_coupled_to60.cmd",
+      "expected_sha256": "c0dae468b78f3b0c787c33773428762812315182ac29e4d0226890b011e8de48",
+      "actual_sha256": "c0dae468b78f3b0c787c33773428762812315182ac29e4d0226890b011e8de48",
+      "match": true
+    },
+    {
+      "relative_path": "inputs/sdevice.par",
+      "expected_sha256": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+      "actual_sha256": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+      "match": true
+    },
+    {
+      "relative_path": "inputs/igbt_seb_msh.tdr",
+      "expected_sha256": "5c7c098706bcf07dc2656a1bfd547aea3415b02167d6afb0439c0a28f35f5265",
+      "actual_sha256": "5c7c098706bcf07dc2656a1bfd547aea3415b02167d6afb0439c0a28f35f5265",
+      "match": true
+    },
+    {
+      "relative_path": "inputs/r1_thermo_coupled_to60.json",
+      "expected_sha256": "cc5d7eeeee7f00a78bfe110ce74b8b6099b19cc878454c0d79f54d376efb7979",
+      "actual_sha256": "cc5d7eeeee7f00a78bfe110ce74b8b6099b19cc878454c0d79f54d376efb7979",
+      "match": true
+    },
+    {
+      "relative_path": "inputs/r1_bias2500_des.sav",
+      "expected_sha256": "72a03b61bf86e7b21626322a35ae9640d7165b5b31e232399372da041d49990b",
+      "actual_sha256": "72a03b61bf86e7b21626322a35ae9640d7165b5b31e232399372da041d49990b",
+      "match": true
+    },
+    {
+      "relative_path": "inputs/r1_bias2500_circuit_des.sav",
+      "expected_sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+      "actual_sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/transient_r1_coupled.plt",
+      "expected_sha256": "42226cce78c1b261b4259bb13673d4f04e7500730951044cc3186887b7171020",
+      "actual_sha256": "42226cce78c1b261b4259bb13673d4f04e7500730951044cc3186887b7171020",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_pre_des.tdr",
+      "expected_sha256": "6b923b3461c8a948ede2cdb918be3dbf091655bedd2495695e3063c8a9d7f910",
+      "actual_sha256": "6b923b3461c8a948ede2cdb918be3dbf091655bedd2495695e3063c8a9d7f910",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_0p4ns_des.tdr",
+      "expected_sha256": "13e9676b10364b466f8e7f39412f4214ea6cd148f5146392b39d1a74c3349f25",
+      "actual_sha256": "13e9676b10364b466f8e7f39412f4214ea6cd148f5146392b39d1a74c3349f25",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_10ns_des.tdr",
+      "expected_sha256": "ce67f592824f065408ffa17b5484dba5b18ca97de4714a00d169e60a45b574d0",
+      "actual_sha256": "ce67f592824f065408ffa17b5484dba5b18ca97de4714a00d169e60a45b574d0",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_40ns_des.tdr",
+      "expected_sha256": "32c2ada1a0a68be318e76c2e12dda154b085fb74df173d13fc2ebd78685e5c94",
+      "actual_sha256": "32c2ada1a0a68be318e76c2e12dda154b085fb74df173d13fc2ebd78685e5c94",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_50ns_des.tdr",
+      "expected_sha256": "daa32d03665f29946cf64101aa4547a2e837c1a6bcf6a2b416481867238cbe57",
+      "actual_sha256": "daa32d03665f29946cf64101aa4547a2e837c1a6bcf6a2b416481867238cbe57",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/field_60ns_des.tdr",
+      "expected_sha256": "130481876269154d16a2f70617ca40bc8fb95550875d200b8093e9ed06201ba4",
+      "actual_sha256": "130481876269154d16a2f70617ca40bc8fb95550875d200b8093e9ed06201ba4",
+      "match": true
+    },
+    {
+      "relative_path": "artifacts/checkpoint_60ns_des.sav",
+      "expected_sha256": "649bc19b9c7ad7cae6852a4a3669f67d85e48aa298c96b85a2084ca7f1b8bb39",
+      "actual_sha256": "649bc19b9c7ad7cae6852a4a3669f67d85e48aa298c96b85a2084ca7f1b8bb39",
+      "match": true
+    }
+  ],
+  "required_artifacts": {
+    "artifacts/transient_r1_coupled.plt": {
+      "relative_path": "artifacts/transient_r1_coupled.plt",
+      "sha256": "42226cce78c1b261b4259bb13673d4f04e7500730951044cc3186887b7171020",
+      "size_bytes": 129907
+    },
+    "artifacts/field_pre_des.tdr": {
+      "relative_path": "artifacts/field_pre_des.tdr",
+      "sha256": "6b923b3461c8a948ede2cdb918be3dbf091655bedd2495695e3063c8a9d7f910",
+      "size_bytes": 6711044
+    },
+    "artifacts/field_0p4ns_des.tdr": {
+      "relative_path": "artifacts/field_0p4ns_des.tdr",
+      "sha256": "13e9676b10364b466f8e7f39412f4214ea6cd148f5146392b39d1a74c3349f25",
+      "size_bytes": 6502396
+    },
+    "artifacts/field_10ns_des.tdr": {
+      "relative_path": "artifacts/field_10ns_des.tdr",
+      "sha256": "ce67f592824f065408ffa17b5484dba5b18ca97de4714a00d169e60a45b574d0",
+      "size_bytes": 6439048
+    },
+    "artifacts/field_40ns_des.tdr": {
+      "relative_path": "artifacts/field_40ns_des.tdr",
+      "sha256": "32c2ada1a0a68be318e76c2e12dda154b085fb74df173d13fc2ebd78685e5c94",
+      "size_bytes": 6268639
+    },
+    "artifacts/field_50ns_des.tdr": {
+      "relative_path": "artifacts/field_50ns_des.tdr",
+      "sha256": "daa32d03665f29946cf64101aa4547a2e837c1a6bcf6a2b416481867238cbe57",
+      "size_bytes": 6394998
+    },
+    "artifacts/field_60ns_des.tdr": {
+      "relative_path": "artifacts/field_60ns_des.tdr",
+      "sha256": "130481876269154d16a2f70617ca40bc8fb95550875d200b8093e9ed06201ba4",
+      "size_bytes": 6548146
+    },
+    "artifacts/checkpoint_60ns_des.sav": {
+      "relative_path": "artifacts/checkpoint_60ns_des.sav",
+      "sha256": "649bc19b9c7ad7cae6852a4a3669f67d85e48aa298c96b85a2084ca7f1b8bb39",
+      "size_bytes": 3127623
+    }
+  },
+  "plt_fields": {
+    "source_file": "transient_r1_coupled.plt",
+    "sample_count": 158,
+    "variables_available": [
+      "time",
+      "Gate OuterVoltage",
+      "Gate InnerVoltage",
+      "Gate QuasiFermiPotential",
+      "Gate DisplacementCurrent",
+      "Gate eCurrent",
+      "Gate hCurrent",
+      "Gate TotalCurrent",
+      "Gate Charge",
+      "Gate Temperature",
+      "Gate lHeatFlux",
+      "Emitter OuterVoltage",
+      "Emitter InnerVoltage",
+      "Emitter QuasiFermiPotential",
+      "Emitter DisplacementCurrent",
+      "Emitter eCurrent",
+      "Emitter hCurrent",
+      "Emitter TotalCurrent",
+      "Emitter Charge",
+      "Emitter Temperature",
+      "Emitter lHeatFlux",
+      "Collector OuterVoltage",
+      "Collector InnerVoltage",
+      "Collector QuasiFermiPotential",
+      "Collector DisplacementCurrent",
+      "Collector eCurrent",
+      "Collector hCurrent",
+      "Collector TotalCurrent",
+      "Collector Charge",
+      "Collector Temperature",
+      "Collector lHeatFlux",
+      "Tmin",
+      "Tave",
+      "Tmax"
+    ],
+    "variables_used": {
+      "time": "time",
+      "collector_voltage": "Collector InnerVoltage",
+      "collector_current": "Collector TotalCurrent",
+      "tmax": "Tmax"
+    },
+    "time_start_s": 1e-13,
+    "time_end_s": 6e-08,
+    "extraction": "SVisual Python API; values written without resampling"
+  },
+  "audit_result": "PASS: manifest, success exit, input provenance, 60 ns Save/checkpoint, PLT fields, and pre/0.4/10/40/50/60 ns field TDRs are present."
+}

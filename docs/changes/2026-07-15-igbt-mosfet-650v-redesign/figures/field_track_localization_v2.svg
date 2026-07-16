@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+<rect width="100%" height="100%" fill="white"/>
+<rect x="60" y="55" width="410" height="300" fill="#f7f7f7" stroke="#333"/>
+<text x="265.0" y="30" text-anchor="middle" font-family="sans-serif" font-size="18">IGBT high-impact markers and frozen track</text>
+<line x1="77.84" y1="247.56" x2="469.94" y2="247.56" stroke="#6a3d9a" stroke-width="3"/>
+<circle cx="77.70" cy="249.52" r="6" fill="#2c7fb8"/>
+<text x="85.70" y="243.52" font-family="sans-serif" font-size="12">325 V</text>
+<circle cx="77.60" cy="250.77" r="6" fill="#fdae61"/>
+<text x="85.60" y="244.77" font-family="sans-serif" font-size="12">400 V</text>
+<circle cx="77.84" cy="247.56" r="6" fill="#d7191c"/>
+<text x="85.84" y="241.56" font-family="sans-serif" font-size="12">500 V</text>
+<text x="265.0" y="390" text-anchor="middle" font-family="sans-serif" font-size="13">x: device depth (um)</text>
+<text x="22" y="205.0" transform="rotate(-90 22 205.0)" text-anchor="middle" font-family="sans-serif" font-size="13">y: lateral coordinate (um)</text>
+<rect x="530" y="55" width="410" height="300" fill="#f7f7f7" stroke="#333"/>
+<text x="735.0" y="30" text-anchor="middle" font-family="sans-serif" font-size="18">MOSFET high-impact markers and frozen track</text>
+<line x1="550.50" y1="55.50" x2="939.94" y2="55.50" stroke="#6a3d9a" stroke-width="3"/>
+<circle cx="930.39" cy="55.00" r="6" fill="#2c7fb8"/>
+<text x="938.39" y="49.00" font-family="sans-serif" font-size="12">325 V</text>
+<circle cx="930.39" cy="55.00" r="6" fill="#fdae61"/>
+<text x="938.39" y="49.00" font-family="sans-serif" font-size="12">400 V</text>
+<circle cx="930.39" cy="55.00" r="6" fill="#d7191c"/>
+<text x="938.39" y="49.00" font-family="sans-serif" font-size="12">500 V</text>
+<text x="735.0" y="390" text-anchor="middle" font-family="sans-serif" font-size="13">x: device depth (um)</text>
+<text x="492" y="205.0" transform="rotate(-90 492 205.0)" text-anchor="middle" font-family="sans-serif" font-size="13">y: lateral coordinate (um)</text>
+<text x="500" y="408" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6a3d9a">Purple: frozen direction=(1,0) strict-interior Silicon track; dots: ImpactIonization maxima</text>
+</svg>

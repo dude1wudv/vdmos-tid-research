@@ -1,0 +1,17 @@
+stage_id,event_id,attempt_id,run_id,artifact_id,sha256,claim_id,status,source,boundary
+ST11,E0007,attempt02,NA,ART0002,3ee4626732fe47ab49b0d0e2a550aee263b337fba4af28164fe37c3f663f6ded,C02,supported,2026-07-11 codex_events/case_summary/artifact_manifest,单个 smoke；不构成 SEB 分类
+ST11,E0011,attempt02,NA,NA,41311b0329fb0f7f0b5c81007063aa5da20ee9f69d912fa79b276c31392b69a5,C03,supported,2026-07-11 restart 负结果,仅该 Sentaurus 版本与状态链
+ST11,E0025,attempt07_A40_60,NA,ART0010,5e80686f4f527b67219963e9ce4e8207a27b2324df4748bc20c938a168fd215d,C04,supported,2026-07-11 solver benchmark,三候选/单次比较；不推总体性能
+ST11,E0031,attempt18_meshhalf_transient_to60,DIAGNOSTIC_CLOSURE--A01_v2500_let15_y3p5--attempt18_meshhalf_transient_to60--legacy,ART0012,4dc94c9ce8df1309763777e186eafdbfbe2568ce6a128aa0dc5092ddddc1d5ee,C05,supported,2026-07-11 mesh gate,run_id 仅为 legacy 注册值
+ST14_IGBT,NA,dc_restart_attempt01,IGBT_T243_V550_L15__dc_restart_attempt01__20260715T055528829Z__ab401cf2,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt04,IGBT_T298_V550_L15__dc_restart_attempt04__20260715T055202345Z__7c92e3af,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt01,IGBT_T323_V550_L15__dc_restart_attempt01__20260715T055528981Z__1784234f,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt01,IGBT_T343_V550_L15__dc_restart_attempt01__20260715T061031255Z__54f3755e,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt01,IGBT_T298_V500_L15__dc_restart_attempt01__20260715T061031460Z__709b2f1b,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt02,IGBT_T298_V525_L15__dc_restart_attempt02__20260715T062437991Z__21563ff8,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_IGBT,NA,dc_restart_attempt02,IGBT_T298_V575_L15__dc_restart_attempt02__20260715T062438172Z__52a7d779,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；IGBT 正式主案
+ST14_MOSFET,NA,dc_restart_attempt01,MOSFET_T298_V550_L15__dc_restart_attempt01__20260715T055529358Z__12cd0578,NA,NA,C06,supported,2026-07-14 case_acceptance.csv,公开层无逐 run artifact/SHA 清单；MOSFET 仅作派生对照附录
+ST14_MESH,NA,transient_attempt01,VAL_IGBT_T298_V550_L15_track_refined__transient_attempt01__20260715T100240136Z__3481672e,NA,NA,C06,supported,2026-07-14 mesh_track_refined_comparison.csv,一次局部 track-refined 门；不称严格全局收敛
+ST14_MESH,NA,transient_attempt01,VAL_MOSFET_T298_V550_L15_track_refined__transient_attempt01__20260715T100240136Z__83d99ea0,NA,NA,C06,supported,2026-07-14 mesh_track_refined_comparison.csv,MOSFET 仅作派生对照附录
+ST13,NA,NA,NA,NA,NA,C14,diagnostic_only,2026-07-13 LET scan diagnostic report,低 LET 支线固定为 diagnostic_only/MESH_SENSITIVE
+ST15,NA,NA,NA,NA,NA,C15,PENDING,2026-07-15 650 V redesign report,无新结构静态/HeavyIon 数值结果；不得以旧结构替代

@@ -1,0 +1,213 @@
+{
+  "schema_version": "igbt_400v_prestrike_recovery_closure/v1",
+  "recovery_attempt_id": "IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B",
+  "profile": "IGBT400_PRESTRIKE_THERMAL_DAMPED_SEGMENTED_V1",
+  "scope": "NUMERICAL_DIAGNOSTIC_ONLY",
+  "status": "FAILED_NUMERICAL_ONLY",
+  "closed_at": "2026-07-16T08:31:29.175918+00:00",
+  "earliest_auditable_stage": "P0",
+  "stage_status": {
+    "P0": "FAILED_NUMERICAL_ONLY",
+    "P1": "NOT_RUN",
+    "P2": "NOT_RUN",
+    "P3": "NOT_RUN"
+  },
+  "stop_rule": "P0 failed; P1/P2/P3 and the existing 2.1 ns extractor are prohibited",
+  "original_failure_claim": {
+    "claim_id": "let15_reference_transient_gate",
+    "status": "FAILED_NUMERICAL_PRESTRIKE_STOP",
+    "run_id": "IGBT650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__452be836",
+    "manifest_sha256": "0ca326d59718892676e84f73ca986026d34501ab4c6c7891f4c9f72ee21d8109",
+    "deck_sha256": "ffbeacca27490a80b0270cd49d41c05c7b5b28a9c9121fba4c099a138485c324",
+    "retained_independently": true,
+    "not_reinterpreted_as_seb": true
+  },
+  "recovery_run": {
+    "run_id": "IGBT650_V400_RECOVERY_P0__authorized_55a3a83a_restart_a5f0194b_thermal_v1__20260716T080339800Z__f9e3018b",
+    "run_manifest": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/recovery/IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B/runs/IGBT650_V400_RECOVERY_P0__authorized_55a3a83a_restart_a5f0194b_thermal_v1__20260716T080339800Z__f9e3018b/run_manifest.json",
+      "sha256": "d0fad61efc7d128f63bff42841779ee5f0cc1e04993d67381e84c17413b0ca19",
+      "size_bytes": 10118
+    },
+    "lifecycle": "FAILED",
+    "exit_code": "130",
+    "wall_time_seconds": "1301",
+    "scheduler_evidence": {
+      "allocation_mode": "AUTO_LEASE",
+      "cpu_core": 2,
+      "sdevice_threads": 1,
+      "lease_acquired": true,
+      "lease_released": true,
+      "affinity_verification": "VERIFIED",
+      "exit_code": "130",
+      "wall_time_seconds": "1301"
+    },
+    "last_accepted_time_s": 1.39850918989182e-11,
+    "last_accepted_time_ps": 13.985091898918201,
+    "crossed_original_failure_time": true,
+    "reached_p0_target_15ps": false,
+    "collector_inner_voltage_v": 400.0,
+    "collector_total_current_a_per_um": 3.16919993983038e-12,
+    "tmax_k": 298.150006461735,
+    "all_terminal_and_temperature_values_finite": true,
+    "lattice_temperature_out_of_range_count": 58,
+    "minimum_attempted_step_s": 5.5644e-18,
+    "last_attempted_step_range_s": [
+      1.3985e-11,
+      1.3985e-11
+    ],
+    "step_size_too_small_observed": false,
+    "termination": "FAIL_CLOSED_INTERRUPT_AFTER_REPEATED_FORBIDDEN_SIGNAL_AND_ASYMPTOTIC_PROGRESS",
+    "checkpoint_main_present": false,
+    "checkpoint_circuit_present": false,
+    "stage_tdr_present": false,
+    "plt": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/recovery/IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B/runs/IGBT650_V400_RECOVERY_P0__authorized_55a3a83a_restart_a5f0194b_thermal_v1__20260716T080339800Z__f9e3018b/artifacts/IGBT650_V400_recovery_p0_IGBT650_V400_recovery_p0.plt",
+      "sha256": "e9c6f6aa9442a6079b28d2262e869b8ea9ae792f5a0188cbcc078a6bc459f15e",
+      "size_bytes": 638655
+    },
+    "log": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/recovery/IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B/runs/IGBT650_V400_RECOVERY_P0__authorized_55a3a83a_restart_a5f0194b_thermal_v1__20260716T080339800Z__f9e3018b/artifacts/IGBT650_V400_recovery_p0.log_des.log",
+      "sha256": "8f2d5c5822e072bcb7180213f5d8f576daa01ebcc21a32e286c3604ff29c128d",
+      "size_bytes": 1500396
+    }
+  },
+  "physical_input_invariance": {
+    "status": "PASS",
+    "canonical_heavy_ion_block": "HeavyIon(StartPoint=(3.22 2.1488228) Direction=(1 0) Length=70.77 Time=1e-10 LET_f=0.1555 Wt_hi=0.1 Gaussian PicoCoulomb)",
+    "bias_v": 400.0,
+    "fully_coupled_equations": [
+      "Poisson",
+      "Electron",
+      "Hole",
+      "Temperature"
+    ],
+    "thermal_boundary": "Gate/Emitter/Collector Thermode Temperature=298.15 K unchanged",
+    "canonical_strike_time_s": 1e-10,
+    "canonical_chain_final_time_s": 2.1e-09,
+    "authorization_sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+    "restart_binding_set_sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e",
+    "parent_restart_main_sha256": "401882ef499aa46b16c903538fe88a869f47f12b4e48962a3ef38eaead7ac146",
+    "parent_restart_circuit_sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+    "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+    "sdevice_parameter_sha256": "6aa6b189214b6b6342417a8f4b7a9b973e861c8dbb1a4186a537b41fa455f859",
+    "original_physical_sections_sha256": "4ea2048d920b9dbbc0860883767cc1e1a7602683b9d688243ed7c25b529802c0",
+    "recovery_physical_sections_sha256": "4ea2048d920b9dbbc0860883767cc1e1a7602683b9d688243ed7c25b529802c0"
+  },
+  "numerical_delta": {
+    "allowed_axes_only": [
+      "time_step",
+      "nonlinear_iterations",
+      "damping",
+      "segmentation",
+      "checkpoint",
+      "output"
+    ],
+    "time_integration": "BE_UNCHANGED",
+    "global_iterations": {
+      "from": 30,
+      "to": 100
+    },
+    "notdamped": {
+      "from": 50,
+      "to": 0
+    },
+    "coupled_line_search_damping": "0.5 only in the controlled failure/strike neighborhoods",
+    "stage_start_s": 0.0,
+    "stage_end_s": 1.5e-11,
+    "segments": [
+      {
+        "initial_time_s": 0.0,
+        "final_time_s": 1.2e-11,
+        "initial_step_s": 1e-14,
+        "increment": 1.15,
+        "decrement": 2.0,
+        "max_step_s": 1e-13,
+        "min_step_s": 1e-20,
+        "line_search_damping": null,
+        "plot_prefix": "IGBT650_V400_recovery_p0_at12ps"
+      },
+      {
+        "initial_time_s": 1.2e-11,
+        "final_time_s": 1.5e-11,
+        "initial_step_s": 2e-15,
+        "increment": 1.1,
+        "decrement": 2.0,
+        "max_step_s": 2e-14,
+        "min_step_s": 1e-20,
+        "line_search_damping": 0.5,
+        "plot_prefix": "IGBT650_V400_recovery_p0_at15ps"
+      }
+    ],
+    "checkpoint_prefix": "IGBT650_V400_recovery_p0_checkpoint",
+    "canonical_chain_final_time_s": 2.1e-09
+  },
+  "physics_delta": [],
+  "failure_signature": {
+    "original_run_id": "IGBT650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__452be836",
+    "time_s": 1.3587637114587e-11,
+    "pre_strike": true,
+    "signals": [
+      "LatticeTemperature update out of range",
+      "Step-size too small"
+    ],
+    "interpretation": "NUMERICAL_PRESTRIKE_NOT_SEB"
+  },
+  "checkpoint_chain": {
+    "P0": "FAILED_NUMERICAL_ONLY; no checkpoint produced",
+    "P1": "NOT_RUN",
+    "P2": "NOT_RUN",
+    "P3": "NOT_RUN"
+  },
+  "stage_gate": {
+    "status": "FAILED_NUMERICAL_ONLY",
+    "pass_is_numerical_only": true,
+    "seb_conclusion_allowed": false
+  },
+  "hash_invariance_postrun": {
+    "failed_run_id_exact": true,
+    "failed_run_retained": true,
+    "failed_parent_exact": true,
+    "parent_succeeded": true,
+    "parent_bias_exact": true,
+    "parent_main_exact": true,
+    "parent_circuit_exact": true,
+    "mesh_exact": true,
+    "authorization_exact": true,
+    "binding_exact": true,
+    "failed_claim_unmodified": true,
+    "heavy_ion_block_exact": true,
+    "bias_exact": true,
+    "fully_coupled_exact": true,
+    "strike_time_exact": true,
+    "canonical_end_exact": true,
+    "failure_signature_exact": true
+  },
+  "sibling_reference_runs_preserved": [
+    "IGBT650_LET15_2P1NS_V325__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__a3cf8ee4",
+    "IGBT650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941469Z__6d2da489",
+    "MOSFET650_LET15_2P1NS_V325__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941956Z__64fcc91c",
+    "MOSFET650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061942485Z__b3f84200",
+    "MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c"
+  ],
+  "preflight": {
+    "sentaurus_release": "W-2024.09",
+    "license_server": "UP",
+    "vendor_daemon": "UP",
+    "online_cores": 24,
+    "lease_count_before": 0,
+    "unmanaged_sdevice_observed": {
+      "pid": 12620,
+      "core": 1,
+      "action": "left untouched"
+    }
+  },
+  "postrun": {
+    "lease_count": 0,
+    "recovery_process_present": false,
+    "unmanaged_sdevice_pid_12620_left_untouched": true
+  },
+  "campaign_summary_run": false,
+  "extractor_run": false,
+  "seb_conclusion_allowed": false
+}

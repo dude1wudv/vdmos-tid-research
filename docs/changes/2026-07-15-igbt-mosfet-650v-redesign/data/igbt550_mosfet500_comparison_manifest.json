@@ -1,0 +1,256 @@
+{
+  "schema_version": "igbt550_mosfet500_comparison_manifest/v1",
+  "comparison_id": "HISTORICAL_IGBT550_VS_MOSFET650_V500_20260716",
+  "created_at": "2026-07-16T09:36:02.4133595Z",
+  "scope": "COMPARISON_ONLY",
+  "physical_simulation_started": false,
+  "formal_campaign_summary_run": false,
+  "global_transient_gate_mutated": false,
+  "global_transient_gate_status": "FAILED_NUMERICAL_PRESTRIKE_IGBT400",
+  "interpretation_policy": {
+    "device_advantage_claim_allowed": false,
+    "cross_device_performance_ratio_allowed": false,
+    "seb_pass_claim_allowed": false,
+    "seb_threshold_or_safety_ranking_allowed": false,
+    "reason": "The two evidence sets do not share bias, structure, HeavyIon track, calibrated AreaFactor, or a common global gate context. Values are retained as within-case observations only."
+  },
+  "shared_nominal_settings": {
+    "initial_temperature_k": 298.15,
+    "let_mev_cm2_mg": 15.0,
+    "let_f_pc_um": 0.1555,
+    "wt_hi_um": 0.1,
+    "strike_time_s": 1e-10,
+    "final_time_s": 2.1e-9,
+    "heavy_ion_profile": "Gaussian PicoCoulomb"
+  },
+  "non_common_conditions": [
+    {
+      "code": "NOT_COMMON_BIAS",
+      "historical_igbt": "VCE=550 V",
+      "current_mosfet": "VDS=500 V"
+    },
+    {
+      "code": "NOT_SAME_STRUCTURE",
+      "historical_igbt": "historical 451.15 um IGBT reference structure",
+      "current_mosfet": "650 V superjunction MOSFET reference model"
+    },
+    {
+      "code": "NOT_SAME_TRACK",
+      "historical_igbt": {
+        "start_point_um": [0.0, 3.5],
+        "direction": [1.0, 0.0],
+        "length_um": 50.0
+      },
+      "current_mosfet": {
+        "start_point_um": [3.2, 5.99],
+        "direction": [1.0, 0.0],
+        "length_um": 60.79
+      }
+    },
+    {
+      "code": "AREA_FACTOR_2D_SEMANTICS_MISMATCH",
+      "historical_igbt": "Historical transient sidecar reports native 2D terminal quantities in A/um, pC/um, and J/um and binds no chip-level AreaFactor.",
+      "current_mosfet": "The static redesign has a MOSFET-specific calibrated AreaFactor of 53502886.18183474 um effective out-of-plane width, but the comparison-only transient extraction intentionally does not apply it and remains in native 2D per-um units. HeavyIon charge closure in both extractors assumes a 1 um out-of-plane thickness, which is not a common chip-area normalization."
+    },
+    {
+      "code": "NOT_COMMON_GATE_CONTEXT",
+      "historical_igbt": "Historical campaign sidecar is PASS within its own campaign.",
+      "current_mosfet": "Runner lifecycle is SUCCEEDED, but the current six-case Checkpoint E remains failed because the sibling IGBT 400 V case stopped numerically before strike."
+    }
+  ],
+  "cancelled_plan": {
+    "case": "current 650 V IGBT at 550 V",
+    "status": "CANCELLED_BY_SCOPE_CHANGE",
+    "new_case_generated": false,
+    "sdevice_started": false,
+    "note": "Historical IGBT_T298_V550_L15 is reused instead; IGBT 400 V original failure and recovery V1 remain independent and unchanged."
+  },
+  "historical_igbt": {
+    "case_id": "IGBT_T298_V550_L15",
+    "status": "HISTORICAL_REFERENCE_SUPPORTED",
+    "device_family": "IGBT",
+    "bias_v": 550.0,
+    "run_id": "IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0",
+    "parent_run_id": "IGBT_T298_V550_L15__dc_restart_attempt04__20260715T055202345Z__7c92e3af",
+    "runner_lifecycle": "SUCCEEDED",
+    "historical_sidecar_status": "PASS",
+    "evidence": {
+      "campaign_table": {
+        "path": "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/data/campaign_2ns_comparison.csv",
+        "sha256": "e0dafe4338a6169b1b72b5129a00869d65c626bdca3bbe72decff9d4a6584b81",
+        "size_bytes": 3992
+      },
+      "mesh_track_table": {
+        "path": "docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation/data/mesh_track_refined_comparison.csv",
+        "sha256": "1830c070155557add67bf935184109505c9c78ffb0db37604635ad62d456ab94",
+        "size_bytes": 6976
+      },
+      "transient_sidecar": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/extracts/IGBT_T298_V550_L15_2ns.json",
+        "sha256": "22d055864c7bc655245150034d2322ebf99a484bc23afad3808e1cdda7b9dc0c",
+        "size_bytes": 6479
+      },
+      "field_sidecar": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/extracts/IGBT_T298_V550_L15_2ns_fields.csv",
+        "sha256": "4428311ab1216a98dd9185e361b54bb1708fb87e7b67f56ad2b2ae098594b420",
+        "size_bytes": 3091
+      },
+      "case_metadata": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/inputs/cases/IGBT_T298_V550_L15/IGBT_T298_V550_L15_transient.json",
+        "sha256": "d6f04110fcd138b53bcf0cf00c0fc0400a6f48665deb1676cfb979f74e3445b5",
+        "size_bytes": 1010
+      },
+      "source_structure": {
+        "path": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt01/sde_seb.cmd",
+        "sha256": "465d8aff50f020c570d0772fa339b54a25d4f141dc74245b019e6243794680d2",
+        "size_bytes": 7543
+      },
+      "source_heavy_ion": {
+        "path": "local_runtime/igbt_seb_full_20260712_035027/cases/A01_v2500_let15_y3p5__attempt04/case.cmd",
+        "sha256": "eb8781479988f847e1749643377463cd59f9dd0371efb70ed7d0ad4f9c7a324c",
+        "size_bytes": 2254
+      },
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0/run_manifest.json",
+        "sha256": "906e3d8329775d39ee110589a99f4b2927a85e0c584096f4ca8fa689e5f89f0e",
+        "size_bytes": 20343
+      },
+      "exact_2p1ns_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0/artifacts/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+        "sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+        "size_bytes": 6864750
+      },
+      "transient_plt": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/runs/IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0/artifacts/IGBT_T298_V550_L15_tr_transient_IGBT_T298_V550_L15_tr.plt",
+        "sha256": "9c8e8348113d691ef95ed82bb128c1e1af8117a9c2aa84464f0f142af7d85406",
+        "size_bytes": 78625
+      }
+    }
+  },
+  "current_mosfet": {
+    "case_id": "MOSFET650_LET15_2P1NS_V500",
+    "status": "COMPARISON_ONLY",
+    "device_family": "MOSFET",
+    "structure_id": "mosfet_650v_superjunction_reference_model",
+    "bias_v": 500.0,
+    "dc_run_id": "MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491",
+    "transient_run_id": "MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c",
+    "runner_lifecycle": "SUCCEEDED",
+    "seb_status": "NOT_EVALUATED_GLOBAL_GATE_FAILED",
+    "extraction_status": "PASS_WITHIN_COMPARISON_ONLY_SCOPE",
+    "evidence": {
+      "device_dsl": {
+        "path": "projects/igbt_mosfet_650v_seb_20260715/devices/mosfet_650v_sj.json",
+        "sha256": "b4784a4944c1edca14573461e49397838b378f98370667b3129759f60a3f7ba7",
+        "size_bytes": 15974
+      },
+      "authorization": {
+        "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/heavy_ion_authorization.json",
+        "sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+        "size_bytes": 77460
+      },
+      "track_binding": {
+        "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/field_track_localization_v2.json",
+        "sha256": "880ca5633509b92ab662c5c603202807dc89df1f631c832022981b2133a12e7e",
+        "size_bytes": 28215
+      },
+      "restart_binding_set": {
+        "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/restart_binding_set.json",
+        "sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e",
+        "size_bytes": 15016
+      },
+      "bound_transient_render_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/post_static_inputs/authorization_55a3a83abba3a9d7__restart_a5f0194b3c15cefd/post_static_render_manifest.json",
+        "sha256": "10055f7014d30af4948912e5583b9bfee1c1c1de4eb07fda21c982221b245758",
+        "size_bytes": 35102
+      },
+      "dc_run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/run_manifest.json",
+        "sha256": "8ef9ab43f056f575571b6257434d63aa7347fc89271db0239e44fc47df93fede",
+        "size_bytes": 10445
+      },
+      "dc_restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/restart_gate.json",
+        "sha256": "e8b07000456135c5625f2c434e3390eaefed4319a068f37a0c93364273b01f04",
+        "size_bytes": 4359
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/artifacts/MOSFET650_V500_restart_des.sav",
+        "sha256": "235d91c5928b11a7dda06ac6e8ca00919c882410020a78ae7d4af000c0babc10",
+        "size_bytes": 1747109
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/artifacts/MOSFET650_V500_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "verified_mesh": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c/artifacts/mosfet_650v_refined_v2_local_msh.tdr",
+        "sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+        "size_bytes": 457703
+      },
+      "transient_run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c/run_manifest.json",
+        "sha256": "583bbab4af4c8605e40f521629dfa6249f06980eaeac31fad35c053d29b1a3ba",
+        "size_bytes": 22193
+      },
+      "exact_2p1ns_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c/artifacts/MOSFET650_V500_tr_at2p1ns_des.tdr",
+        "sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+        "size_bytes": 3704367
+      },
+      "transient_plt": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c/artifacts/MOSFET650_V500_tr_transient_MOSFET650_V500_transient.plt",
+        "sha256": "4e89e3de13a0f39bb5b546d14cb68fd3b95bdb6cb3cba4fdf19078c7aeac2ba2",
+        "size_bytes": 176255
+      },
+      "audit_tdr_set": {
+        "count": 16,
+        "status": "COMPLETE",
+        "hashes_bound_by": "comparison-only extraction provenance sources"
+      },
+      "comparison_extraction": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/mosfet650_v500_comparison_only_extraction.json",
+        "sha256": "06a2a5d89a63aab8a8a2592f5b05440aabc7b64258d474abd67cf7f636c97ef9",
+        "size_bytes": 7990
+      },
+      "comparison_field_table": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/mosfet650_v500_comparison_only_fields.csv",
+        "sha256": "75b6b444d9b94c1ec8710b53e3e32cfaaccfe812d9321dee4c9c3f87dc3559da",
+        "size_bytes": 2077
+      },
+      "extraction_provenance": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/extraction_provenance.json",
+        "sha256": "9fb0af9406a2bcc4c9ab5d8d6cef84a4736ec8a3f3499e2683446cbe6410e0ff",
+        "size_bytes": 10359,
+        "svisual_exit_code": 0
+      }
+    }
+  },
+  "global_gate_unchanged_anchors": [
+    {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/campaign_run_summary.json",
+      "sha256": "ce06d76c7f2c7d7e3de4ae1f6309ea978e2c8c4d83cec0f4eb9f3048b1f82cc9",
+      "size_bytes": 297,
+      "status": "UNCHANGED_HISTORICAL_SNAPSHOT"
+    },
+    {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/campaign_run_summary.csv",
+      "sha256": "864077be9cdeda6efa16fc13e3e74d5f46d6cb8db7c3e3172563c2a31a3485a9",
+      "size_bytes": 256,
+      "status": "UNCHANGED_HISTORICAL_SNAPSHOT"
+    },
+    {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__452be836/run_manifest.json",
+      "sha256": "0ca326d59718892676e84f73ca986026d34501ab4c6c7891f4c9f72ee21d8109",
+      "size_bytes": 11922,
+      "status": "FAILED_NUMERICAL_PRESTRIKE_STOP_RETAINED"
+    },
+    {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt_400v_prestrike_recovery.json",
+      "sha256": "36e7d14cdf1213e690666a306e8c361fc854a7db89c246f8ab343ca262afa3cc",
+      "size_bytes": 8641,
+      "status": "FAILED_NUMERICAL_ONLY_RETAINED"
+    }
+  ]
+}

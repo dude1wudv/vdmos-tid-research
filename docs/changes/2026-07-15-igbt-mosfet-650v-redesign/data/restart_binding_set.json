@@ -1,0 +1,265 @@
+{
+  "schema_version": "650v_restart_binding_set/v1",
+  "authorization_sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+  "status": "PASS",
+  "records": [
+    {
+      "device_family": "IGBT",
+      "bias_v": 325,
+      "run_id": "IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba",
+      "parent_run_id": "AUTHORIZATION_55a3a83abba3a9d7",
+      "actual_bias_v": 325.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba/run_manifest.json",
+        "sha256": "7baf4472f4bda5241ab325b5e508b7f1b0a7c4a62e84df04e485889da1e390cf",
+        "size_bytes": 8618
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba/restart_gate.json",
+        "sha256": "04383578837bc6bcd5d019bd7451e93b6623602d5f6316b68fb411634544d658",
+        "size_bytes": 4261
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba/artifacts/IGBT650_V325_restart_des.sav",
+        "sha256": "533ac5db86dd9ec253df6bb52b9254850b8ecf402a3f36b4f55cadf57ead966a",
+        "size_bytes": 878572
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba/artifacts/IGBT650_V325_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba/artifacts/IGBT650_V325_dc_pre_des.tdr",
+        "sha256": "558cc569503f7ae162665a87927467a71cddd0a1ff9e009f9f2153469a09424b",
+        "size_bytes": 1672524
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 3,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "508"
+      }
+    },
+    {
+      "device_family": "IGBT",
+      "bias_v": 400,
+      "run_id": "IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a",
+      "parent_run_id": "IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba",
+      "actual_bias_v": 400.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a/run_manifest.json",
+        "sha256": "3ff265f9a3209a595994acaa3cfa6e781160595b1247f3c8f8e2eb5039e0e336",
+        "size_bytes": 10327
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a/restart_gate.json",
+        "sha256": "14ffeb5768d99f7eba6217ceab6069afc0a637051fe3f62c08383e11fb94202e",
+        "size_bytes": 4303
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a/artifacts/IGBT650_V400_restart_des.sav",
+        "sha256": "401882ef499aa46b16c903538fe88a869f47f12b4e48962a3ef38eaead7ac146",
+        "size_bytes": 887536
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a/artifacts/IGBT650_V400_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a/artifacts/IGBT650_V400_dc_pre_des.tdr",
+        "sha256": "abd53ffaa785b435fedd1dd07c01e688a48e6efbb84484afdbde7fe0bb3ccb82",
+        "size_bytes": 1689416
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 3,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "519"
+      }
+    },
+    {
+      "device_family": "IGBT",
+      "bias_v": 500,
+      "run_id": "IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb",
+      "parent_run_id": "IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a",
+      "actual_bias_v": 500.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb/run_manifest.json",
+        "sha256": "64957b932c5304e8f24be4f39a5630fae0b68c6d2e73c3244a6ee2e7cd815214",
+        "size_bytes": 10363
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb/restart_gate.json",
+        "sha256": "4199092bc499172c774475d316a55688c0bb4ad55d1cbdd389a99bf7f22ee1c4",
+        "size_bytes": 4316
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb/artifacts/IGBT650_V500_restart_des.sav",
+        "sha256": "1115b49b56cec78af665776c19296769c838742de84255e481c8fc0701ce74b6",
+        "size_bytes": 898099
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb/artifacts/IGBT650_V500_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb/artifacts/IGBT650_V500_dc_pre_des.tdr",
+        "sha256": "56a120335a41535f9c7307106073d05cf6f8aea784bbb9fbfeb8fd7d0fee4bd8",
+        "size_bytes": 1705594
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "531"
+      }
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 325,
+      "run_id": "MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca",
+      "parent_run_id": "AUTHORIZATION_55a3a83abba3a9d7",
+      "actual_bias_v": 325.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca/run_manifest.json",
+        "sha256": "0ce733b4d6d1f2d0defb3b251e131b0c2bc56d48e757ebb0cdf73f8c3cab24b9",
+        "size_bytes": 8676
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca/restart_gate.json",
+        "sha256": "93072804dd656e1747442ec0b2e981a607e296a8eb72b1e92e547bc2bbd818ff",
+        "size_bytes": 4303
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca/artifacts/MOSFET650_V325_restart_des.sav",
+        "sha256": "c8c6b14ed4468bda7169504156739f69f5fba56dfe45d7a8ab7a5f9a0958acc6",
+        "size_bytes": 1715724
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca/artifacts/MOSFET650_V325_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca/artifacts/MOSFET650_V325_dc_pre_des.tdr",
+        "sha256": "d59dded9ba309cb3538ed24d127a05fd7c49adb74bfd6ed8ebf20092be83aa2f",
+        "size_bytes": 3313811
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "1651"
+      }
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 400,
+      "run_id": "MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603",
+      "parent_run_id": "MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca",
+      "actual_bias_v": 400.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603/run_manifest.json",
+        "sha256": "201ccd883c11248433ff04e38037112a675851d9e60e5fdea3c946145b65dc8e",
+        "size_bytes": 10409
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603/restart_gate.json",
+        "sha256": "8cbe0a7a7808be3ef2b6e4a680ccec7a1e9df8567d7f97972e307a7578c65dec",
+        "size_bytes": 4360
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603/artifacts/MOSFET650_V400_restart_des.sav",
+        "sha256": "5e92fb363d1c97dd2c0129965ab66527575cd0cf6bfabb4c9da87225aca8a68f",
+        "size_bytes": 1721709
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603/artifacts/MOSFET650_V400_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603/artifacts/MOSFET650_V400_dc_pre_des.tdr",
+        "sha256": "ca3b535e7af6680368b83a394cdd08f9d5bee4542119b7323f2ca79e320d186f",
+        "size_bytes": 3319983
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 3,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "1666"
+      }
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 500,
+      "run_id": "MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491",
+      "parent_run_id": "MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603",
+      "actual_bias_v": 500.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_manifest": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/run_manifest.json",
+        "sha256": "8ef9ab43f056f575571b6257434d63aa7347fc89271db0239e44fc47df93fede",
+        "size_bytes": 10445
+      },
+      "restart_gate": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/restart_gate.json",
+        "sha256": "e8b07000456135c5625f2c434e3390eaefed4319a068f37a0c93364273b01f04",
+        "size_bytes": 4359
+      },
+      "restart_main": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/artifacts/MOSFET650_V500_restart_des.sav",
+        "sha256": "235d91c5928b11a7dda06ac6e8ca00919c882410020a78ae7d4af000c0babc10",
+        "size_bytes": 1747109
+      },
+      "restart_circuit": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/artifacts/MOSFET650_V500_restart_circuit_des.sav",
+        "sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "size_bytes": 306
+      },
+      "prebias_tdr": {
+        "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491/artifacts/MOSFET650_V500_dc_pre_des.tdr",
+        "sha256": "1bae8f1bd07cad1886da01ed113d4df87cfe9d4b331904dd2b66d314c73dd862",
+        "size_bytes": 3346366
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "1575"
+      }
+    }
+  ]
+}

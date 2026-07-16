@@ -1,0 +1,558 @@
+{
+  "schema_version": "650v_field_track_localization/v2",
+  "status": "VERIFIED_TRACKS_FROZEN_HEAVYION_NOT_AUTHORIZED",
+  "coordinate_system": {
+    "x": "device depth from top surface",
+    "y": "lateral cell coordinate",
+    "unit": "um"
+  },
+  "field_unit": "V/cm (Sentaurus native electric-field magnitude)",
+  "impact_ionization_unit": "cm^-3 s^-1 (Sentaurus native field)",
+  "selection_policy": "retain global Silicon Emax as boundary context; freeze the non-seed path from the 500 V ImpactIonization sensitive marker and audit the strict-interior path Emax",
+  "runs": [
+    {
+      "case_id": "IGBT650_FIELD_V325",
+      "bias_v": 325,
+      "actual_bias_v": 325.0,
+      "run_id": "IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3/run_manifest.json",
+      "run_manifest_sha256": "a282ea465561af31bd4a6344baaeefcb804b3cad94e880ba2f0eafc5c6e66ccc",
+      "deck_sha256": "7ab8170a8c7d0f29486ce9b27f2bc456372c75939a74e10e3d13f3a373311a81",
+      "metadata_sha256": "9239c11d9bdc1c09d04f91f41cf0010922f6d44a7f4eef113eb1e518fe112b39",
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3/artifacts/igbt650_field_v325.plt",
+      "source_plt_sha256": "e1d412ce19a4336787db21ef709f244fa38a22c25c33126ad73cdee24b8b7fdd",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3/artifacts/igbt650_field_v325_pre_des.tdr",
+      "field_tdr_sha256": "dad9eb3f575806a7e9a6327e919519cd1fc5d8f90671313871085d0fe6a2a5ca",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/igbt650_field_v325_field_v2.json",
+      "field_extraction_sha256": "437e5ff6fd950cde1adcfa19d83503b9e2b3f46e30d092c87c6ea8cabad7b29b",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 6,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "334"
+      }
+    },
+    {
+      "case_id": "IGBT650_FIELD_V400",
+      "bias_v": 400,
+      "actual_bias_v": 400.0,
+      "run_id": "IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27/run_manifest.json",
+      "run_manifest_sha256": "7bd2b18ef5207a8be8e9e25625f427f3dcf336d89718eb25f66f6b9cba2448a6",
+      "deck_sha256": "dd823b43309082323d066649d026b57b61a1e881db2eab48856064bc2a4bfc18",
+      "metadata_sha256": "41a813abdca7fec4cea21d5cdf7c6a46b966821f555765054dff61fc236ffda3",
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27/artifacts/igbt650_field_v400.plt",
+      "source_plt_sha256": "80e3071017201b0d7095c56dc29091af43d94ac5623e44844dc85860394fe980",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27/artifacts/igbt650_field_v400_pre_des.tdr",
+      "field_tdr_sha256": "51b381c54bb226cdbd9019a178ff54a3345bbd62ffe7a8c10df75fc9f660ef0a",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/igbt650_field_v400_field_v2.json",
+      "field_extraction_sha256": "3bd4a6dffe76db9b60c97d126ec1020625b3c057575bd54ed9888f21b67a7b1a",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "337"
+      }
+    },
+    {
+      "case_id": "IGBT650_FIELD_V500",
+      "bias_v": 500,
+      "actual_bias_v": 500.0,
+      "run_id": "IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29/run_manifest.json",
+      "run_manifest_sha256": "ee6a520538be4e414acb1f6c1f662d958777b87553e4ed33b5c9267fbd6460c9",
+      "deck_sha256": "ae107eece92eeb1fd0a05b9eb3c6a795a3f9733f19e096c9ec1f3c25f5c5d52b",
+      "metadata_sha256": "6d8ea842344784844b84bc0cfa0d4fb555408a1ef863289fcaeec602710241dd",
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29/artifacts/igbt650_field_v500.plt",
+      "source_plt_sha256": "a5567bbbc13d1f98cae38648f51a02ce6bb7ecc42fe659658db75cd6a027b75b",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29/artifacts/igbt650_field_v500_pre_des.tdr",
+      "field_tdr_sha256": "7ce2f873d4446c99ddc59a8326c898db65bf4cc01c5bfe8907986e0e9f8d8099",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/igbt650_field_v500_field_v2.json",
+      "field_extraction_sha256": "631b9c1a491996d98e2e7a2a83906a9b99e036e1d6655df74ca9ce816593f600",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 3,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "340"
+      }
+    },
+    {
+      "case_id": "MOSFET650_FIELD_V325",
+      "bias_v": 325,
+      "actual_bias_v": 325.0,
+      "run_id": "MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8/run_manifest.json",
+      "run_manifest_sha256": "fe5bf6c203ea7bce74aabb32766617798c69f00af72cc89a4fa5a70b896c8b7a",
+      "deck_sha256": "32568cdaab05ce147dc83caaec4f1dfaed40158bbf9c2e02db57d4fbc89074b6",
+      "metadata_sha256": "5ce9b34680ffc1df1c7fd8c973345570331e5d4201748f4da67fe9e96b8a273f",
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8/artifacts/mosfet650_field_v325.plt",
+      "source_plt_sha256": "6c2c689bb7ddccdcf43f3a4a0d370170875f7a7783fb0c458c00de7dd034eabf",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8/artifacts/mosfet650_field_v325_pre_des.tdr",
+      "field_tdr_sha256": "b3b74bfca9e82e044136eaa5bed476b652432e15ae6c8dd16885b709634b5990",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/mosfet650_field_v325_field_v2.json",
+      "field_extraction_sha256": "28a322916240558769aff004e1052fdf9f56e3574ad824a9f404f283bb9aeea5",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 4,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "900"
+      }
+    },
+    {
+      "case_id": "MOSFET650_FIELD_V400",
+      "bias_v": 400,
+      "actual_bias_v": 400.0,
+      "run_id": "MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0/run_manifest.json",
+      "run_manifest_sha256": "2dfb0fed10cc77e7be9963db699ac26a94a6d9662d07aa5bacb9d39569511983",
+      "deck_sha256": "92c02e88e4f0e476bcada5d959b9de91d2c11e090eeedb40ba9a57958ed45e1d",
+      "metadata_sha256": "b4768ced0d46689bd3fb244c248ea20f953b222102798bf6a2cfff367094e81f",
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0/artifacts/mosfet650_field_v400.plt",
+      "source_plt_sha256": "b9df316767d496b968f5b930fbc94ffba9e3e2a35c9ce526eb096780c39bd9da",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0/artifacts/mosfet650_field_v400_pre_des.tdr",
+      "field_tdr_sha256": "d832368a0812ce70c99d3e401139325597141b30fcc0a00102f2c53ac1ff922a",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/mosfet650_field_v400_field_v2.json",
+      "field_extraction_sha256": "00db8aa82f45be54f95ed7b484d84796e8101acb584d3797372726d7fff6dd9c",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 7,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "910"
+      }
+    },
+    {
+      "case_id": "MOSFET650_FIELD_V500",
+      "bias_v": 500,
+      "actual_bias_v": 500.0,
+      "run_id": "MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c",
+      "run_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c/run_manifest.json",
+      "run_manifest_sha256": "cbb1553dc9e64996d5226601383c632dd31397182c8e2eb8d0f3b18d48db46e2",
+      "deck_sha256": "ed0ddc218322c83dd7f37422a19ae6ff3628fea19409e26d3a90809fb87ce631",
+      "metadata_sha256": "c14f72273b0d2ef993e2c32195beb9de0dba4df13d130dcd9b1115f007884d38",
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "source_plt": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c/artifacts/mosfet650_field_v500.plt",
+      "source_plt_sha256": "79a2585e543c04a5619e910fd2ef531fabf4ca7461b1530eb09d97f6b86dd744",
+      "field_tdr": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c/artifacts/mosfet650_field_v500_pre_des.tdr",
+      "field_tdr_sha256": "290373b138d55165a864e9b53830083af9a1960b6f015b95a803dc1dcd5eca60",
+      "field_extraction": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/field_extractions/mosfet650_field_v500_field_v2.json",
+      "field_extraction_sha256": "a51dfd00178c71d607ea7df347be9652bd997ec8ac99563dba466597092a30ec",
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 5,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "exit_code": "0",
+        "wall_time_seconds": "913"
+      }
+    }
+  ],
+  "field_rows": [
+    {
+      "device_family": "IGBT",
+      "bias_v": 325,
+      "actual_bias_v": 325.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_id": "IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3",
+      "cpu_core": 6,
+      "global_emax_v_per_cm": 334392.190166,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.40625,
+      "impact_ionization_max_cm3_s": 321981916674000.0,
+      "impact_max_x_um": 3.19493937492,
+      "impact_max_y_um": 2.10963654518,
+      "track_y_um": 2.10963654518,
+      "track_path_emax_v_per_cm": 150542.294704,
+      "track_path_emax_x_um": 3.22365045547,
+      "track_path_impact_max_cm3_s": 39006022942600.0,
+      "distance_to_si_oxide_um": 0.015060625079999834,
+      "distance_to_junction_reference_um": 2.5730881301153308,
+      "distance_to_back_si_boundary_um": 70.80506062508,
+      "distance_to_lateral_si_boundary_um": 2.10963654518,
+      "source_tdr_sha256": "dad9eb3f575806a7e9a6327e919519cd1fc5d8f90671313871085d0fe6a2a5ca",
+      "source_tdr_size_bytes": 1502561,
+      "deck_sha256": "7ab8170a8c7d0f29486ce9b27f2bc456372c75939a74e10e3d13f3a373311a81",
+      "metadata_sha256": "9239c11d9bdc1c09d04f91f41cf0010922f6d44a7f4eef113eb1e518fe112b39",
+      "source_plt_sha256": "e1d412ce19a4336787db21ef709f244fa38a22c25c33126ad73cdee24b8b7fdd"
+    },
+    {
+      "device_family": "IGBT",
+      "bias_v": 400,
+      "actual_bias_v": 400.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_id": "IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27",
+      "cpu_core": 2,
+      "global_emax_v_per_cm": 334392.190166,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.40625,
+      "impact_ionization_max_cm3_s": 958492395348000.0,
+      "impact_max_x_um": 3.17626643181,
+      "impact_max_y_um": 2.08463644981,
+      "track_y_um": 2.08463644981,
+      "track_path_emax_v_per_cm": 154724.189933,
+      "track_path_emax_x_um": 3.22128772736,
+      "track_path_impact_max_cm3_s": 73858110573800.0,
+      "distance_to_si_oxide_um": 0.033733568190000174,
+      "distance_to_junction_reference_um": 2.5984535676746026,
+      "distance_to_back_si_boundary_um": 70.82373356819,
+      "distance_to_lateral_si_boundary_um": 2.08463644981,
+      "source_tdr_sha256": "51b381c54bb226cdbd9019a178ff54a3345bbd62ffe7a8c10df75fc9f660ef0a",
+      "source_tdr_size_bytes": 1511466,
+      "deck_sha256": "dd823b43309082323d066649d026b57b61a1e881db2eab48856064bc2a4bfc18",
+      "metadata_sha256": "41a813abdca7fec4cea21d5cdf7c6a46b966821f555765054dff61fc236ffda3",
+      "source_plt_sha256": "80e3071017201b0d7095c56dc29091af43d94ac5623e44844dc85860394fe980"
+    },
+    {
+      "device_family": "IGBT",
+      "bias_v": 500,
+      "actual_bias_v": 500.0,
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "run_id": "IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29",
+      "cpu_core": 3,
+      "global_emax_v_per_cm": 334392.190166,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.40625,
+      "impact_ionization_max_cm3_s": 2350492680800000.0,
+      "impact_max_x_um": 3.21900749207,
+      "impact_max_y_um": 2.14882278442,
+      "track_y_um": 2.14882278442,
+      "track_path_emax_v_per_cm": 199838.933243,
+      "track_path_emax_x_um": 3.22740316391,
+      "track_path_impact_max_cm3_s": 1191303380250000.0,
+      "distance_to_si_oxide_um": 0.009007492069999845,
+      "distance_to_junction_reference_um": 2.538571388437819,
+      "distance_to_back_si_boundary_um": 70.78099250793,
+      "distance_to_lateral_si_boundary_um": 2.14882278442,
+      "source_tdr_sha256": "7ce2f873d4446c99ddc59a8326c898db65bf4cc01c5bfe8907986e0e9f8d8099",
+      "source_tdr_size_bytes": 1518444,
+      "deck_sha256": "ae107eece92eeb1fd0a05b9eb3c6a795a3f9733f19e096c9ec1f3c25f5c5d52b",
+      "metadata_sha256": "6d8ea842344784844b84bc0cfa0d4fb555408a1ef863289fcaeec602710241dd",
+      "source_plt_sha256": "a5567bbbc13d1f98cae38648f51a02ce6bb7ecc42fe659658db75cd6a027b75b"
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 325,
+      "actual_bias_v": 325.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_id": "MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8",
+      "cpu_core": 4,
+      "global_emax_v_per_cm": 644052.651929,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.400390625,
+      "impact_ionization_max_cm3_s": 3689419016280000.0,
+      "impact_max_x_um": 62.5,
+      "impact_max_y_um": 6.0,
+      "track_y_um": 5.99,
+      "track_path_emax_v_per_cm": 155172.98756,
+      "track_path_emax_x_um": 62.0,
+      "track_path_impact_max_cm3_s": 3651809754310000.0,
+      "distance_to_si_oxide_um": 59.39843179748099,
+      "distance_to_junction_reference_um": 1.2000000000000002,
+      "distance_to_back_si_boundary_um": 1.5,
+      "distance_to_lateral_si_boundary_um": 0.0,
+      "source_tdr_sha256": "b3b74bfca9e82e044136eaa5bed476b652432e15ae6c8dd16885b709634b5990",
+      "source_tdr_size_bytes": 2995105,
+      "deck_sha256": "32568cdaab05ce147dc83caaec4f1dfaed40158bbf9c2e02db57d4fbc89074b6",
+      "metadata_sha256": "5ce9b34680ffc1df1c7fd8c973345570331e5d4201748f4da67fe9e96b8a273f",
+      "source_plt_sha256": "6c2c689bb7ddccdcf43f3a4a0d370170875f7a7783fb0c458c00de7dd034eabf"
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 400,
+      "actual_bias_v": 400.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_id": "MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0",
+      "cpu_core": 7,
+      "global_emax_v_per_cm": 644052.651929,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.400390625,
+      "impact_ionization_max_cm3_s": 8334669457920000.0,
+      "impact_max_x_um": 62.5,
+      "impact_max_y_um": 6.0,
+      "track_y_um": 5.99,
+      "track_path_emax_v_per_cm": 170139.03707,
+      "track_path_emax_x_um": 62.0,
+      "track_path_impact_max_cm3_s": 8247815805090000.0,
+      "distance_to_si_oxide_um": 59.39843179748099,
+      "distance_to_junction_reference_um": 1.2000000000000002,
+      "distance_to_back_si_boundary_um": 1.5,
+      "distance_to_lateral_si_boundary_um": 0.0,
+      "source_tdr_sha256": "d832368a0812ce70c99d3e401139325597141b30fcc0a00102f2c53ac1ff922a",
+      "source_tdr_size_bytes": 3003308,
+      "deck_sha256": "92c02e88e4f0e476bcada5d959b9de91d2c11e090eeedb40ba9a57958ed45e1d",
+      "metadata_sha256": "b4768ced0d46689bd3fb244c248ea20f953b222102798bf6a2cfff367094e81f",
+      "source_plt_sha256": "b9df316767d496b968f5b930fbc94ffba9e3e2a35c9ce526eb096780c39bd9da"
+    },
+    {
+      "device_family": "MOSFET",
+      "bias_v": 500,
+      "actual_bias_v": 500.0,
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "run_id": "MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c",
+      "cpu_core": 5,
+      "global_emax_v_per_cm": 644052.651929,
+      "global_emax_x_um": 0.0,
+      "global_emax_y_um": 4.400390625,
+      "impact_ionization_max_cm3_s": 1.97566535041e+16,
+      "impact_max_x_um": 62.5,
+      "impact_max_y_um": 6.0,
+      "track_y_um": 5.99,
+      "track_path_emax_v_per_cm": 188371.677107,
+      "track_path_emax_x_um": 62.0,
+      "track_path_impact_max_cm3_s": 1.95502056473e+16,
+      "distance_to_si_oxide_um": 59.39843179748099,
+      "distance_to_junction_reference_um": 1.2000000000000002,
+      "distance_to_back_si_boundary_um": 1.5,
+      "distance_to_lateral_si_boundary_um": 0.0,
+      "source_tdr_sha256": "290373b138d55165a864e9b53830083af9a1960b6f015b95a803dc1dcd5eca60",
+      "source_tdr_size_bytes": 3012708,
+      "deck_sha256": "ed0ddc218322c83dd7f37422a19ae6ff3628fea19409e26d3a90809fb87ce631",
+      "metadata_sha256": "c14f72273b0d2ef993e2c32195beb9de0dba4df13d130dcd9b1115f007884d38",
+      "source_plt_sha256": "79a2585e543c04a5619e910fd2ef531fabf4ca7461b1530eb09d97f6b86dd744"
+    }
+  ],
+  "tracks": {
+    "IGBT": {
+      "status": "VERIFIED_FROZEN_NOT_SEED",
+      "selection_rule": "500 V impact-ionization maximum defines the sensitive lateral coordinate; boundary maxima are retained as context but are not used as the track selector; the path starts 0.01 um beyond the oxide tip and ends 0.01 um before the back Silicon boundary",
+      "seed_track_reused": false,
+      "sensitive_region": "trench oxide tip / P-body-to-drift high-impact-ionization region",
+      "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+      "representative_bias_v": 500,
+      "representative_run_id": "IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29",
+      "representative_deck_sha256": "ae107eece92eeb1fd0a05b9eb3c6a795a3f9733f19e096c9ec1f3c25f5c5d52b",
+      "representative_run_manifest_sha256": "ee6a520538be4e414acb1f6c1f662d958777b87553e4ed33b5c9267fbd6460c9",
+      "representative_field_tdr_sha256": "7ce2f873d4446c99ddc59a8326c898db65bf4cc01c5bfe8907986e0e9f8d8099",
+      "representative_field_extraction_sha256": "631b9c1a491996d98e2e7a2a83906a9b99e036e1d6655df74ca9ce816593f600",
+      "global_emax_boundary_context": {
+        "value_v_per_cm": 334392.190166,
+        "position_um": [
+          0.0,
+          4.40625
+        ],
+        "interpretation": "retained boundary/contact maximum; not used to freeze the HeavyIon path"
+      },
+      "sensitive_marker": {
+        "field": "ImpactIonization",
+        "value_cm3_s": 2350492680800000.0,
+        "position_um": [
+          3.21900749207,
+          2.14882278442
+        ]
+      },
+      "track_path_emax": {
+        "value_v_per_cm": 199838.933243,
+        "position_um": [
+          3.22740316391,
+          2.14882278442
+        ]
+      },
+      "start_um": [
+        3.22,
+        2.14882278442
+      ],
+      "direction": [
+        1.0,
+        0.0
+      ],
+      "length_um": 70.77,
+      "end_um": [
+        73.99,
+        2.14882278442
+      ],
+      "oxide_tip_x_um": 3.21,
+      "silicon_bounds_um": {
+        "x_min": 0.0,
+        "x_max": 74.0,
+        "y_min": 0.0,
+        "y_max": 6.0
+      },
+      "strict_interior_margin_um": 0.01,
+      "boundary_distances_from_sensitive_marker": {
+        "point_um": [
+          3.21900749207,
+          2.14882278442
+        ],
+        "distance_to_si_oxide_tip_segment_um": 0.009007492069999845,
+        "distance_to_back_silicon_boundary_um": 70.78099250793,
+        "distance_to_nearest_lateral_silicon_boundary_um": 2.14882278442,
+        "junction_reference": "nominal P-body/drift ValueAtDepth segment from the frozen DSL; not a proprietary-junction reconstruction",
+        "junction_reference_segment_um": [
+          [
+            5.65,
+            2.88
+          ],
+          [
+            5.65,
+            5.2
+          ]
+        ],
+        "distance_to_junction_reference_um": 2.538571388437819
+      },
+      "all_bias_sensitive_markers": [
+        {
+          "bias_v": 325,
+          "impact_ionization_max_cm3_s": 321981916674000.0,
+          "position_um": [
+            3.19493937492,
+            2.10963654518
+          ],
+          "track_path_emax_v_per_cm": 150542.294704
+        },
+        {
+          "bias_v": 400,
+          "impact_ionization_max_cm3_s": 958492395348000.0,
+          "position_um": [
+            3.17626643181,
+            2.08463644981
+          ],
+          "track_path_emax_v_per_cm": 154724.189933
+        },
+        {
+          "bias_v": 500,
+          "impact_ionization_max_cm3_s": 2350492680800000.0,
+          "position_um": [
+            3.21900749207,
+            2.14882278442
+          ],
+          "track_path_emax_v_per_cm": 199838.933243
+        }
+      ]
+    },
+    "MOSFET": {
+      "status": "VERIFIED_FROZEN_NOT_SEED",
+      "selection_rule": "500 V impact-ionization maximum defines the sensitive lateral coordinate; boundary maxima are retained as context but are not used as the track selector; the path starts 0.01 um beyond the oxide tip and ends 0.01 um before the back Silicon boundary",
+      "seed_track_reused": false,
+      "sensitive_region": "drain-side high-impact-ionization region adjacent to the SJ P-pillar termination",
+      "mesh_sha256": "1b900c26df4e367aa7a5621e21a24479f07b3ad0fbe3c7294d19398f6bdb0727",
+      "representative_bias_v": 500,
+      "representative_run_id": "MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c",
+      "representative_deck_sha256": "ed0ddc218322c83dd7f37422a19ae6ff3628fea19409e26d3a90809fb87ce631",
+      "representative_run_manifest_sha256": "cbb1553dc9e64996d5226601383c632dd31397182c8e2eb8d0f3b18d48db46e2",
+      "representative_field_tdr_sha256": "290373b138d55165a864e9b53830083af9a1960b6f015b95a803dc1dcd5eca60",
+      "representative_field_extraction_sha256": "a51dfd00178c71d607ea7df347be9652bd997ec8ac99563dba466597092a30ec",
+      "global_emax_boundary_context": {
+        "value_v_per_cm": 644052.651929,
+        "position_um": [
+          0.0,
+          4.400390625
+        ],
+        "interpretation": "retained boundary/contact maximum; not used to freeze the HeavyIon path"
+      },
+      "sensitive_marker": {
+        "field": "ImpactIonization",
+        "value_cm3_s": 1.97566535041e+16,
+        "position_um": [
+          62.5,
+          6.0
+        ]
+      },
+      "track_path_emax": {
+        "value_v_per_cm": 188371.677107,
+        "position_um": [
+          62.0,
+          5.99
+        ]
+      },
+      "start_um": [
+        3.2,
+        5.99
+      ],
+      "direction": [
+        1.0,
+        0.0
+      ],
+      "length_um": 60.79,
+      "end_um": [
+        63.99,
+        5.99
+      ],
+      "oxide_tip_x_um": 3.19,
+      "silicon_bounds_um": {
+        "x_min": 0.0,
+        "x_max": 64.0,
+        "y_min": 0.0,
+        "y_max": 6.0
+      },
+      "strict_interior_margin_um": 0.01,
+      "boundary_distances_from_sensitive_marker": {
+        "point_um": [
+          62.5,
+          6.0
+        ],
+        "distance_to_si_oxide_tip_segment_um": 59.39843179748099,
+        "distance_to_back_silicon_boundary_um": 1.5,
+        "distance_to_nearest_lateral_silicon_boundary_um": 0.0,
+        "junction_reference": "SJ P-pillar termination segment from the frozen DSL; nearest named P/N-junction termination",
+        "junction_reference_segment_um": [
+          [
+            62.5,
+            3.0
+          ],
+          [
+            62.5,
+            4.8
+          ]
+        ],
+        "distance_to_junction_reference_um": 1.2000000000000002
+      },
+      "all_bias_sensitive_markers": [
+        {
+          "bias_v": 325,
+          "impact_ionization_max_cm3_s": 3689419016280000.0,
+          "position_um": [
+            62.5,
+            6.0
+          ],
+          "track_path_emax_v_per_cm": 155172.98756
+        },
+        {
+          "bias_v": 400,
+          "impact_ionization_max_cm3_s": 8334669457920000.0,
+          "position_um": [
+            62.5,
+            6.0
+          ],
+          "track_path_emax_v_per_cm": 170139.03707
+        },
+        {
+          "bias_v": 500,
+          "impact_ionization_max_cm3_s": 1.97566535041e+16,
+          "position_um": [
+            62.5,
+            6.0
+          ],
+          "track_path_emax_v_per_cm": 188371.677107
+        }
+      ]
+    }
+  },
+  "all_tracks_frozen": true,
+  "heavy_ion_authorized": false
+}

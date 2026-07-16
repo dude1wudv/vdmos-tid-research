@@ -1,0 +1,7 @@
+source_id,source_path,source_type,used_in,status,boundary
+S01,docs/changes/2026-07-14-igbt-mosfet-seb-paper-simulation,formal fact source,02_正式结果 (7 IGBT cases),included as filtered public evidence,fixed historical 2D model; not global convergence or 650 V proof
+S02,local_runtime/tcad_projects/igbt_mosfet_seb_paper_20260714/inputs,continuation inputs,01_IGBT可继续仿真工程; 05_最小复现材料,included after IGBT-only filtering and path redaction,no raw TDR/PLT/SAV or private run directory
+S03,docs/changes/2026-07-15-ai-assisted-tcad-paper-materials,AI-assisted TCAD paper materials,02_正式结果/论文材料,included as public small materials,researcher-constrained bounded autonomy; no AI-vs-human claim
+S04,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan,low-LET diagnostic evidence,04_低LET诊断附录,included as diagnostic appendix,diagnostic_only/MESH_SENSITIVE; no threshold or causality
+S05,scripts + config,reproduction tooling,05_最小复现材料/scripts,included after sensitive-path redaction,verifier is read-only; no SDevice invoked by packaging
+S06,local_runtime/.../delivery_v2_gzp_20260715/IGBT_SEB_20260714_Final_Continuation.gzp,verified 20260714 continuation Workbench package,01_IGBT可继续仿真工程,included; SHA matched frozen verification record,pack/unpack/Workbench-open/SVisual probes PASS; no post-package SDevice rerun

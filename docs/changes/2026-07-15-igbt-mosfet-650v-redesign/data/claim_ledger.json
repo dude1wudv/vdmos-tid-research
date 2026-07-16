@@ -1,0 +1,491 @@
+{
+  "schema_version": "650v_claim_ledger/v1",
+  "campaign_id": "igbt_mosfet_650v_seb_20260715",
+  "purpose": "登记可由轻量文件与私有 runtime 哈希复核的静态、网格与后续阶段门主张；refined-v1 失败历史保留，不把静态校准运行计入 post-static campaign。",
+  "evidence_bindings": {
+    "baseline_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_baseline_extraction.json",
+      "sha256": "f03ebcb4cb57cdecfb098eb9b86aea2a7dd6468c8aef84e8d1e6a0e1b0f92b72"
+    },
+    "refined_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_extraction.json",
+      "sha256": "6b4f37758af9a3113283c738667b048f85110b6b3fb9c9c0f8de349f4e82aee6"
+    },
+    "mesh_consistency": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency.json",
+      "sha256": "81081b474e82ef7b17676e08d3bbe1080ae9573bd558784b3b08f7c11c4e3401"
+    },
+    "refined_run_set": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/refined_mesh_consistency_v1.json",
+      "sha256": "b64e9e562f97cacfa97baae09a5235bd81f7628c22d583b7d3cc2d012ee6dd63"
+    },
+    "refined_mesh_generation": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/mesh_generation/refined_mesh_manifest.json",
+      "sha256": "ead5fb4f6533eea5ee750cd0830a210c3bda7f6941d1f1a3250b1dd48d89e597"
+    },
+    "refined_v2_extraction": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_refined_v2_local_extraction.json",
+      "sha256": "c8dd899e368b88f14e4b4466ad0ea23b698d394266d504c9820d1c3a849b70d5"
+    },
+    "mesh_consistency_v2": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/static_mesh_consistency_v2.json",
+      "sha256": "9e416828bf514351c699e2d6b59db2104856a090a8c406eac032b84aec80cedc"
+    },
+    "refined_v2_run_set": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/static_run_sets/refined_mesh_consistency_v2_local.json",
+      "sha256": "fcd1c4c72ecbcab8a2838f50efcf309b13c4a55c9c878418fb09487724786c91"
+    },
+    "refined_v2_mesh_generation": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/mesh_generation/refined_v2_local_mesh_manifest.json",
+      "sha256": "ff0d97a2c538fb431097fd2ace1fd42a52800c29cef516e7f30c327144e66e24"
+    },
+    "field_track_localization_v2": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/field_track_localization_v2.json",
+      "sha256": "880ca5633509b92ab662c5c603202807dc89df1f631c832022981b2133a12e7e"
+    },
+    "heavy_ion_authorization": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/heavy_ion_authorization.json",
+      "sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06"
+    },
+    "post_static_render_manifest": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/post_static_inputs/authorization_55a3a83abba3a9d7/post_static_render_manifest.json",
+      "sha256": "685f063fcf06f2f2f41e1b844c257a1c0c21d004b81f12d2e2121488d0b7e49d"
+    },
+    "restart_binding_set": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/restart_binding_set.json",
+      "sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e"
+    },
+    "bound_transient_render_manifest": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/post_static_inputs/authorization_55a3a83abba3a9d7__restart_a5f0194b3c15cefd/post_static_render_manifest.json",
+      "sha256": "10055f7014d30af4948912e5583b9bfee1c1c1de4eb07fda21c982221b245758"
+    },
+    "igbt_400_transient_failed_manifest": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/runs/IGBT650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__452be836/run_manifest.json",
+      "sha256": "0ca326d59718892676e84f73ca986026d34501ab4c6c7891f4c9f72ee21d8109"
+    },
+    "igbt_400_prestrike_recovery": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt_400v_prestrike_recovery.json",
+      "sha256": "36e7d14cdf1213e690666a306e8c361fc854a7db89c246f8ab343ca262afa3cc"
+    },
+    "igbt550_mosfet500_comparison_manifest": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt550_mosfet500_comparison_manifest.json",
+      "sha256": "c862ef179028d610ef0ff102d86a0cc8410a2f8b6ad120df9b1bfa06b95e283e"
+    },
+    "igbt550_mosfet500_comparison_json": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt550_mosfet500_comparison.json",
+      "sha256": "8bd2a6e35baa8e7a145c860a85301400399dc3fba7d1b814dcdc93379f807116"
+    },
+    "igbt550_mosfet500_comparison_csv": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt550_mosfet500_comparison.csv",
+      "sha256": "04351a20c6bd21fb1fa160694b02775cf595f091d7aa124ddc9e3e54d645ad6b"
+    },
+    "mosfet_v500_comparison_extraction": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/mosfet650_v500_comparison_only_extraction.json",
+      "sha256": "06a2a5d89a63aab8a8a2592f5b05440aabc7b64258d474abd67cf7f636c97ef9"
+    },
+    "mosfet_v500_comparison_provenance": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/comparison_only_igbt550_mosfet500_20260716/extraction_provenance.json",
+      "sha256": "9fb0af9406a2bcc4c9ab5d8d6cef84a4736ec8a3f3499e2683446cbe6410e0ff"
+    },
+    "igbt550_mosfet500_svisual_spatial_comparison": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/igbt550_mosfet500_svisual_spatial_comparison.json",
+      "sha256": "a8c5fbb5069a942b05cf41ea278be2e5353037f78b484cacf02117fffef30385"
+    },
+    "igbt550_mosfet500_svisual_probe_provenance": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/probe_2ns_comparison_provenance.json",
+      "sha256": "25ffd5d862d370cf70b6bb84c8079aefddf06e1a4f5dbf68eb15c43e0850996b"
+    },
+    "igbt550_mosfet500_svisual_render_provenance": {
+      "path": "local_runtime/tcad_projects/igbt_mosfet_650v_2ns_svisual/render_2ns_comparison_provenance.json",
+      "sha256": "fe0bf4a657eeacb529d0ff7f7712e2bf9db2485ab44c6b39b421e21b6b2156bb"
+    },
+    "igbt550_mosfet500_svisual_carrier_png": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_carrier_density_2p1ns_svisual_comparison.png",
+      "sha256": "b5605f62d39a8d765e671b7c6bfd9ae70f7622380ad960b3c6ea37c8e639d8d1"
+    },
+    "igbt550_mosfet500_svisual_temperature_png": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_lattice_temperature_2p1ns_svisual_comparison.png",
+      "sha256": "644006e0ee6fde51a0e2ac5b241be84249f07e0f43391c541a4cb4491136e34a"
+    },
+    "igbt550_mosfet500_svisual_current_density_png": {
+      "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_current_density_v_2p1ns_svisual_comparison.png",
+      "sha256": "41bc7b92ba0026a14878551f99f506d65d954dab9bf6965a635092327002f234"
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "model_scope",
+      "status": "SUPPORTED",
+      "claim": "IGBT lifetime=300 us 与 MOSFET attempt24/SJ scale=0.8 仅冻结为 reference-model candidates，不是专有商用芯片结构复现。",
+      "evidence": [
+        "projects/igbt_mosfet_650v_seb_20260715/devices/igbt_650v.json",
+        "projects/igbt_mosfet_650v_seb_20260715/devices/mosfet_650v_sj.json"
+      ]
+    },
+    {
+      "claim_id": "baseline_static_gates",
+      "status": "SUPPORTED",
+      "claim": "baseline IGBT 与 MOSFET 的 BV、Vth、导通和 650 V 漏电四门全部通过；BV 取高端端子 InnerVoltage 首个原始电流样本达到 1e-6 A/um，未使用 solver failure。",
+      "values": {
+        "IGBT": {"bv_v": 707.497688089023, "vth_v": 6.448419139306199, "vcesat_v": 1.55, "leakage_a": 1.942219625700824e-05},
+        "MOSFET": {"bv_v": 824.279280266482, "vth_v": 4.012161559996825, "rdson_ohm": 0.087, "leakage_a": 7.3603471784209215e-06}
+      },
+      "evidence": ["baseline_extraction"]
+    },
+    {
+      "claim_id": "refined_mesh_generation",
+      "status": "SUPPORTED",
+      "claim": "refined 对照来自两份实际新 SDE 网格，不是布尔值改写。",
+      "values": {
+        "IGBT": {"baseline_mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664", "refined_mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755", "points": 9152, "elements": 17836},
+        "MOSFET": {"baseline_mesh_sha256": "fa8279e907be5bf545b938e0cb24fffd69e544225bd4366ad5285589f848e569", "refined_mesh_sha256": "949901b1790b164c47e6b2dce92e522bda0ecdb5dc71f8724d9fdc301b39b4ad", "points": 8303, "elements": 16250}
+      },
+      "evidence": ["refined_mesh_generation"]
+    },
+    {
+      "claim_id": "refined_static_runs",
+      "status": "SUPPORTED",
+      "claim": "8 个 refined 静态 SDevice case 均 SUCCEEDED；每案 Threads=1、AUTO_LEASE、lease acquired/released=true、affinity VERIFIED，使用 cores 1-4。",
+      "run_ids": [
+        "IGBT650_REFINED_STATIC_BV__mesh_consistency_v1__20260715T232824034Z__34617479",
+        "IGBT650_REFINED_STATIC_VTH__mesh_consistency_v1__20260715T232824035Z__bfc09029",
+        "IGBT650_REFINED_STATIC_CONDUCTION__mesh_consistency_v1__20260715T232824124Z__62e59e82",
+        "IGBT650_REFINED_STATIC_OFF_LEAKAGE__mesh_consistency_v1__20260715T232824343Z__8d506c70",
+        "MOSFET650_REFINED_STATIC_BV__mesh_consistency_v1__20260715T233541084Z__3c4de328",
+        "MOSFET650_REFINED_STATIC_VTH__mesh_consistency_v1__20260715T233541134Z__d4b3156d",
+        "MOSFET650_REFINED_STATIC_CONDUCTION__mesh_consistency_v1__20260715T233541444Z__ec55d1f2",
+        "MOSFET650_REFINED_STATIC_OFF_LEAKAGE__mesh_consistency_v1__20260715T233541605Z__531e88c6"
+      ],
+      "evidence": ["refined_extraction", "refined_run_set"]
+    },
+    {
+      "claim_id": "fixed_area_factor_policy",
+      "status": "SUPPORTED",
+      "claim": "refined Vth、导通与漏电比较固定复用 baseline AreaFactor；refined-v1/v2 自校准因子只作诊断，没有用于掩盖差异。",
+      "values": {
+        "IGBT": {"fixed_baseline": 52755946.32810768, "diagnostic_refined_self_calibrated": 47135269.38403092},
+        "MOSFET": {"fixed_baseline": 53502886.18183474, "diagnostic_refined_v1_self_calibrated": 41197619.37311974, "diagnostic_refined_v2_self_calibrated": 34462188.85021455}
+      },
+      "evidence": ["refined_extraction", "refined_v2_extraction", "mesh_consistency", "mesh_consistency_v2"]
+    },
+    {
+      "claim_id": "mesh_consistency_gate",
+      "status": "SUPPORTED",
+      "claim": "IGBT refined-v1 四项 mesh consistency 均通过。MOSFET refined-v1 Vth 的 0.11826345 V 超限失败历史原样保留；refined-v2-local 使用不变 fixed baseline AreaFactor 和不变阈值完成三级趋势，Vth v1→v2 差 0.03699976 V、估计剩余误差 0.01684617 V，四项 successive 门、四静态门与调度证据均通过，因此组合五门闭合。",
+      "historical_refined_v1": {"status": "FAILED_GATE_RETAINED", "baseline_vth_v": 4.012161559996825, "refined_v1_vth_v": 3.8938981091184983, "delta_v": 0.11826345087832646, "threshold_v": 0.1},
+      "refined_v2": {"status": "PASSED", "vth_v": 3.856898348408629, "v1_to_v2_delta_v": 0.0369997607098691, "estimated_remaining_error_v": 0.01684617434612834},
+      "heavy_ion_authorized": false,
+      "evidence": ["mesh_consistency", "mesh_consistency_v2", "refined_v2_extraction", "refined_v2_run_set", "refined_v2_mesh_generation"]
+    },
+    {
+      "claim_id": "refined_v2_static_runs",
+      "status": "SUPPORTED",
+      "claim": "MOSFET refined-v2-local 四静态案均 SUCCEEDED；全部 Threads=1、AUTO_LEASE、lease acquired/released=true、affinity VERIFIED，使用 cores 2/3/4。三个 runner 重启失败 manifest 被保留且未覆盖。",
+      "run_ids": [
+        "MOSFET650_REFINED_V2_LOCAL_STATIC_BV__mesh_consistency_v2_local_full_static__20260716T025715209Z__7582079d",
+        "MOSFET650_REFINED_V2_LOCAL_STATIC_VTH__mesh_consistency_v2_local_vth_precheck_retry3__20260716T024828894Z__13f0b01b",
+        "MOSFET650_REFINED_V2_LOCAL_STATIC_CONDUCTION__mesh_consistency_v2_local_full_static__20260716T025715428Z__13f5fc75",
+        "MOSFET650_REFINED_V2_LOCAL_STATIC_OFF_LEAKAGE__mesh_consistency_v2_local_full_static__20260716T025716462Z__ae1874cd"
+      ],
+      "evidence": ["refined_v2_extraction", "refined_v2_run_set"]
+    },
+    {
+      "claim_id": "field_localization_and_track_freeze",
+      "status": "SUPPORTED",
+      "claim": "复用 6 个已完成的 325/400/500 V verified-mesh 关断场 run/TDR，没有重复 SDevice 仿真。全域 Emax 的 x=0 边界最大值只保留为背景；轨迹按 500 V ImpactIonization 敏感标记冻结并以严格硅内 cutline 复核，不复用 seed track。",
+      "values": {
+        "IGBT": {"track_x_um": 3.22, "track_y_um": 2.14882278442, "direction": [1.0, 0.0], "length_um": 70.77, "track_emax_v_per_cm_at_500v": 199838.933243},
+        "MOSFET": {"track_x_um": 3.2, "track_y_um": 5.99, "direction": [1.0, 0.0], "length_um": 60.79, "track_emax_v_per_cm_at_500v": 188371.677107}
+      },
+      "run_ids": [
+        "IGBT650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032752310Z__175339f3",
+        "IGBT650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032752495Z__caf7ff27",
+        "IGBT650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032753086Z__e4556c29",
+        "MOSFET650_FIELD_V325__checkpoint_b_field_localization_v1__20260716T032753704Z__e87609e8",
+        "MOSFET650_FIELD_V400__checkpoint_b_field_localization_v1__20260716T032754473Z__e3db44a0",
+        "MOSFET650_FIELD_V500__checkpoint_b_field_localization_v1__20260716T032755074Z__58d0108c"
+      ],
+      "heavy_ion_authorized": false,
+      "evidence": ["field_track_localization_v2"]
+    },
+    {
+      "claim_id": "heavy_ion_authorization",
+      "status": "SUPPORTED",
+      "claim": "在五门与两条非 seed 轨迹均闭合后签发 HeavyIon 授权。证据绑定两份当前 DSL、baseline/refined/refined-v2 mesh、20 个静态 run manifests/PLT、6 个 field run manifests/PLT/TDR/extractions，共 77 个文件记录；prepare 仅在这些路径、大小和 SHA-256 全部精确匹配时放行。",
+      "authorization_sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+      "heavy_ion_authorized": true,
+      "evidence": ["heavy_ion_authorization"]
+    },
+    {
+      "claim_id": "post_static_render_gate",
+      "status": "SUPPORTED_EXACT_BOUND_TRANSIENTS",
+      "claim": "六个 DC restart PASS gate 组成 SHA-256=a5f0194b...e644e 的 exact binding set；prepare 再次校验 parent run manifest/restart gate/main/circuit/actual bias/mesh 后，在 immutable 目录 authorization_55a3a83abba3a9d7__restart_a5f0194b3c15cefd 渲染 6 个 transient。每份 deck 实际 Load 对应 bias restart，并使用 LET_f=0.1555 pC/um（对应 LET15）、16 个 strike-window audit TDR 与精确 2.1 ns 输出契约。",
+      "evidence": ["restart_binding_set", "bound_transient_render_manifest"]
+    },
+    {
+      "claim_id": "dc_restart_chains",
+      "status": "SUPPORTED",
+      "claim": "IGBT 与 MOSFET 各自严格按 325→400→500 V 串行门完成，六案实际偏压均精确达到目标，native restart main/circuit 与 prebias TDR 齐全；全部 AUTO_LEASE、Threads=1、lease acquired/released=true、affinity VERIFIED、exit_code=0。",
+      "run_ids": [
+        "IGBT650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246750Z__9b5c35ba",
+        "IGBT650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T045835700Z__80fe2d4a",
+        "IGBT650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T051213450Z__823ecaeb",
+        "MOSFET650_DC_RESTART_V325__authorized_55a3a83a_chain_v1__20260716T044246880Z__ae6e93ca",
+        "MOSFET650_DC_RESTART_V400__authorized_55a3a83a_chain_v1__20260716T051513983Z__de8a5603",
+        "MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491"
+      ],
+      "restart_binding_set_sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e",
+      "evidence": ["restart_binding_set"]
+    },
+    {
+      "claim_id": "let15_reference_transient_gate",
+      "status": "FAILED_NUMERICAL_PRESTRIKE_STOP",
+      "claim": "六个独立 LET15/2.1 ns 输入在六 parent restart 精确绑定后并发启动；IGBT 400 V 案于 13.587637 ps（早于 100 ps strike）因 LatticeTemperature 方程反复减小步长至过小而 exit_code=2。该失败不是 HeavyIon 响应或 SEB 证据；阶段 E fail closed，不重试、不进入 campaign 汇总/SEB 判定。其余五个在失败出现前已独立启动，最终 runner SUCCEEDED 并保存 exact 2.1 ns TDR，但未继续做场/电荷提取，也不据此越过失败门。",
+      "failed_run_id": "IGBT650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__452be836",
+      "sibling_success_run_ids": [
+        "IGBT650_LET15_2P1NS_V325__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941348Z__a3cf8ee4",
+        "IGBT650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941469Z__6d2da489",
+        "MOSFET650_LET15_2P1NS_V325__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061941956Z__64fcc91c",
+        "MOSFET650_LET15_2P1NS_V400__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061942485Z__b3f84200",
+        "MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c"
+      ],
+      "values": {
+        "time_end_s": 1.3587637114587e-11,
+        "strike_time_s": 1e-10,
+        "collector_voltage_v": 400.0,
+        "collector_current_a_per_um": 1.95740636437389e-12,
+        "tmax_k": 298.150006461735,
+        "termination_reason": "STEP_SIZE_TOO_SMALL_AFTER_LATTICE_TEMPERATURE_OUT_OF_RANGE"
+      },
+      "evidence": ["bound_transient_render_manifest", "igbt_400_transient_failed_manifest"]
+    },
+    {
+      "claim_id": "igbt_400_prestrike_numerical_recovery",
+      "status": "FAILED_NUMERICAL_ONLY",
+      "claim": "独立 recovery attempt `IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B` 仅改变时间步、非线性迭代/阻尼、分段、checkpoint 与输出，physics_delta=[]；P0 从 exact V400 parent 出发，末端有限值推进到 13.9850919 ps，虽越过原 13.587637 ps，但未达到 15 ps，且日志仍有 58 次 LatticeTemperature update out of range，故 P0 为 FAILED_NUMERICAL_ONLY，P1/P2/P3 与 2.1 ns extractor 均 NOT RUN。该结果与原失败 run 独立，不构成 SEB、热失控、安全或阈值结论。",
+      "recovery_attempt_id": "IGBT400_PRESTRIKE_THERMAL_RECOVERY_V1_20260716B",
+      "profile": "IGBT400_PRESTRIKE_THERMAL_DAMPED_SEGMENTED_V1",
+      "scope": "NUMERICAL_DIAGNOSTIC_ONLY",
+      "run_id": "IGBT650_V400_RECOVERY_P0__authorized_55a3a83a_restart_a5f0194b_thermal_v1__20260716T080339800Z__f9e3018b",
+      "stage_status": {
+        "P0": "FAILED_NUMERICAL_ONLY",
+        "P1": "NOT_RUN",
+        "P2": "NOT_RUN",
+        "P3": "NOT_RUN"
+      },
+      "values": {
+        "last_accepted_time_s": 1.39850918989182e-11,
+        "crossed_original_failure_time": true,
+        "reached_p0_target_15ps": false,
+        "collector_voltage_v": 400.0,
+        "collector_current_a_per_um": 3.16919993983038e-12,
+        "tmax_k": 298.150006461735,
+        "first_out_of_range_after_original_failure_attempt_start_s": 1.382e-11,
+        "first_out_of_range_after_original_failure_attempt_end_s": 1.3835e-11,
+        "last_out_of_range_attempt_start_s": 1.3985e-11,
+        "last_out_of_range_attempt_end_s": 1.3985e-11,
+        "lattice_temperature_out_of_range_count": 58,
+        "minimum_attempted_step_s": 5.5644e-18,
+        "exit_code": 130
+      },
+      "scheduling_evidence": {
+        "allocation_mode": "AUTO_LEASE",
+        "cpu_core": 2,
+        "sdevice_threads": 1,
+        "lease_acquired": true,
+        "lease_released": true,
+        "affinity_verification": "VERIFIED",
+        "wall_time_seconds": 1301
+      },
+      "physical_input_invariance": {
+        "authorization_sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+        "restart_binding_set_sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e",
+        "parent_restart_main_sha256": "401882ef499aa46b16c903538fe88a869f47f12b4e48962a3ef38eaead7ac146",
+        "parent_restart_circuit_sha256": "3f35a68b78eaacca5c4cc995ab0be8ddb49fbac9ded5e499a65e9851781fcba5",
+        "mesh_sha256": "84d24e1dc14052ee3ef3525ced567ee9337c97ba0e5e55eefc1d0ddde09fd755",
+        "sdevice_parameter_sha256": "6aa6b189214b6b6342417a8f4b7a9b973e861c8dbb1a4186a537b41fa455f859",
+        "physics_delta": []
+      },
+      "evidence": ["igbt_400_prestrike_recovery", "igbt_400_transient_failed_manifest", "restart_binding_set"]
+    },
+    {
+      "claim_id": "current_igbt_550v_plan",
+      "status": "CANCELLED_BY_SCOPE_CHANGE",
+      "claim": "当前 650 V IGBT 的新建 550 V 计划按范围变更取消；未生成新 case，未启动 SDevice，也不改变原 IGBT 400 V 失败或 recovery V1。",
+      "new_case_generated": false,
+      "sdevice_started": false,
+      "evidence": ["igbt550_mosfet500_comparison_manifest"]
+    },
+    {
+      "claim_id": "historical_igbt_550v_reference",
+      "status": "HISTORICAL_REFERENCE_SUPPORTED",
+      "claim": "历史 `IGBT_T298_V550_L15` 可作为 298.15 K、550 V、LET15、2.1 ns 的历史参考单列展示；其 sidecar、exact 2.1 ns TDR、PLT、16 点 HeavyIon audit 与源结构/HeavyIon 文件均已由 comparison manifest 冻结哈希。该状态只支持历史工况内部指标，不表示与当前 MOSFET 为共同工况。",
+      "run_id": "IGBT_T298_V550_L15__transient_reference_attempt01__20260715T064159391Z__27ebb6c0",
+      "values": {
+        "tmax_k": 300.386549973,
+        "terminal_collected_charge_pc_um": 0.0015667171079054242,
+        "terminal_energy_j_um": 9.268326177934994e-13,
+        "emax_v_per_cm": 145841.603695,
+        "heavy_ion_charge_closure_error_pct": 3.7597595215736135,
+        "audit_points": 16
+      },
+      "evidence": ["igbt550_mosfet500_comparison_manifest", "igbt550_mosfet500_comparison_json", "igbt550_mosfet500_comparison_csv"]
+    },
+    {
+      "claim_id": "mosfet_v500_comparison_only_postprocessing",
+      "status": "COMPARISON_ONLY",
+      "claim": "只读复用 MOSFET 650 V SJ reference model 的既有 V500 exact 2.1 ns TDR、PLT 与 16 个 audit TDR，通过原 `extract_igbt_mosfet_seb_2ns.py` 在 SVisual headless 中完成后处理；未启动 SDevice、未修改原 metadata/manifest。runner `SUCCEEDED` 仅说明该单案运行完成，不是 SEB PASS，也不越过全局 Checkpoint E 的 IGBT400 fail-closed。",
+      "dc_run_id": "MOSFET650_DC_RESTART_V500__authorized_55a3a83a_chain_v1__20260716T054548932Z__b7d96491",
+      "run_id": "MOSFET650_LET15_2P1NS_V500__authorized_55a3a83a_restart_a5f0194b_reference_v1__20260716T061943026Z__68883e0c",
+      "svisual_exit_code": 0,
+      "values": {
+        "tmax_k": 703.289277824,
+        "hotspot_x_um": 46.0,
+        "hotspot_y_um": 6.0,
+        "terminal_final_current_a_um": 0.0399006856085,
+        "terminal_peak_abs_current_a_um": 0.0399006856085,
+        "terminal_peak_time_s": 2.1e-9,
+        "terminal_collected_charge_pc_um": 60.18187549388502,
+        "terminal_energy_j_um": 3.009093774703226e-8,
+        "emax_v_per_cm": 695104.217396,
+        "heavy_ion_nominal_charge_pc": 9.452845,
+        "heavy_ion_integrated_charge_pc": 9.455064962963664,
+        "heavy_ion_charge_closure_error_pct": 0.02348460134133923,
+        "audit_points": 16
+      },
+      "unextracted": {
+        "hotspot_region": "comparison extractor does not classify current-model regions",
+        "nearest_interface_type": "comparison extractor does not perform interface classification",
+        "nearest_interface_distance_um": "comparison extractor does not perform interface-distance calculation"
+      },
+      "evidence": ["mosfet_v500_comparison_extraction", "mosfet_v500_comparison_provenance", "igbt550_mosfet500_comparison_manifest", "igbt550_mosfet500_comparison_json"]
+    },
+    {
+      "claim_id": "igbt550_mosfet500_svisual_spatial_comparison",
+      "status": "COMPARISON_ONLY",
+      "claim": "Sentaurus Visual W-2024.09 在 VM 上只读打开历史 IGBT 550 V 与当前 MOSFET 500 V 的 exact 2.1 ns TDR，直接导出总载流子密度、LatticeTemperature 与 Abs(TotalCurrentDensity-V) 空间场面板并无损左右拼接；未启动 SDevice。图与图注明确 `IGBT 550 V`、`MOSFET 500 V`、`t=2.1 ns (post-injection 2.0 ns)`，只允许描述可见分布和各自坐标峰值。",
+      "svisual_exit_code": 0,
+      "sdevice_started": false,
+      "source_time_s": 2.1e-9,
+      "post_injection_time_s": 2.0e-9,
+      "source_tdrs": {
+        "IGBT": {
+          "case_id": "IGBT_T298_V550_L15",
+          "bias_v": 550.0,
+          "remote_path": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/IGBT_T298_V550_L15_tr_at2p1ns_des.tdr",
+          "sha256": "7e6acb8e089e3cf1beb8e5bcd25a7393e933ef310056d0b976f15c82ab639c98",
+          "hash_verified_on_vm": true
+        },
+        "MOSFET": {
+          "case_id": "MOSFET650_LET15_2P1NS_V500",
+          "bias_v": 500.0,
+          "remote_path": "/home/tcad/codex_runs/igbt_mosfet_2ns_comparison_20260716_probe_render/MOSFET650_V500_tr_at2p1ns_des.tdr",
+          "sha256": "e4cf34dda0165ceab1ee70f24253255564cac26d48b75aaede625489758337f8",
+          "hash_verified_on_vm": true
+        }
+      },
+      "figures": {
+        "carrier": {
+          "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_carrier_density_2p1ns_svisual_comparison.png",
+          "physical_variable": "TotalCarrierDensity = eDensity + hDensity",
+          "render_field": "Log10TotalCarrierDensity = log10(eDensity + hDensity)",
+          "unit": "cm^-3",
+          "color_scale_strategy": "COMMON_LOG10_RANGE",
+          "color_range": [12.0, 20.0],
+          "IGBT_peak": {"value": 6.98499642314e+19, "xyz_um": [0.0, 3.35625004768, 0.0]},
+          "MOSFET_peak": {"value": 8.69851376267e+19, "xyz_um": [0.0625, 3.65625, 0.0]}
+        },
+        "temperature": {
+          "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_lattice_temperature_2p1ns_svisual_comparison.png",
+          "physical_variable": "LatticeTemperature",
+          "render_field": "LatticeTemperature",
+          "unit": "K",
+          "color_scale_strategy": "INDEPENDENT_PANEL_RANGES_DUE_TO_LARGE_DYNAMIC_RANGE",
+          "color_range": {"IGBT": [298.15, 300.4], "MOSFET": [298.15, 703.3]},
+          "IGBT_peak": {"value": 300.386549973, "xyz_um": [170.757232666, 0.0, 0.0]},
+          "MOSFET_peak": {"value": 703.289277824, "xyz_um": [46.0, 6.0, 0.0]}
+        },
+        "current_density": {
+          "path": "docs/changes/2026-07-15-igbt-mosfet-650v-redesign/figures/igbt550_mosfet500_total_current_density_v_2p1ns_svisual_comparison.png",
+          "physical_variable": "Abs(TotalCurrentDensity-V)",
+          "render_field": "Log10AbsTotalCurrentDensityV = log10(Abs(TotalCurrentDensity-V))",
+          "unit": "A/cm^2",
+          "color_scale_strategy": "COMMON_LOG10_RANGE",
+          "color_range": [-1.0, 7.0],
+          "IGBT_peak": {"value": 629189.199357, "xyz_um": [0.802219390869, 2.79658699036, 0.0]},
+          "MOSFET_peak": {"value": 3335083.99778, "xyz_um": [0.0, 3.28125, 0.0]}
+        }
+      },
+      "limitations": [
+        "NOT_COMMON_BIAS",
+        "NOT_SAME_STRUCTURE",
+        "NOT_SAME_TRACK",
+        "AREA_FACTOR_2D_SEMANTICS_MISMATCH",
+        "NO_SEB_SAFETY_THRESHOLD_COMMERCIAL_PERFORMANCE_OR_DEVICE_RANKING_CLAIM"
+      ],
+      "evidence": [
+        "igbt550_mosfet500_svisual_spatial_comparison",
+        "igbt550_mosfet500_svisual_probe_provenance",
+        "igbt550_mosfet500_svisual_render_provenance",
+        "igbt550_mosfet500_svisual_carrier_png",
+        "igbt550_mosfet500_svisual_temperature_png",
+        "igbt550_mosfet500_svisual_current_density_png"
+      ]
+    },
+    {
+      "claim_id": "igbt550_mosfet500_interpretation_boundary",
+      "status": "SUPPORTED_LIMITATION",
+      "claim": "该并列表明确为 `NOT_COMMON_BIAS`、`NOT_SAME_STRUCTURE`、`NOT_SAME_TRACK` 与 `AREA_FACTOR_2D_SEMANTICS_MISMATCH`。不计算跨器件性能比例，不把 500 V MOSFET 与 550 V IGBT 的数值差写成器件优势，不给出 SEB 阈值、安全电压或安全排名。",
+      "cross_device_ratios_computed": false,
+      "seb_threshold_claim_allowed": false,
+      "safety_ranking_allowed": false,
+      "evidence": ["igbt550_mosfet500_comparison_manifest", "igbt550_mosfet500_comparison_json", "igbt550_mosfet500_comparison_csv"]
+    },
+    {
+      "claim_id": "post_static_campaign_scope",
+      "status": "PENDING_REFRESH_BLOCKED_BY_TRANSIENT_FAILURE",
+      "claim": "campaign_run_summary 的旧 run_count=0 已被本轮 restart/transient runs 取代；由于阶段 E 已 fail closed，尚未发布新的正式 campaign 汇总或任何 SEB/安全判定。",
+      "evidence": ["docs/changes/2026-07-15-igbt-mosfet-650v-redesign/data/campaign_run_summary.json"]
+    },
+    {
+      "claim_id": "igbt_attempt15_mesh_provenance",
+      "status": "UNRESOLVED_HISTORICAL_GAP",
+      "claim": "attempt15 manifest 仍为 PREPARED/PENDING_SDE，且其当前目录 mesh SHA-256=96a8026a...，不同于 baseline runs 实际绑定的 535bef9c...。没有证据可把 535bef9c... 追溯为 attempt15 那次 SDE 的直接输出，故不补写虚构的 SDE_SUCCEEDED provenance。",
+      "known_evidence": {
+        "attempt_manifest": "local_runtime/tcad_projects/igbt_mosfet_650v_seb_20260715/mesh_attempts/igbt_seed_attempt15_drift_thickness_74/attempt_manifest.json",
+        "attempt15_generated_deck_sha256": "07c243c41f21f1566dc0c1ae5bc9d48d63a939f609a88eea09c54790af80e8ba",
+        "attempt15_directory_mesh_sha256": "96a8026afeb03a8ebd852371f596923cf658cc31686895fbae172170f854dde8",
+        "actual_baseline_run_mesh_sha256": "535bef9cfb4537174f746545cb3b7b3b95ed8ea536e6fea4e6a5408a408e1664"
+      }
+    }
+  ],
+  "gate_state": {
+    "baseline_static": "PASSED",
+    "IGBT_mesh_consistency": "PASSED",
+    "MOSFET_refined_v1_history": "FAILED_RETAINED",
+    "MOSFET_mesh_consistency": "PASSED_REFINED_V2_LOCAL",
+    "combined_mesh_consistency": "PASSED",
+    "post_static_authorization_ready": true,
+    "heavy_ion_authorized": true,
+    "dc_restart_chains": "PASSED_SIX_EXACT_BINDINGS",
+    "restart_binding_set_sha256": "a5f0194b3c15cefd10085fe43b4f1a96d435026f8e59293704cb77cbb86e644e",
+    "let15_2p1ns_reference_transient": "FAILED_NUMERICAL_PRESTRIKE_IGBT400",
+    "igbt_400_prestrike_recovery": "FAILED_NUMERICAL_ONLY",
+    "igbt_400_prestrike_recovery_stages": {
+      "P0": "FAILED_NUMERICAL_ONLY",
+      "P1": "NOT_RUN",
+      "P2": "NOT_RUN",
+      "P3": "NOT_RUN"
+    },
+    "campaign_summary": "NOT_RUN_AFTER_FAILED_TRANSIENT_GATE",
+    "current_igbt_550v_plan": "CANCELLED_BY_SCOPE_CHANGE",
+    "historical_igbt_550v_reference": "HISTORICAL_REFERENCE_SUPPORTED",
+    "mosfet_v500_postprocessing": "COMPARISON_ONLY",
+    "igbt550_mosfet500_comparison": "COMPARISON_ONLY_NON_COMMON_CONDITIONS",
+    "igbt550_mosfet500_svisual_spatial_figures": "COMPARISON_ONLY_THREE_FIELDS_RENDERED",
+    "cross_device_performance_ratios": "NOT_COMPUTED",
+    "seb_threshold_or_safety_ranking": "NOT_ALLOWED",
+    "authorization_evidence_sha256": "55a3a83abba3a9d76e0a3c80e6d88015114dc42796887fdcd6e51b388a0b3c06",
+    "next_allowed_action": "STOPPED_AT_RECOVERY_P0: preserve original failure and independent FAILED_NUMERICAL_ONLY recovery evidence; formal P1/P2/P3, formal campaign extractor/summary, and SEB/safety/threshold claims remain blocked. The completed MOSFET V500 SVisual pass is COMPARISON_ONLY and does not change the global gate."
+  }
+}

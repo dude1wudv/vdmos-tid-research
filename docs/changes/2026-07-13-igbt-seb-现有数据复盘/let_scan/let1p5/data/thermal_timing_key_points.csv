@@ -1,0 +1,15 @@
+﻿series_id,key_id,time_s,ic_a_um,tmax_k,delta_t_k,power_w_um,cumulative_electrical_energy_j_um,source_path,source_row
+thermal_steady,pulse_local_max,1.002e-10,0.000115015758711,324.633215745,5.5999976211751346e-08,0.2875393967775,6.772667495525322e-13,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,32
+thermal_steady,post_pulse_sample_min,2.64444793126e-10,1.07080993397e-06,324.633219558,3.869000011036405e-06,0.002677024834925,1.4586823854410489e-12,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,62
+thermal_steady,time_10ns,1e-08,7.55553928803e-06,324.668928458,0.035712768999985656,0.018888848220075,8.765913248771697e-11,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,82
+thermal_steady,time_40ns,4e-08,8.81040663347e-05,325.582389894,0.9491742050000198,0.22026016583675,2.986019082328044e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,115
+thermal_steady,time_50ns,5e-08,0.000114934883265,325.95019323,1.3169775410000284,0.28733720816249997,5.681235312389844e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,133
+thermal_steady,time_60ns,6e-08,8.53168579547e-05,326.456434834,1.823219144999996,0.21329214488675,8.191002608829105e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,151
+thermal_steady,available_window_end,6e-08,8.53168579547e-05,326.456434834,1.823219144999996,0.21329214488675,8.191002608829105e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_thermal_raw.csv,151
+cold300_nonsteady,pulse_local_max,1.002e-10,0.00011531490269,300.047363824,0.047142843000017365,0.288287256725,6.849661229504503e-13,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,32
+cold300_nonsteady,post_pulse_sample_min,2.53956733647e-10,1.10377064434e-06,300.049795214,0.04957423300004393,0.00275942661085,1.434992279520456e-12,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,58
+cold300_nonsteady,time_10ns,1e-08,8.35931574058e-06,300.047694981,0.04747400000002244,0.02089828935145,9.539152152467373e-11,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,78
+cold300_nonsteady,time_40ns,4e-08,0.000100974328575,308.198626427,8.198405446000038,0.2524358214375,3.3809571521510077e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,111
+cold300_nonsteady,time_50ns,5e-08,0.000120590777397,313.686521634,13.68630065299999,0.3014769434925,6.344302438886867e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,129
+cold300_nonsteady,time_60ns,6e-08,9.05136704723e-05,314.489899496,14.489678515000037,0.22628417618075,8.983967329080733e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,147
+cold300_nonsteady,available_window_end,6e-08,9.05136704723e-05,314.489899496,14.489678515000037,0.22628417618075,8.983967329080733e-09,docs/changes/2026-07-13-igbt-seb-现有数据复盘/let_scan/data/let1p5_cold300_raw.csv,147

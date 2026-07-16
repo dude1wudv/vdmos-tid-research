@@ -1,0 +1,266 @@
+{
+  "schema": "igbt_mosfet_seb_frozen_runtime/v1",
+  "campaign": "igbt_mosfet_seb_paper_20260714",
+  "records": [
+    {
+      "relative_path": "campaign_manifest.json",
+      "sha256": "a04af8d9837fa8bd52e70ef462dd59b6b70f46b53c1f9fafeb1bdc70def7beb0",
+      "size_bytes": 7347
+    },
+    {
+      "relative_path": "case_matrix.csv",
+      "sha256": "36b90d808f57f33a54b4df70909d598d586830afe9f18116ac3068e9db046e1c",
+      "size_bytes": 1647
+    },
+    {
+      "relative_path": "cases/IGBT_T243_V550_L15/IGBT_T243_V550_L15_dc.cmd",
+      "sha256": "d3016d7c599e8261f70e04a47e99b1336ec46956458e90d1e0ec4232cf8aaa30",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T243_V550_L15/IGBT_T243_V550_L15_dc.json",
+      "sha256": "b7e0507e22f6646bee4067d638431ed9941d92b250edda67d451c01c579ebf56",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T243_V550_L15/IGBT_T243_V550_L15_transient.cmd",
+      "sha256": "7e7865a6a12fc0a16c06b96561d093efbce38f2f2993302309826679bbfc5906",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T243_V550_L15/IGBT_T243_V550_L15_transient.json",
+      "sha256": "a2d7096ed9a6d2b6bfa98a228c6e26eecc88108dd9111d0508b2c341794ae36b",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V500_L15/IGBT_T298_V500_L15_dc.cmd",
+      "sha256": "b11eb2f0d7e54ae38ceac63eca50c9f6f718f2e52c702e72ef41bec66e13977b",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V500_L15/IGBT_T298_V500_L15_dc.json",
+      "sha256": "548094fc74f50de73d931fd94f2d06541a973ce7c61f979d75bdaec2697aba91",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V500_L15/IGBT_T298_V500_L15_transient.cmd",
+      "sha256": "af368ee0a91c65a1b400bfc0cedd3d22b83447262d91481b0bf55bb714c3b0da",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V500_L15/IGBT_T298_V500_L15_transient.json",
+      "sha256": "9c34c653634f5a287808d9452eb9d344030971e2748f0088faa9f08563bfb24f",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V525_L15/IGBT_T298_V525_L15_dc.cmd",
+      "sha256": "ae2805a83abeea489abc312d4c0f6b6bb44d970f5b93ee8df40af08fa5edc087",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V525_L15/IGBT_T298_V525_L15_dc.json",
+      "sha256": "928db7de2b35c4e16818513432de5e19742f45450d05edd6eecd11cface034f5",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V525_L15/IGBT_T298_V525_L15_transient.cmd",
+      "sha256": "3ee0fe061ef39be5ff4f26fc67753eab9bab4e63ed2e7d935bd709d6b6e7319b",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V525_L15/IGBT_T298_V525_L15_transient.json",
+      "sha256": "5f8596842ffc62802cc5067ce9eb9e78da150ef1054f8d83e534b2df5493dd80",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V550_L15/IGBT_T298_V550_L15_dc.cmd",
+      "sha256": "c2b334dceccb8249f0593852cedcffc9219a2e38be63db4ae0d21b0b12c211af",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V550_L15/IGBT_T298_V550_L15_dc.json",
+      "sha256": "96dff1d1b56b7988d9b2b70bba129862cc757d1adce271d5974f99feb037e8e7",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V550_L15/IGBT_T298_V550_L15_transient.cmd",
+      "sha256": "168010e78d67a6a5be830f8333374fb667e33d33640b838960b9d65f9b04e315",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V550_L15/IGBT_T298_V550_L15_transient.json",
+      "sha256": "d6f04110fcd138b53bcf0cf00c0fc0400a6f48665deb1676cfb979f74e3445b5",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V575_L15/IGBT_T298_V575_L15_dc.cmd",
+      "sha256": "ed90ebffee21d22831672ef2b1ffa0e8ba27c5ee2ab1d42e6c0795db384a8d7f",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V575_L15/IGBT_T298_V575_L15_dc.json",
+      "sha256": "d7380bd706d6833a70d90eaa6814e7efc0eb85b3d1319e2694b10479fac0411c",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V575_L15/IGBT_T298_V575_L15_transient.cmd",
+      "sha256": "6ccc960ed559c0d0b7e91f580252ed1e3979a6447f16cfa7b1a8e4952690dccd",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T298_V575_L15/IGBT_T298_V575_L15_transient.json",
+      "sha256": "c3882d4394f98c3c32f44c56bc0a18ec43ecd697291fe22fbb257c86a69acf87",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T323_V550_L15/IGBT_T323_V550_L15_dc.cmd",
+      "sha256": "142897356b8f9fee6ead42f5b32c6b3934a312f604331fb5bc911d4bd377c6ed",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T323_V550_L15/IGBT_T323_V550_L15_dc.json",
+      "sha256": "412daae9e80dddc68acc08b2c899c8e7d403b6880ea687fcd09fa102c6c6f444",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T323_V550_L15/IGBT_T323_V550_L15_transient.cmd",
+      "sha256": "e141409eecd2ce4c11188e8017d236e5354ff753bfa0f69d1fb0f1d51011a0d6",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T323_V550_L15/IGBT_T323_V550_L15_transient.json",
+      "sha256": "ec1e63ef13272cbae6aac1fa7992b180c17df661e79f446478b3934b85a93dfe",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/IGBT_T343_V550_L15/IGBT_T343_V550_L15_dc.cmd",
+      "sha256": "f9cacf54fa67d25afbe9c468c77cfccc123f7eee559c69ccacf407355379f3d8",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/IGBT_T343_V550_L15/IGBT_T343_V550_L15_dc.json",
+      "sha256": "8c2da60450a47be73a1c2f0a78fb7357df7baea97281af117c5a080424741c93",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "cases/IGBT_T343_V550_L15/IGBT_T343_V550_L15_transient.cmd",
+      "sha256": "e44065bbfbfd2bbd4314e2061f61ddd4334031580aca76e49a8809ede85b1aa3",
+      "size_bytes": 5714
+    },
+    {
+      "relative_path": "cases/IGBT_T343_V550_L15/IGBT_T343_V550_L15_transient.json",
+      "sha256": "136c93a8c0762acab812651afa170e081619d5e5d8500f31fba8b83b8c55f0e9",
+      "size_bytes": 1010
+    },
+    {
+      "relative_path": "cases/MOSFET_T298_V550_L15/MOSFET_T298_V550_L15_dc.cmd",
+      "sha256": "e05128f455e30be56789a1f19d0ebc82b166de532eda4f0fec1932cfa747434d",
+      "size_bytes": 1459
+    },
+    {
+      "relative_path": "cases/MOSFET_T298_V550_L15/MOSFET_T298_V550_L15_dc.json",
+      "sha256": "134811b2a06d7d2cce20061833cf124fbb992ef95dea1864ded965ddaf4eff8c",
+      "size_bytes": 999
+    },
+    {
+      "relative_path": "cases/MOSFET_T298_V550_L15/MOSFET_T298_V550_L15_transient.cmd",
+      "sha256": "84ba5d660d576c88aa03bc28ac3acd6e70500682d4c71452e331519929618a0f",
+      "size_bytes": 5754
+    },
+    {
+      "relative_path": "cases/MOSFET_T298_V550_L15/MOSFET_T298_V550_L15_transient.json",
+      "sha256": "8e65042bdc8c0edbb50edaf6e82b7e9828dd45b37146d4cf4521228672e12427",
+      "size_bytes": 1034
+    },
+    {
+      "relative_path": "cases/VAL_IGBT_T298_V550_L15_track_refined/VAL_IGBT_T298_V550_L15_track_refined_dc.cmd",
+      "sha256": "08dc497b16db7db7b14c8c0e5dd58563a98d5ba1d957fcf1ae7159624271c065",
+      "size_bytes": 1554
+    },
+    {
+      "relative_path": "cases/VAL_IGBT_T298_V550_L15_track_refined/VAL_IGBT_T298_V550_L15_track_refined_dc.json",
+      "sha256": "d3e28cdf95d6094a6561c8904c36c95a4d65f3247e674ea52793b36808900cbe",
+      "size_bytes": 1023
+    },
+    {
+      "relative_path": "cases/VAL_IGBT_T298_V550_L15_track_refined/VAL_IGBT_T298_V550_L15_track_refined_transient.cmd",
+      "sha256": "f266f4b11ad30d456c8ea221dcd2d4df65fb82d1661f20a133f59e3a1e24bd95",
+      "size_bytes": 6133
+    },
+    {
+      "relative_path": "cases/VAL_IGBT_T298_V550_L15_track_refined/VAL_IGBT_T298_V550_L15_track_refined_transient.json",
+      "sha256": "c572558dd80be6096355d2a11ebbf4db903d3b59405cac547d1f6e73d7e7563e",
+      "size_bytes": 1075
+    },
+    {
+      "relative_path": "cases/VAL_MOSFET_T298_V550_L15_track_refined/VAL_MOSFET_T298_V550_L15_track_refined_dc.cmd",
+      "sha256": "8345394bd5c86fa2f6f91d44880f01d4d5bab94784512e207f9697cdb16a7881",
+      "size_bytes": 1554
+    },
+    {
+      "relative_path": "cases/VAL_MOSFET_T298_V550_L15_track_refined/VAL_MOSFET_T298_V550_L15_track_refined_dc.json",
+      "sha256": "6cb6c4f8456993445c35720050f83f6141b954471d3d21ba9751590e013b14e6",
+      "size_bytes": 1045
+    },
+    {
+      "relative_path": "cases/VAL_MOSFET_T298_V550_L15_track_refined/VAL_MOSFET_T298_V550_L15_track_refined_transient.cmd",
+      "sha256": "3c8f62f058cae35eb025f77a20b4b5b6c15408faaa697bbe9f3383ac62119491",
+      "size_bytes": 6173
+    },
+    {
+      "relative_path": "cases/VAL_MOSFET_T298_V550_L15_track_refined/VAL_MOSFET_T298_V550_L15_track_refined_transient.json",
+      "sha256": "59d671bf741af9d3a362b1e41ac412ef307ee7e6b9d575177e39556becc2dea6",
+      "size_bytes": 1099
+    },
+    {
+      "relative_path": "frozen_input_manifest.json",
+      "sha256": "586617f8f961ef6c5f836f3305b0d1b937361265ac19e4b67183ae7394d656ad",
+      "size_bytes": 1950
+    },
+    {
+      "relative_path": "inspect_svisual_api.py",
+      "sha256": "d46a0c81e2ccda8b57ba3d6cdc1957ec85473fa308f6b1cc6dc991a8748ead5e",
+      "size_bytes": 576
+    },
+    {
+      "relative_path": "plot_2ns_spec.json",
+      "sha256": "c1b7ede68eeff3fa8fc8bd0761bb43547cc50b705649cbdd2589a76fd7024a4b",
+      "size_bytes": 1744
+    },
+    {
+      "relative_path": "sde/igbt_baseline_sde.cmd",
+      "sha256": "9336137eee8c42f69db454f1c3e09dfb332fc2f6537ac2821692e59970d0b6b2",
+      "size_bytes": 7360
+    },
+    {
+      "relative_path": "sde/igbt_track_refined_sde.cmd",
+      "sha256": "64f83a61a7028599975cefa57553e5a80680303f5c84e5876cf1fdc60779efe4",
+      "size_bytes": 7377
+    },
+    {
+      "relative_path": "sde/mosfet_baseline_sde.cmd",
+      "sha256": "ee4ce7f7be365df20794e5b8a2bc3bbbfd1745057f1a5d4a49e32df0648ca1a4",
+      "size_bytes": 7340
+    },
+    {
+      "relative_path": "sde/mosfet_track_refined_sde.cmd",
+      "sha256": "998e6bd0112981416de27a3bd4f8dc1b0e50660c6176da51e6ba1a39fe6240c2",
+      "size_bytes": 7357
+    },
+    {
+      "relative_path": "sdevice.par",
+      "sha256": "58dcaf4ba5b0a2a6b61d01e8fcbbab7bb6ecb6d08b69b44cc45941125c0039a1",
+      "size_bytes": 97878
+    },
+    {
+      "relative_path": "sdevice_parameter_snapshot.json",
+      "sha256": "ebfcbfd2d45b4aeb9953d21cd5e6ba4cd9cff29098b670203ac578a8da22b9ac",
+      "size_bytes": 553
+    },
+    {
+      "relative_path": "source_and_derivation_audit.json",
+      "sha256": "ae8319740a01e195ab5cc934880c6188a954a3788ccb997138f6af7f965c4781",
+      "size_bytes": 2569
+    }
+  ]
+}
