@@ -168,18 +168,19 @@ function New-RunFragments {
     foreach ($record in $Manifest.inputs) { $inputByName[[IO.Path]::GetFileName($record.relative_path)] = $record.sha256 }
     $caseRow = @{
         case_id = $Manifest.case_id; attempt_id = $Manifest.attempt_id; parent_run_id = $Manifest.parent_run_id
-        phase = 'execution'; target_vce_v = $Manifest.target_vce_v; actual_vce_v = $Manifest.actual_vce_v
+        phase = 'execution'; target_bias_v = $Manifest.target_bias_v; actual_bias_v = $Manifest.actual_bias_v
+        target_vce_v = $Manifest.target_vce_v; actual_vce_v = $Manifest.actual_vce_v
         let_mev_cm2_mg = $Manifest.let_mev_cm2_mg; let_pc_um = $Manifest.let_f_pc_um
         y_um = $Manifest.track_y_um; length_um = $Manifest.track_length_um; wt_um = $Manifest.wt_hi_um
-        s_s = $Manifest.heavy_ion_time_s; time_end_s = $Manifest.time_end_s; mesh_variant = $Manifest.mesh_variant
+        s_s = $Manifest.heavy_ion_time_s; final_time_s = $Manifest.final_time_s; time_end_s = $Manifest.time_end_s; mesh_variant = $Manifest.mesh_variant
         tmax_k = $Manifest.t_steady_max_k; t1680_s = 'NA'; t2500_s = 'NA'; peak_ic_a_um = 'NA'; peak_power_w_um = 'NA'
         status = $lifecycle; run_dir = 'private_run_dir'; deck_sha256 = $inputByName[[IO.Path]::GetFileName($Manifest.deck_path)]
         mesh_sha256 = $inputByName[[IO.Path]::GetFileName($Manifest.mesh_path)]; plt_file = 'NA'; log_file = 'artifacts/stdout.log'
-        tdr_file = $Manifest.exact_2p1ns_tdr; notes = "device_family=$($Manifest.device_family); parent_restart_sha256=$($Manifest.parent_restart_main_sha256)"
+        tdr_file = $Manifest.exact_final_tdr; notes = "device_family=$($Manifest.device_family); parent_restart_sha256=$($Manifest.parent_restart_main_sha256)"
     }
     Write-CsvFragment (Join-Path $FragmentDir 'case_summary.csv') @(
-        'case_id','attempt_id','parent_run_id','phase','target_vce_v','actual_vce_v','let_mev_cm2_mg','let_pc_um',
-        'y_um','length_um','wt_um','s_s','time_end_s','mesh_variant','tmax_k','t1680_s','t2500_s',
+        'case_id','attempt_id','parent_run_id','phase','target_bias_v','actual_bias_v','target_vce_v','actual_vce_v','let_mev_cm2_mg','let_pc_um',
+        'y_um','length_um','wt_um','s_s','final_time_s','time_end_s','mesh_variant','tmax_k','t1680_s','t2500_s',
         'peak_ic_a_um','peak_power_w_um','status','run_dir','deck_sha256','mesh_sha256','plt_file','log_file','tdr_file','notes'
     ) @($caseRow)
 
@@ -203,9 +204,11 @@ function New-RunFragments {
     $provenanceRow = @{
         run_id = $Manifest.run_id; case_id = $Manifest.case_id; attempt_id = $Manifest.attempt_id
         device_family = $Manifest.device_family; t_init_k = $Manifest.t_init_k; t_steady_k = $Manifest.t_steady_k
+        target_bias_v = $Manifest.target_bias_v; actual_bias_v = $Manifest.actual_bias_v
         target_vce_v = $Manifest.target_vce_v; actual_vce_v = $Manifest.actual_vce_v
         parent_restart_main_sha256 = $Manifest.parent_restart_main_sha256
         parent_restart_circuit_sha256 = $Manifest.parent_restart_circuit_sha256
+        exact_final_tdr = $Manifest.exact_final_tdr; exact_final_tdr_sha256 = $Manifest.exact_final_tdr_sha256
         exact_2p1ns_tdr = $Manifest.exact_2p1ns_tdr; exact_2p1ns_tdr_sha256 = $Manifest.exact_2p1ns_tdr_sha256
         field_audit_sha256 = $Manifest.field_audit_sha256; extraction_sha256 = $Manifest.extraction_sha256
         screenshot_manifest_sha256 = $Manifest.screenshot_manifest_sha256
@@ -215,8 +218,8 @@ function New-RunFragments {
         wall_time_seconds = $Manifest.wall_time_seconds
     }
     Write-CsvFragment (Join-Path $FragmentDir 'run_provenance.csv') @(
-        'run_id','case_id','attempt_id','device_family','t_init_k','t_steady_k','target_vce_v','actual_vce_v',
-        'parent_restart_main_sha256','parent_restart_circuit_sha256','exact_2p1ns_tdr','exact_2p1ns_tdr_sha256',
+        'run_id','case_id','attempt_id','device_family','t_init_k','t_steady_k','target_bias_v','actual_bias_v','target_vce_v','actual_vce_v',
+        'parent_restart_main_sha256','parent_restart_circuit_sha256','exact_final_tdr','exact_final_tdr_sha256','exact_2p1ns_tdr','exact_2p1ns_tdr_sha256',
         'field_audit_sha256','extraction_sha256','screenshot_manifest_sha256','allocation_mode','cpu_core',
         'sdevice_threads','lease_acquired','lease_released','affinity_verification','exit_code','wall_time_seconds'
     ) @($provenanceRow)
@@ -301,6 +304,8 @@ $tSteadyK = [string] (Get-MetadataValue $physicalMetadata 't_steady_k')
 $tSteadyMaxK = [string] (Get-MetadataValue $physicalMetadata 't_steady_max_k')
 $targetVceV = [string] (Get-MetadataValue $physicalMetadata 'target_vce_v')
 $actualVceV = [string] (Get-MetadataValue $physicalMetadata 'actual_vce_v')
+$targetBiasV = [string] (Get-MetadataValue $physicalMetadata 'target_bias_v' $targetVceV)
+$actualBiasV = [string] (Get-MetadataValue $physicalMetadata 'actual_bias_v' $actualVceV)
 $letValue = [string] (Get-MetadataValue $physicalMetadata 'let_mev_cm2_mg')
 $letFValue = [string] (Get-MetadataValue $physicalMetadata 'let_f_pc_um')
 $trackYValue = [string] (Get-MetadataValue $physicalMetadata 'track_y_um')
@@ -308,8 +313,9 @@ $trackLengthValue = [string] (Get-MetadataValue $physicalMetadata 'length_um')
 $wtHiValue = [string] (Get-MetadataValue $physicalMetadata 'wt_hi_um')
 $heavyIonTimeValue = [string] (Get-MetadataValue $physicalMetadata 'strike_time_s')
 $timeEndValue = [string] (Get-MetadataValue $physicalMetadata 'total_time_s')
+$finalTimeValue = [string] (Get-MetadataValue $physicalMetadata 'final_time_s' $timeEndValue)
 $meshVariantValue = [string] (Get-MetadataValue $physicalMetadata 'mesh_variant')
-$exactTdrExpected = [string] (Get-MetadataValue $physicalMetadata 'exact_2p1ns_tdr')
+$exactTdrExpected = [string] (Get-MetadataValue $physicalMetadata 'exact_final_tdr' (Get-MetadataValue $physicalMetadata 'exact_2p1ns_tdr'))
 $fieldAuditHash = [string] (Get-MetadataValue $physicalMetadata 'field_audit_sha256')
 $extractionHash = [string] (Get-MetadataValue $physicalMetadata 'extraction_sha256')
 $screenshotManifestHash = [string] (Get-MetadataValue $physicalMetadata 'screenshot_manifest_sha256')
@@ -530,7 +536,7 @@ finally {
         if ($null -ne $exactRecord) { $exactTdrHash = $exactRecord.sha256 }
     }
     $manifest = [ordered]@{
-        schema_version = 'igbt_seb_run_manifest/v1'; schema_extensions = @('igbt_mosfet_seb_paper/v1')
+        schema_version = 'sdevice_run_manifest/v1'; schema_extensions = @('igbt_seb_run_manifest/v1', 'igbt_mosfet_seb_paper/v1')
         run_id = $runId; execution_mode = $ExecutionMode
         worker_id = $WorkerId; case_id = $CaseId; attempt_id = $AttemptId; parent_run_id = $ParentRunId
         lifecycle = $lifecycle; started_at = $startedAt; ended_at = $endedAt; exit_code = $exitCode
@@ -551,16 +557,20 @@ finally {
         case_schema = [ordered]@{
             campaign_id = $campaignId; publication_profile = $publicationProfile; structure_id = $structureId
             device_family = $deviceFamily; high_terminal_name = $highTerminalName; bias_quantity = $biasQuantity
+            target_bias_v = $targetBiasV; actual_bias_v = $actualBiasV; final_time_s = $finalTimeValue
+            exact_final_tdr = $exactTdrExpected
             target_blocking_voltage_v = $targetBlockingVoltage; actual_blocking_voltage_v = $actualBlockingVoltage
             rated_voltage_v = $ratedVoltage; bv_static_v = $bvStaticVoltage; bv_criterion = $bvCriterion
             derating_basis = $deratingBasis; parent_restart_ids = @($parentRestartIds); parent_restart_hashes = @($parentRestartHashes)
             termination_reason = $terminationReason
         }
+        target_bias_v = $targetBiasV; actual_bias_v = $actualBiasV
         target_vce_v = $targetVceV; actual_vce_v = $actualVceV
         let_mev_cm2_mg = $letValue; let_f_pc_um = $letFValue; track_y_um = $trackYValue
         track_length_um = $trackLengthValue; wt_hi_um = $wtHiValue; heavy_ion_time_s = $heavyIonTimeValue
-        time_end_s = $timeEndValue; mesh_variant = $meshVariantValue
+        final_time_s = $finalTimeValue; time_end_s = $timeEndValue; mesh_variant = $meshVariantValue
         parent_restart_main_sha256 = $parentRestartMainSha; parent_restart_circuit_sha256 = $parentRestartCircuitSha
+        exact_final_tdr = $exactTdrExpected; exact_final_tdr_sha256 = $exactTdrHash
         exact_2p1ns_tdr = $exactTdrExpected; exact_2p1ns_tdr_sha256 = $exactTdrHash
         field_audit_sha256 = $fieldAuditHash; extraction_sha256 = $extractionHash
         screenshot_manifest_sha256 = $screenshotManifestHash

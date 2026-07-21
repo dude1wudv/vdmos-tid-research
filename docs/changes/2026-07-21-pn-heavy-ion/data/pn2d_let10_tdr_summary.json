@@ -1,0 +1,252 @@
+{
+  "schema": "pn_diode_tdr_extraction/v1",
+  "case_id": "PN2D_LET10",
+  "source_final_tdr": "pn2d_let10_at100ns_des.tdr",
+  "source_final_tdr_sha256": "d1d44d26e44460d5589eecbdcf66974564853dadc61b5dbb6fac0b634dae21c3",
+  "available_fields": [
+    "Abs(ElectricField-V)",
+    "Abs(TotalCurrentDensity-V)",
+    "Abs(eCurrentDensity-V)",
+    "Abs(hCurrentDensity-V)",
+    "AcceptorConcentration",
+    "DonorConcentration",
+    "DopingConcentration",
+    "ElectricField-V",
+    "ElectricField-X",
+    "ElectricField-Y",
+    "ElectrostaticPotential",
+    "HeavyIonChargeDensity",
+    "HeavyIonGeneration",
+    "ImpactIonization",
+    "LatticeTemperature",
+    "QuasiFermiPotential",
+    "SpaceCharge",
+    "TotalCurrentDensity-V",
+    "TotalCurrentDensity-X",
+    "TotalCurrentDensity-Y",
+    "X",
+    "Y",
+    "eCurrentDensity-V",
+    "eCurrentDensity-X",
+    "eCurrentDensity-Y",
+    "eDensity",
+    "eImpactIonization",
+    "eMobility",
+    "eQuasiFermiPotential",
+    "hCurrentDensity-V",
+    "hCurrentDensity-X",
+    "hCurrentDensity-Y",
+    "hDensity",
+    "hImpactIonization",
+    "hMobility",
+    "hQuasiFermiPotential"
+  ],
+  "field_maxima": {
+    "electric_field": {
+      "field": "Abs(ElectricField-V)",
+      "value": 100890.624036,
+      "position_um": [
+        10.0,
+        0.1875
+      ],
+      "material_scope": "Silicon"
+    },
+    "avalanche_generation": {
+      "field": "ImpactIonization",
+      "value": 3992294082010.0,
+      "position_um": [
+        0.0,
+        0.0
+      ],
+      "material_scope": "Silicon"
+    },
+    "electron_density": {
+      "field": "eDensity",
+      "value": 1e+18,
+      "position_um": [
+        0.0,
+        0.0625
+      ],
+      "material_scope": "Silicon"
+    },
+    "hole_density": {
+      "field": "hDensity",
+      "value": 1e+18,
+      "position_um": [
+        10.0,
+        0.0625
+      ],
+      "material_scope": "Silicon"
+    },
+    "heavy_ion_charge_density": {
+      "field": "HeavyIonChargeDensity",
+      "value": 3.65048892728e+18,
+      "position_um": [
+        0.078125,
+        0.5
+      ],
+      "material_scope": "Silicon"
+    },
+    "temperature": {
+      "field": "LatticeTemperature",
+      "value": 300.0,
+      "position_um": [
+        0.078125,
+        0.0625
+      ],
+      "material_scope": "Silicon"
+    }
+  },
+  "heavy_ion_charge": {
+    "nominal_charge_pc_per_1um_depth": 1.03667,
+    "integrated_generation_charge_pc_per_1um_depth": 1.0815311727080805,
+    "closure_error_pct": 4.327430398109389,
+    "integration_method": "analytic integral of quadratic log-rate Gaussian fit",
+    "gaussian_fit_coefficients_ps": [
+      -0.12335256627847391,
+      0.11494445011875191,
+      69.34165594809656
+    ],
+    "gaussian_fit_r_squared": 0.998528820959813,
+    "trapz_charge_pc_per_1um_depth_diagnostic": 1.0909671297166053,
+    "trapz_closure_error_pct_diagnostic": 5.237648404661588,
+    "audit_points": [
+      {
+        "time_s": 9.2e-11,
+        "source_tdr": "pn2d_let10_audit_92ps_des.tdr",
+        "source_tdr_sha256": "7a9ce73f29065d5afb7dbc3b1ba7b61f608e55f78dee60975fcb823fa80d65a2",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.82916060253e+26,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.4e-11,
+        "source_tdr": "pn2d_let10_audit_94ps_des.tdr",
+        "source_tdr_sha256": "0af023029cb7295315eeca5c4a7c06e72d395317224cf08d1d6fd0d6d94c9343",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 7.22817968824e+27,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.6e-11,
+        "source_tdr": "pn2d_let10_audit_96ps_des.tdr",
+        "source_tdr_sha256": "24f4489de9a2f4161d748acb70eceba0d4c38fb18b8516c8e20c996d05c0b3ce",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.07008670201e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.7e-11,
+        "source_tdr": "pn2d_let10_audit_97ps_des.tdr",
+        "source_tdr_sha256": "e4ab5a0f1c585effed2638ad4843412a28b1bf2312b2b0213de59b9d187a22b0",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 3.88426295412e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.8e-11,
+        "source_tdr": "pn2d_let10_audit_98ps_des.tdr",
+        "source_tdr_sha256": "6fae816cf5d34f7330f09f32ac283f69a530fe5189be7a3012d1ab9a7eb32d48",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 7.43643763651e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.9e-11,
+        "source_tdr": "pn2d_let10_audit_99ps_des.tdr",
+        "source_tdr_sha256": "5e2837aa6a441168998e55bb4d64156aacb4b62791225c92dc564afa5a595d0c",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.10901656555e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 9.95e-11,
+        "source_tdr": "pn2d_let10_audit_99p5ps_des.tdr",
+        "source_tdr_sha256": "fccf9e210befa6ff8b47c2ca81e26316f4d674a3897353f109d3ed3cb04b2151",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.24247512788e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1e-10,
+        "source_tdr": "pn2d_let10_audit_100ps_des.tdr",
+        "source_tdr_sha256": "e77eccb91b32393b6a3342fbd0ebee02a31d9504c788d43d048d566e9990e8f0",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.28994250698e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.002e-10,
+        "source_tdr": "pn2d_let10_audit_100p2ps_des.tdr",
+        "source_tdr_sha256": "783474502348c9a9afc39b0c26db1450fcae5386262cf358bf162ee0cb0dd915",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.28833242776e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.005e-10,
+        "source_tdr": "pn2d_let10_audit_100p5ps_des.tdr",
+        "source_tdr_sha256": "c064c89e7a0e1e70e40db103fe22240cf56a79d9ee5f94401507bbf579ac0543",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.25810026504e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.01e-10,
+        "source_tdr": "pn2d_let10_audit_101ps_des.tdr",
+        "source_tdr_sha256": "cf14f4b7f2b13517aeaeea9ba0b9862fb6cf533eb965657bfcce12088d79d771",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.15271621626e+30,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.02e-10,
+        "source_tdr": "pn2d_let10_audit_102ps_des.tdr",
+        "source_tdr_sha256": "f3fcc6d41671d097ebc066a5691b242e64cd4a3493dcec3fc4e865304e0317bf",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 8.21785010314e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.03e-10,
+        "source_tdr": "pn2d_let10_audit_103ps_des.tdr",
+        "source_tdr_sha256": "4c71dd867eb50a5743c3fb3bc3f1132f3e245fca677dffd0dcf3db7ebd2c0e58",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 5.94211650756e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.04e-10,
+        "source_tdr": "pn2d_let10_audit_104ps_des.tdr",
+        "source_tdr_sha256": "e08d04c5ecb86ab761ddc14585651b669f65f92c16df3431bbc8e6acbf6bdc3a",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 2.85027533297e+29,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.06e-10,
+        "source_tdr": "pn2d_let10_audit_106ps_des.tdr",
+        "source_tdr_sha256": "22238b5b1e6a11ea360d3de14a4b7503d7fdf6693ecb463c9d2ce13203044f7e",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 3.14403001744e+28,
+        "domain_raw": 10.0
+      },
+      {
+        "time_s": 1.08e-10,
+        "source_tdr": "pn2d_let10_audit_108ps_des.tdr",
+        "source_tdr_sha256": "a44f90fb71ae2c0fe8e3cd365def7ea886a59e5220f32bf7ebe0c3cead8b27f7",
+        "field": "HeavyIonGeneration",
+        "space_integral_raw": 1.30009820257e+27,
+        "domain_raw": 10.0
+      }
+    ],
+    "conversion": "integral(SVisual 2D generation rate,time)*elementary_charge"
+  },
+  "checks": {
+    "all_audit_points_present": true,
+    "gaussian_fit_r_squared_ge_0p995": true,
+    "charge_closure_le_5pct": true,
+    "final_tdr_present": true
+  },
+  "status": "PASS"
+}

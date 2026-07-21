@@ -1,0 +1,864 @@
+{
+  "schema": "pn_diode_heavy_ion_extraction/v1",
+  "status": "PASS",
+  "normalization": "2D current per unit depth; 1 um equivalent depth gives the same numeric current in A",
+  "baseline": {
+    "forward_endpoint": {
+      "mode": "forward",
+      "top_voltage_v": 1.2,
+      "top_current_a_per_um": 2.47223979245097e-05,
+      "abs_top_current_a_per_um": 2.47223979245097e-05
+    },
+    "reverse_endpoint": {
+      "mode": "reverse",
+      "top_voltage_v": -99.999999981767,
+      "top_current_a_per_um": -1.82329784453062e-15,
+      "abs_top_current_a_per_um": 1.82329784453062e-15
+    },
+    "forward_run_id": "PN2D_FORWARD__baseline_v1__20260721T052959141Z__40296d3d",
+    "reverse_run_id": "PN2D_REVERSE100__official_resistor_restart_v3__20260721T061239857Z__fc111e7e",
+    "baseline_csv": "docs\\changes\\2026-07-21-pn-heavy-ion\\data\\pn2d_baseline_iv.csv"
+  },
+  "transient_cases": [
+    {
+      "case_id": "PN2D_LET1",
+      "let_mev_cm2_mg": 1.0,
+      "let_f_pc_um": 0.0103667,
+      "time_end_s": 1e-07,
+      "sample_count": 351,
+      "baseline_current_a_per_um": -1.82329784262896e-15,
+      "final_current_a_per_um": -1.82332011500174e-15,
+      "peak_abs_current_a_per_um": 1.00677658877498e-05,
+      "peak_current_time_s": 1.05e-10,
+      "peak_abs_power_w_per_um": 0.00024962986073892763,
+      "peak_power_time_s": 9.86e-11,
+      "collected_charge_pc_per_um": 0.08914970882317828,
+      "port_energy_j_per_um": 7.422334735872228e-13,
+      "final_to_peak_excursion_fraction": 2.2122457983529152e-15,
+      "recovered_to_10pct": true,
+      "tail_abs_current_slope_a_per_um_s": 1.003173987711937e-13,
+      "sustained_tail_growth": true,
+      "nominal_injected_charge_pc_per_1um_depth": 0.103667,
+      "run_id": "PN2D_LET1__official_resistor_100ns_final_v4__20260721T064701662Z__836ccec7",
+      "cpu_core": 2,
+      "wall_time_seconds": 187.0,
+      "source_plt": "local_runtime\\pn_diode_heavy_ion\\runs\\PN2D_LET1__official_resistor_100ns_final_v4__20260721T064701662Z__836ccec7\\artifacts\\pn2d_let1.plt",
+      "source_plt_sha256": "18adf1d284f58d2e6dd73c50823d3fbcf99462e54c96c9087778f36b31356a55",
+      "transient_csv": "docs\\changes\\2026-07-21-pn-heavy-ion\\data\\pn2d_let1_transient.csv",
+      "tdr_summary": {
+        "schema": "pn_diode_tdr_extraction/v1",
+        "case_id": "PN2D_LET1",
+        "source_final_tdr": "pn2d_let1_at100ns_des.tdr",
+        "source_final_tdr_sha256": "e63e83859734b0bae150d909f316020b2d8e8314db2ab71b626222558d8855f2",
+        "available_fields": [
+          "Abs(ElectricField-V)",
+          "Abs(TotalCurrentDensity-V)",
+          "Abs(eCurrentDensity-V)",
+          "Abs(hCurrentDensity-V)",
+          "AcceptorConcentration",
+          "DonorConcentration",
+          "DopingConcentration",
+          "ElectricField-V",
+          "ElectricField-X",
+          "ElectricField-Y",
+          "ElectrostaticPotential",
+          "HeavyIonChargeDensity",
+          "HeavyIonGeneration",
+          "ImpactIonization",
+          "LatticeTemperature",
+          "QuasiFermiPotential",
+          "SpaceCharge",
+          "TotalCurrentDensity-V",
+          "TotalCurrentDensity-X",
+          "TotalCurrentDensity-Y",
+          "X",
+          "Y",
+          "eCurrentDensity-V",
+          "eCurrentDensity-X",
+          "eCurrentDensity-Y",
+          "eDensity",
+          "eImpactIonization",
+          "eMobility",
+          "eQuasiFermiPotential",
+          "hCurrentDensity-V",
+          "hCurrentDensity-X",
+          "hCurrentDensity-Y",
+          "hDensity",
+          "hImpactIonization",
+          "hMobility",
+          "hQuasiFermiPotential"
+        ],
+        "field_maxima": {
+          "electric_field": {
+            "field": "Abs(ElectricField-V)",
+            "value": 100890.624036,
+            "position_um": [
+              10.0,
+              0.1875
+            ],
+            "material_scope": "Silicon"
+          },
+          "avalanche_generation": {
+            "field": "ImpactIonization",
+            "value": 3992294082010.0,
+            "position_um": [
+              0.0,
+              0.0
+            ],
+            "material_scope": "Silicon"
+          },
+          "electron_density": {
+            "field": "eDensity",
+            "value": 1e+18,
+            "position_um": [
+              0.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "hole_density": {
+            "field": "hDensity",
+            "value": 1e+18,
+            "position_um": [
+              10.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "heavy_ion_charge_density": {
+            "field": "HeavyIonChargeDensity",
+            "value": 3.65048892728e+17,
+            "position_um": [
+              0.078125,
+              0.5
+            ],
+            "material_scope": "Silicon"
+          },
+          "temperature": {
+            "field": "LatticeTemperature",
+            "value": 300.0,
+            "position_um": [
+              0.078125,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          }
+        },
+        "heavy_ion_charge": {
+          "nominal_charge_pc_per_1um_depth": 0.103667,
+          "integrated_generation_charge_pc_per_1um_depth": 0.10815311727080305,
+          "closure_error_pct": 4.32743039810457,
+          "integration_method": "analytic integral of quadratic log-rate Gaussian fit",
+          "gaussian_fit_coefficients_ps": [
+            -0.12335256627847722,
+            0.11494445011878361,
+            67.03907085510247
+          ],
+          "gaussian_fit_r_squared": 0.9985288209598115,
+          "trapz_charge_pc_per_1um_depth_diagnostic": 0.10909671297166022,
+          "trapz_closure_error_pct_diagnostic": 5.237648404661299,
+          "audit_points": [
+            {
+              "time_s": 9.2e-11,
+              "source_tdr": "pn2d_let1_audit_92ps_des.tdr",
+              "source_tdr_sha256": "4b29ee7dd09ebfd80c127713305ad28830f7279fb334ebb962f4ec09711aea32",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.82916060253e+25,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.4e-11,
+              "source_tdr": "pn2d_let1_audit_94ps_des.tdr",
+              "source_tdr_sha256": "455e0748872380cf4ba718ec25757417ef4dee53e54619fab0ff356b43be91c7",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 7.22817968823e+26,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.6e-11,
+              "source_tdr": "pn2d_let1_audit_96ps_des.tdr",
+              "source_tdr_sha256": "39c5702e9c78656be7a29a833ab93f6576e58721ced59d250503d79f054eb092",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.07008670201e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.7e-11,
+              "source_tdr": "pn2d_let1_audit_97ps_des.tdr",
+              "source_tdr_sha256": "44ba48fe7ab8921f0a4c8e97aed7a24f1488ccfe41967597f8a9526ab609d2c3",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.88426295412e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.8e-11,
+              "source_tdr": "pn2d_let1_audit_98ps_des.tdr",
+              "source_tdr_sha256": "6887c0b32c35835b084a34fd74bb7d38ca4146f43c6a8ea2afacae2bfd385efa",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 7.43643763651e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.9e-11,
+              "source_tdr": "pn2d_let1_audit_99ps_des.tdr",
+              "source_tdr_sha256": "601499771be7903ada87bde8bb8a23e7a79d545e6cd981aa87c5c4eb78c44f59",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.10901656555e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.95e-11,
+              "source_tdr": "pn2d_let1_audit_99p5ps_des.tdr",
+              "source_tdr_sha256": "036902866f477e5927bca7ecfa100488bf9b4cb10856da5af3291a0b095a5b5c",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.24247512788e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1e-10,
+              "source_tdr": "pn2d_let1_audit_100ps_des.tdr",
+              "source_tdr_sha256": "a329450e6e2f33a79dd2dd35376fc5c5ff8ca87fb546a27e58dbf4923d4246de",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.28994250698e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.002e-10,
+              "source_tdr": "pn2d_let1_audit_100p2ps_des.tdr",
+              "source_tdr_sha256": "b1480c3be361410d067464c68706eb81e4de3b8c6e8407120d208080435c8a4f",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.28833242776e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.005e-10,
+              "source_tdr": "pn2d_let1_audit_100p5ps_des.tdr",
+              "source_tdr_sha256": "be9e9e569ce4f6d45c1f8c594af7c537ff89b1ac07855ebec79f535521a8913a",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.25810026504e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.01e-10,
+              "source_tdr": "pn2d_let1_audit_101ps_des.tdr",
+              "source_tdr_sha256": "8b0cbff61cadb2f5716903fd0a405b8c5640627c5f48132f837003e8c32a997e",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.15271621626e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.02e-10,
+              "source_tdr": "pn2d_let1_audit_102ps_des.tdr",
+              "source_tdr_sha256": "1c68aa96c6259ea03118f568b468a2ac853a6fe2f4b5a847de2e32d4ee8fcf67",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 8.21785010314e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.03e-10,
+              "source_tdr": "pn2d_let1_audit_103ps_des.tdr",
+              "source_tdr_sha256": "54e5eee256997764a39df4d62da64f4c9fbd617311e17b44bc7b72e3bbfe4e61",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 5.94211650756e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.04e-10,
+              "source_tdr": "pn2d_let1_audit_104ps_des.tdr",
+              "source_tdr_sha256": "ee90049276d485eb184b6d90206c41898a4a2c2755a13392bec290552a120824",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 2.85027533297e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.06e-10,
+              "source_tdr": "pn2d_let1_audit_106ps_des.tdr",
+              "source_tdr_sha256": "b9554372e74955dd1ead93ff697ea4dd0b0fdcfd8a194932117030a2406ef3ba",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.14403001744e+27,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.08e-10,
+              "source_tdr": "pn2d_let1_audit_108ps_des.tdr",
+              "source_tdr_sha256": "f2955fd86b4586f010a474eb66e5baa120b58cb3462ab3843be7450118a459a8",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.30009820257e+26,
+              "domain_raw": 10.0
+            }
+          ],
+          "conversion": "integral(SVisual 2D generation rate,time)*elementary_charge"
+        },
+        "checks": {
+          "all_audit_points_present": true,
+          "gaussian_fit_r_squared_ge_0p995": true,
+          "charge_closure_le_5pct": true,
+          "final_tdr_present": true
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "case_id": "PN2D_LET10",
+      "let_mev_cm2_mg": 10.0,
+      "let_f_pc_um": 0.103667,
+      "time_end_s": 1e-07,
+      "sample_count": 351,
+      "baseline_current_a_per_um": -1.82329784262896e-15,
+      "final_current_a_per_um": -1.82332011500174e-15,
+      "peak_abs_current_a_per_um": 1.00839832861625e-05,
+      "peak_current_time_s": 1.03e-10,
+      "peak_abs_power_w_per_um": 0.0002495561503063589,
+      "peak_power_time_s": 9.6e-11,
+      "collected_charge_pc_per_um": 0.296811971783914,
+      "port_energy_j_per_um": 9.547489013387784e-13,
+      "final_to_peak_excursion_fraction": 2.20868799083905e-15,
+      "recovered_to_10pct": true,
+      "tail_abs_current_slope_a_per_um_s": 1.003173987711937e-13,
+      "sustained_tail_growth": true,
+      "nominal_injected_charge_pc_per_1um_depth": 1.03667,
+      "run_id": "PN2D_LET10__official_resistor_final_v3__20260721T063215897Z__1ac345ad",
+      "cpu_core": 3,
+      "wall_time_seconds": 195.0,
+      "source_plt": "local_runtime\\pn_diode_heavy_ion\\runs\\PN2D_LET10__official_resistor_final_v3__20260721T063215897Z__1ac345ad\\artifacts\\pn2d_let10.plt",
+      "source_plt_sha256": "e90b78b16539f204e28de2078f22b95907620655bd2d89c1ce0a8234d4c96bdd",
+      "transient_csv": "docs\\changes\\2026-07-21-pn-heavy-ion\\data\\pn2d_let10_transient.csv",
+      "tdr_summary": {
+        "schema": "pn_diode_tdr_extraction/v1",
+        "case_id": "PN2D_LET10",
+        "source_final_tdr": "pn2d_let10_at100ns_des.tdr",
+        "source_final_tdr_sha256": "d1d44d26e44460d5589eecbdcf66974564853dadc61b5dbb6fac0b634dae21c3",
+        "available_fields": [
+          "Abs(ElectricField-V)",
+          "Abs(TotalCurrentDensity-V)",
+          "Abs(eCurrentDensity-V)",
+          "Abs(hCurrentDensity-V)",
+          "AcceptorConcentration",
+          "DonorConcentration",
+          "DopingConcentration",
+          "ElectricField-V",
+          "ElectricField-X",
+          "ElectricField-Y",
+          "ElectrostaticPotential",
+          "HeavyIonChargeDensity",
+          "HeavyIonGeneration",
+          "ImpactIonization",
+          "LatticeTemperature",
+          "QuasiFermiPotential",
+          "SpaceCharge",
+          "TotalCurrentDensity-V",
+          "TotalCurrentDensity-X",
+          "TotalCurrentDensity-Y",
+          "X",
+          "Y",
+          "eCurrentDensity-V",
+          "eCurrentDensity-X",
+          "eCurrentDensity-Y",
+          "eDensity",
+          "eImpactIonization",
+          "eMobility",
+          "eQuasiFermiPotential",
+          "hCurrentDensity-V",
+          "hCurrentDensity-X",
+          "hCurrentDensity-Y",
+          "hDensity",
+          "hImpactIonization",
+          "hMobility",
+          "hQuasiFermiPotential"
+        ],
+        "field_maxima": {
+          "electric_field": {
+            "field": "Abs(ElectricField-V)",
+            "value": 100890.624036,
+            "position_um": [
+              10.0,
+              0.1875
+            ],
+            "material_scope": "Silicon"
+          },
+          "avalanche_generation": {
+            "field": "ImpactIonization",
+            "value": 3992294082010.0,
+            "position_um": [
+              0.0,
+              0.0
+            ],
+            "material_scope": "Silicon"
+          },
+          "electron_density": {
+            "field": "eDensity",
+            "value": 1e+18,
+            "position_um": [
+              0.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "hole_density": {
+            "field": "hDensity",
+            "value": 1e+18,
+            "position_um": [
+              10.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "heavy_ion_charge_density": {
+            "field": "HeavyIonChargeDensity",
+            "value": 3.65048892728e+18,
+            "position_um": [
+              0.078125,
+              0.5
+            ],
+            "material_scope": "Silicon"
+          },
+          "temperature": {
+            "field": "LatticeTemperature",
+            "value": 300.0,
+            "position_um": [
+              0.078125,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          }
+        },
+        "heavy_ion_charge": {
+          "nominal_charge_pc_per_1um_depth": 1.03667,
+          "integrated_generation_charge_pc_per_1um_depth": 1.0815311727080805,
+          "closure_error_pct": 4.327430398109389,
+          "integration_method": "analytic integral of quadratic log-rate Gaussian fit",
+          "gaussian_fit_coefficients_ps": [
+            -0.12335256627847391,
+            0.11494445011875191,
+            69.34165594809656
+          ],
+          "gaussian_fit_r_squared": 0.998528820959813,
+          "trapz_charge_pc_per_1um_depth_diagnostic": 1.0909671297166053,
+          "trapz_closure_error_pct_diagnostic": 5.237648404661588,
+          "audit_points": [
+            {
+              "time_s": 9.2e-11,
+              "source_tdr": "pn2d_let10_audit_92ps_des.tdr",
+              "source_tdr_sha256": "7a9ce73f29065d5afb7dbc3b1ba7b61f608e55f78dee60975fcb823fa80d65a2",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.82916060253e+26,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.4e-11,
+              "source_tdr": "pn2d_let10_audit_94ps_des.tdr",
+              "source_tdr_sha256": "0af023029cb7295315eeca5c4a7c06e72d395317224cf08d1d6fd0d6d94c9343",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 7.22817968824e+27,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.6e-11,
+              "source_tdr": "pn2d_let10_audit_96ps_des.tdr",
+              "source_tdr_sha256": "24f4489de9a2f4161d748acb70eceba0d4c38fb18b8516c8e20c996d05c0b3ce",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.07008670201e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.7e-11,
+              "source_tdr": "pn2d_let10_audit_97ps_des.tdr",
+              "source_tdr_sha256": "e4ab5a0f1c585effed2638ad4843412a28b1bf2312b2b0213de59b9d187a22b0",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.88426295412e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.8e-11,
+              "source_tdr": "pn2d_let10_audit_98ps_des.tdr",
+              "source_tdr_sha256": "6fae816cf5d34f7330f09f32ac283f69a530fe5189be7a3012d1ab9a7eb32d48",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 7.43643763651e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.9e-11,
+              "source_tdr": "pn2d_let10_audit_99ps_des.tdr",
+              "source_tdr_sha256": "5e2837aa6a441168998e55bb4d64156aacb4b62791225c92dc564afa5a595d0c",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.10901656555e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.95e-11,
+              "source_tdr": "pn2d_let10_audit_99p5ps_des.tdr",
+              "source_tdr_sha256": "fccf9e210befa6ff8b47c2ca81e26316f4d674a3897353f109d3ed3cb04b2151",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.24247512788e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1e-10,
+              "source_tdr": "pn2d_let10_audit_100ps_des.tdr",
+              "source_tdr_sha256": "e77eccb91b32393b6a3342fbd0ebee02a31d9504c788d43d048d566e9990e8f0",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.28994250698e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.002e-10,
+              "source_tdr": "pn2d_let10_audit_100p2ps_des.tdr",
+              "source_tdr_sha256": "783474502348c9a9afc39b0c26db1450fcae5386262cf358bf162ee0cb0dd915",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.28833242776e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.005e-10,
+              "source_tdr": "pn2d_let10_audit_100p5ps_des.tdr",
+              "source_tdr_sha256": "c064c89e7a0e1e70e40db103fe22240cf56a79d9ee5f94401507bbf579ac0543",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.25810026504e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.01e-10,
+              "source_tdr": "pn2d_let10_audit_101ps_des.tdr",
+              "source_tdr_sha256": "cf14f4b7f2b13517aeaeea9ba0b9862fb6cf533eb965657bfcce12088d79d771",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.15271621626e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.02e-10,
+              "source_tdr": "pn2d_let10_audit_102ps_des.tdr",
+              "source_tdr_sha256": "f3fcc6d41671d097ebc066a5691b242e64cd4a3493dcec3fc4e865304e0317bf",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 8.21785010314e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.03e-10,
+              "source_tdr": "pn2d_let10_audit_103ps_des.tdr",
+              "source_tdr_sha256": "4c71dd867eb50a5743c3fb3bc3f1132f3e245fca677dffd0dcf3db7ebd2c0e58",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 5.94211650756e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.04e-10,
+              "source_tdr": "pn2d_let10_audit_104ps_des.tdr",
+              "source_tdr_sha256": "e08d04c5ecb86ab761ddc14585651b669f65f92c16df3431bbc8e6acbf6bdc3a",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 2.85027533297e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.06e-10,
+              "source_tdr": "pn2d_let10_audit_106ps_des.tdr",
+              "source_tdr_sha256": "22238b5b1e6a11ea360d3de14a4b7503d7fdf6693ecb463c9d2ce13203044f7e",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.14403001744e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.08e-10,
+              "source_tdr": "pn2d_let10_audit_108ps_des.tdr",
+              "source_tdr_sha256": "a44f90fb71ae2c0fe8e3cd365def7ea886a59e5220f32bf7ebe0c3cead8b27f7",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.30009820257e+27,
+              "domain_raw": 10.0
+            }
+          ],
+          "conversion": "integral(SVisual 2D generation rate,time)*elementary_charge"
+        },
+        "checks": {
+          "all_audit_points_present": true,
+          "gaussian_fit_r_squared_ge_0p995": true,
+          "charge_closure_le_5pct": true,
+          "final_tdr_present": true
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "case_id": "PN2D_LET50",
+      "let_mev_cm2_mg": 50.0,
+      "let_f_pc_um": 0.518335,
+      "time_end_s": 1e-07,
+      "sample_count": 351,
+      "baseline_current_a_per_um": -1.82329784262896e-15,
+      "final_current_a_per_um": -1.82332011500174e-15,
+      "peak_abs_current_a_per_um": 1.00872696624548e-05,
+      "peak_current_time_s": 1.03e-10,
+      "peak_abs_power_w_per_um": 0.0002479806776573199,
+      "peak_power_time_s": 4.8e-08,
+      "collected_charge_pc_per_um": 0.4757777630855254,
+      "port_energy_j_per_um": 1.1287527508456088e-12,
+      "final_to_peak_excursion_fraction": 2.2079684125890002e-15,
+      "recovered_to_10pct": true,
+      "tail_abs_current_slope_a_per_um_s": 1.8916995111488958e-13,
+      "sustained_tail_growth": true,
+      "nominal_injected_charge_pc_per_1um_depth": 5.18335,
+      "run_id": "PN2D_LET50__official_resistor_final_v3__20260721T063218013Z__c9da52d9",
+      "cpu_core": 4,
+      "wall_time_seconds": 203.0,
+      "source_plt": "local_runtime\\pn_diode_heavy_ion\\runs\\PN2D_LET50__official_resistor_final_v3__20260721T063218013Z__c9da52d9\\artifacts\\pn2d_let50.plt",
+      "source_plt_sha256": "18dc6e2a0d032b6424a1517eb8c7adcdc4e64b4c86d45d0fa650020abddfc039",
+      "transient_csv": "docs\\changes\\2026-07-21-pn-heavy-ion\\data\\pn2d_let50_transient.csv",
+      "tdr_summary": {
+        "schema": "pn_diode_tdr_extraction/v1",
+        "case_id": "PN2D_LET50",
+        "source_final_tdr": "pn2d_let50_at100ns_des.tdr",
+        "source_final_tdr_sha256": "17e005e2fdb974d66f27cd2a10187de7ff8efd0713e6b074cd939b127bf03b2a",
+        "available_fields": [
+          "Abs(ElectricField-V)",
+          "Abs(TotalCurrentDensity-V)",
+          "Abs(eCurrentDensity-V)",
+          "Abs(hCurrentDensity-V)",
+          "AcceptorConcentration",
+          "DonorConcentration",
+          "DopingConcentration",
+          "ElectricField-V",
+          "ElectricField-X",
+          "ElectricField-Y",
+          "ElectrostaticPotential",
+          "HeavyIonChargeDensity",
+          "HeavyIonGeneration",
+          "ImpactIonization",
+          "LatticeTemperature",
+          "QuasiFermiPotential",
+          "SpaceCharge",
+          "TotalCurrentDensity-V",
+          "TotalCurrentDensity-X",
+          "TotalCurrentDensity-Y",
+          "X",
+          "Y",
+          "eCurrentDensity-V",
+          "eCurrentDensity-X",
+          "eCurrentDensity-Y",
+          "eDensity",
+          "eImpactIonization",
+          "eMobility",
+          "eQuasiFermiPotential",
+          "hCurrentDensity-V",
+          "hCurrentDensity-X",
+          "hCurrentDensity-Y",
+          "hDensity",
+          "hImpactIonization",
+          "hMobility",
+          "hQuasiFermiPotential"
+        ],
+        "field_maxima": {
+          "electric_field": {
+            "field": "Abs(ElectricField-V)",
+            "value": 100890.624036,
+            "position_um": [
+              10.0,
+              0.1875
+            ],
+            "material_scope": "Silicon"
+          },
+          "avalanche_generation": {
+            "field": "ImpactIonization",
+            "value": 3992294082010.0,
+            "position_um": [
+              0.0,
+              0.0
+            ],
+            "material_scope": "Silicon"
+          },
+          "electron_density": {
+            "field": "eDensity",
+            "value": 1e+18,
+            "position_um": [
+              0.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "hole_density": {
+            "field": "hDensity",
+            "value": 1e+18,
+            "position_um": [
+              10.0,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          },
+          "heavy_ion_charge_density": {
+            "field": "HeavyIonChargeDensity",
+            "value": 1.82524446364e+19,
+            "position_um": [
+              0.078125,
+              0.5
+            ],
+            "material_scope": "Silicon"
+          },
+          "temperature": {
+            "field": "LatticeTemperature",
+            "value": 300.0,
+            "position_um": [
+              0.078125,
+              0.0625
+            ],
+            "material_scope": "Silicon"
+          }
+        },
+        "heavy_ion_charge": {
+          "nominal_charge_pc_per_1um_depth": 5.18335,
+          "integrated_generation_charge_pc_per_1um_depth": 5.4076558635446546,
+          "closure_error_pct": 4.327430398191412,
+          "integration_method": "analytic integral of quadratic log-rate Gaussian fit",
+          "gaussian_fit_coefficients_ps": [
+            -0.12335256627848398,
+            0.11494445011868501,
+            70.95109386053151
+          ],
+          "gaussian_fit_r_squared": 0.998528820959802,
+          "trapz_charge_pc_per_1um_depth_diagnostic": 5.454835648586234,
+          "trapz_closure_error_pct_diagnostic": 5.237648404723472,
+          "audit_points": [
+            {
+              "time_s": 9.2e-11,
+              "source_tdr": "pn2d_let50_audit_92ps_des.tdr",
+              "source_tdr_sha256": "d520e2e2120b926435b2b325ab5e0111407e389e522a6bcf62cfe20d9525dfda",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 9.14580301266e+26,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.4e-11,
+              "source_tdr": "pn2d_let50_audit_94ps_des.tdr",
+              "source_tdr_sha256": "e8f340f5cb82bf8e4ab7e63dedad5d53f916022a4c1248b2c8d5bd301c203dd6",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.61408984412e+28,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.6e-11,
+              "source_tdr": "pn2d_let50_audit_96ps_des.tdr",
+              "source_tdr_sha256": "e54bfe9bb48a66b13130115922d69f8811bc883a06438f5865d9fad837844210",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 5.35043351005e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.7e-11,
+              "source_tdr": "pn2d_let50_audit_97ps_des.tdr",
+              "source_tdr_sha256": "8835697a7e73a40fba2c9d4ab52da94bcd769ce91f09bf716d699b8d3081c0c6",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.94213147706e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.8e-11,
+              "source_tdr": "pn2d_let50_audit_98ps_des.tdr",
+              "source_tdr_sha256": "ab008bf61ddef9b73a0206dfc7ab02bca6da58ef2921cbb9090f04971cbf6874",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 3.71821881826e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.9e-11,
+              "source_tdr": "pn2d_let50_audit_99ps_des.tdr",
+              "source_tdr_sha256": "78573bfefc6834941fd1a81a144e255684ffcc86838b95ca1331f0d4720b6484",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 5.54508282776e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 9.95e-11,
+              "source_tdr": "pn2d_let50_audit_99p5ps_des.tdr",
+              "source_tdr_sha256": "9051cbc2c2b4bc300cb3f9d071e5002a752339b617008461bf200ceedeb9535d",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 6.21237563942e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1e-10,
+              "source_tdr": "pn2d_let50_audit_100ps_des.tdr",
+              "source_tdr_sha256": "32f29270bbe8aeb674941e2930e9ef25031e3297f76ff2086e18450c3f2db5dd",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 6.44971253492e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.002e-10,
+              "source_tdr": "pn2d_let50_audit_100p2ps_des.tdr",
+              "source_tdr_sha256": "e7159314673ea59c0b779200430351f01b4357770c5d8c2634e3dc783f3554b7",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 6.44166213882e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.005e-10,
+              "source_tdr": "pn2d_let50_audit_100p5ps_des.tdr",
+              "source_tdr_sha256": "bd39ae0076013f5c5781ac2e41e795a84e4a9e19021c94c16fa6e5d51ee09e68",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 6.29050132522e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.01e-10,
+              "source_tdr": "pn2d_let50_audit_101ps_des.tdr",
+              "source_tdr_sha256": "f5e2ab05f345d906f08117767bbe6e6c3295f4fa94e2998ad1fa65dcb4f5e285",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 5.76358108128e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.02e-10,
+              "source_tdr": "pn2d_let50_audit_102ps_des.tdr",
+              "source_tdr_sha256": "a5b9ce242b0801310284683ef0e9d673154fa42560fc263353dd5c9152185d95",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 4.10892505157e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.03e-10,
+              "source_tdr": "pn2d_let50_audit_103ps_des.tdr",
+              "source_tdr_sha256": "3491393da49909d839604df7ee6dd6b33b790281efc31160441ac70932eb7a4e",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 2.97105825378e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.04e-10,
+              "source_tdr": "pn2d_let50_audit_104ps_des.tdr",
+              "source_tdr_sha256": "a52993fe7d12afa7520e8bd34bdcdb976cd0432096d9ed5fc52571becab3eea6",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.42513766648e+30,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.06e-10,
+              "source_tdr": "pn2d_let50_audit_106ps_des.tdr",
+              "source_tdr_sha256": "09ac68d111aff1e88dcca67d666b254811d7a29ba14bce539e776936bbba8a40",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 1.57201500872e+29,
+              "domain_raw": 10.0
+            },
+            {
+              "time_s": 1.08e-10,
+              "source_tdr": "pn2d_let50_audit_108ps_des.tdr",
+              "source_tdr_sha256": "a6514932b2aeb33c0c5937dff4345739733f88e1576270c320c3451929f40169",
+              "field": "HeavyIonGeneration",
+              "space_integral_raw": 6.50049101286e+27,
+              "domain_raw": 10.0
+            }
+          ],
+          "conversion": "integral(SVisual 2D generation rate,time)*elementary_charge"
+        },
+        "checks": {
+          "all_audit_points_present": true,
+          "gaussian_fit_r_squared_ge_0p995": true,
+          "charge_closure_le_5pct": true,
+          "final_tdr_present": true
+        },
+        "status": "PASS"
+      }
+    }
+  ],
+  "figures": {
+    "png": "docs\\changes\\2026-07-21-pn-heavy-ion\\figures\\pn2d_baseline_and_heavy_ion.png",
+    "png_sha256": "25580dac8f408da414cb6fb10266ed81d1bb7e4a4cf794e3e4b4afdda7ecad01",
+    "svg": "docs\\changes\\2026-07-21-pn-heavy-ion\\figures\\pn2d_baseline_and_heavy_ion.svg",
+    "svg_sha256": "121f40940ad478a03270f74acb94b12811533d95949f14bf44233821917fb860"
+  }
+}
